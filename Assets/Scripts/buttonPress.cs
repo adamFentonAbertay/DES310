@@ -41,17 +41,17 @@ public class buttonPress : MonoBehaviour
     }
 
     //Uses buttons On Clock - SendMessage to envoke
-    void startResponse()
+    void minigameResponse()
     {
         Debug.Log("start game called");
-        SceneManager.LoadSceneAsync("BlankAR");
+        SceneManager.LoadSceneAsync("MinigameExample");
         
     }
 
-    void howToPlayResponse()
+    void ARResponse()
     {
         Debug.Log("how to play called");
-        SceneManager.LoadSceneAsync("MinigameExample");
+        SceneManager.LoadSceneAsync("BlankAR");
     }
 
     void loreInfoResponse()
