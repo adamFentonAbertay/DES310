@@ -54,10 +54,10 @@ public class buttonPress : MonoBehaviour
         SceneManager.LoadSceneAsync("BlankAR");
     }
 
-    void loreInfoResponse()
+    void DiceResponse()
     {
-        AIPlayerHolder.SetActive(true);
-        Debug.Log("lore and info called");
+        Debug.Log("dice game called");
+        SceneManager.LoadSceneAsync("Dice");
     }
     void MenuToSettingsResponse()
     {
