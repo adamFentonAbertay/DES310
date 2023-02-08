@@ -48,6 +48,11 @@ public class buttonPress : MonoBehaviour
         
     }
 
+    void menuResponse()
+    {
+        Debug.Log("how to play called");
+        SceneManager.LoadSceneAsync("Startup");
+    }
     void ARResponse()
     {
         Debug.Log("how to play called");
