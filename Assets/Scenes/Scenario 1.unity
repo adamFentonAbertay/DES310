@@ -678,6 +678,7 @@ MonoBehaviour:
   - God I hate game dev :(
   - Whoops, didn't see you there! Please get out of my prototype text system
   - Welcome adventurers!
+  Narrator: {fileID: 724854561}
 --- !u!1 &1259141700
 GameObject:
   m_ObjectHideFlags: 0
