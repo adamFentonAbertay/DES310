@@ -34,11 +34,11 @@ public class Floor_Check : MonoBehaviour
             {
                 case "side1":
                     Debug.Log("dice roll : 6");
-                    Dice_Text.diceNumber = 6;
+                    Dice_Text.diceNumber = 2;
                     break;
                 case "side2":
                     Debug.Log("dice roll : 5");
-                    Dice_Text.diceNumber = 5;
+                    Dice_Text.diceNumber = 3;
                     break;
                 case "side3":
                     Debug.Log("dice roll : 4");
@@ -65,11 +65,11 @@ public class Floor_Check : MonoBehaviour
             {
                 case "side1_2":
                     Debug.Log("dice roll : 6");
-                    Dice_Text.diceNumber2 = 6;
+                    Dice_Text.diceNumber2 = 2;
                     break;
                 case "side2_2":
                     Debug.Log("dice roll : 5");
-                    Dice_Text.diceNumber2 = 5;
+                    Dice_Text.diceNumber2 = 3;
                     break;
                 case "side3_2":
                     Debug.Log("dice roll : 4");
