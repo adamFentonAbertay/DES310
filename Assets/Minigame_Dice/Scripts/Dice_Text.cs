@@ -9,10 +9,12 @@ public class Dice_Text : MonoBehaviour
     public TextMeshProUGUI diceText;
     public TextMeshProUGUI rerollText;
     public static int diceNumber;
+    public static int crossNumber;
 
     public TextMeshProUGUI diceText2;
     public TextMeshProUGUI rerollText2;
     public static int diceNumber2;
+    public static int crossNumber2;
 
     public Dice d1;
     public Dice2 d2;
