@@ -11,6 +11,7 @@ public class buttonPress : MonoBehaviour
     public GameObject AIPlayerHolder;
     public GameObject mainMenuHolder;
     public GameObject settingsMenuHolder;
+    public GameObject scenarioMenuHolder;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +39,7 @@ public class buttonPress : MonoBehaviour
         mainMenuHolder.SetActive(false);
         settingsMenuHolder.SetActive(false);
         AIPlayerHolder.SetActive(false);
+        scenarioMenuHolder.SetActive(false);
     }
 
     //Uses buttons On Clock - SendMessage to envoke
@@ -48,9 +50,17 @@ public class buttonPress : MonoBehaviour
         
     }
 
+    void scenarioResponse()
+    {
+        hideAllUI();
+        scenarioMenuHolder.SetActive(true);
+        Debug.Log("scenario called");
+        //SceneManager.LoadSceneAsync()
+    }
+
     void menuResponse()
     {
-        Debug.Log("how to play called");
+        Debug.Log("menu called");
         SceneManager.LoadSceneAsync("Startup");
     }
     void ARResponse()
