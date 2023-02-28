@@ -46,6 +46,8 @@ public class DialogueManager : MonoBehaviour
         else if (dialoguesScenarios[textCountTracker] == "RESUME")
         {
             resumeDialogue();
+            textCountTracker++;
+            StartCoroutine(TypeDialogue(dialoguesScenarios[textCountTracker]));
         }
         else
         {
@@ -57,13 +59,14 @@ public class DialogueManager : MonoBehaviour
     //make invisible without setactive? maybe causing memory leak as still being used?
     //think memory leaks are the couroutines tbf
 
+    //having play in here causes a memory leak bruh
     public void resumeDialogue()
     {
         Debug.Log("resume dialogue");
         dialogueBox.SetActive(true);
         Narrator.enabled = true;
         clickableCollider.SetActive(true);
-        //playDialgoue();
+       
     }
     public void disableDialogue()
     {
