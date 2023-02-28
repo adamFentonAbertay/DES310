@@ -1130,6 +1130,8 @@ MonoBehaviour:
     pudgy one.
   - Once a tile is reached in the board game that is not revaled, it should be tapped
     on within the app to progress the story.
+  - DISABLE
+  - Oh shit oh shit oh shit! This is weird..
   sfx: {fileID: 1882796566}
   clickableCollider: {fileID: 1025779402}
   Narrator: {fileID: 724854561}
