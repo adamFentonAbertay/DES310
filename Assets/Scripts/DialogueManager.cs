@@ -13,19 +13,39 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI dialogueText;
     [SerializeField] int lettersPerSecond = 10;
     [SerializeField] string[] dialoguesScenarios;
+    [SerializeField] AudioSource sfx;
     public RawImage Narrator;
     private int textCountTracker = 0;
     private bool NarratorMovementFlipFlop = true;
     
     public void showDialogue()
     {
+        dialogueBox.SetActive(true);
+        Narrator.enabled = true;
+        playDialgoue();
+    }
+
+    public void playDialgoue()
+    {
         StopAllCoroutines();
         Narrator.transform.position.Set(300, 100, 200);
-       
-        Debug.Log("show dialgoue");
-        dialogueBox.SetActive(true);
-        StartCoroutine(TypeDialogue(dialoguesScenarios[textCountTracker]));
-        textCountTracker++;
+
+        Debug.Log("play dialgoue");
+        if (dialoguesScenarios[textCountTracker] == "HIDE")
+        {
+            hideDialogue();
+        }
+        else
+        {
+            StartCoroutine(TypeDialogue(dialoguesScenarios[textCountTracker]));
+            textCountTracker++;
+        }
+    }
+
+    public void hideDialogue()
+    {
+        dialogueBox.SetActive(false);
+        Narrator.enabled = false;
     }
 
     public IEnumerator TypeDialogue(string dialogue)
@@ -33,6 +53,7 @@ public class DialogueManager : MonoBehaviour
         dialogueText.text = "";
         foreach (var letter in dialogue.ToCharArray())
         {
+            sfx.Play();
             if (NarratorMovementFlipFlop == true)
             {
                 Debug.Log("flip");
