@@ -54,6 +54,8 @@ public class DialogueManager : MonoBehaviour
         }
         textCountTracker++;
     }
+    //make invisible without setactive? maybe causing memory leak as still being used?
+    //think memory leaks are the couroutines tbf
 
     public void resumeDialogue()
     {
@@ -61,10 +63,11 @@ public class DialogueManager : MonoBehaviour
         dialogueBox.SetActive(true);
         Narrator.enabled = true;
         clickableCollider.SetActive(true);
-        playDialgoue();
+        //playDialgoue();
     }
     public void disableDialogue()
     {
+        StopAllCoroutines();
         Debug.Log("disable dialogue");
         dialogueBox.SetActive(false);
         Narrator.enabled = false;
@@ -74,8 +77,10 @@ public class DialogueManager : MonoBehaviour
 
     public void hideDialogue()
     {
+        StopAllCoroutines();
         Debug.Log("hide dialogue");
         dialogueBox.SetActive(false);
+     
         Narrator.enabled = false;
         clickableCollider.SetActive(true);
     }
@@ -90,16 +95,14 @@ public class DialogueManager : MonoBehaviour
             sfx.Play();
             if (NarratorMovementFlipFlop == true)
             {
-                Debug.Log("flip");
                 float posX = Narrator.transform.position.x;
                 float posZ = Narrator.transform.position.z;
-                Narrator.transform.position.Set(posX, 100, posZ);
+                Narrator.gameObject.transform.position.Set(posX, 100, posZ);
                 NarratorMovementFlipFlop = false;
                 
             }
             else
             {
-                Debug.Log("flop");
                 float posX = Narrator.transform.position.x;
                 float posZ = Narrator.transform.position.z;
                 Narrator.transform.position.Set(posX, -100, posZ);
@@ -112,6 +115,10 @@ public class DialogueManager : MonoBehaviour
             if (dialogueText.text.EndsWith(".") || dialogueText.text.EndsWith("?") || dialogueText.text.EndsWith("!"))
             {
                 yield return new WaitForSeconds(PunctuationPauseTime);
+            }
+            if (dialogueText.text.EndsWith(","))
+            {
+                yield return new WaitForSeconds(PunctuationPauseTime / 2);
             }
             yield return new WaitForSeconds(1f / lettersPerSecond);
         }
