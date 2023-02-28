@@ -20,6 +20,7 @@ public class DialogueManager : MonoBehaviour
     
     public void showDialogue()
     {
+
         dialogueBox.SetActive(true);
         Narrator.enabled = true;
         playDialgoue();
@@ -38,8 +39,9 @@ public class DialogueManager : MonoBehaviour
         else
         {
             StartCoroutine(TypeDialogue(dialoguesScenarios[textCountTracker]));
-            textCountTracker++;
+            
         }
+        textCountTracker++;
     }
 
     public void hideDialogue()
@@ -72,7 +74,13 @@ public class DialogueManager : MonoBehaviour
                 NarratorMovementFlipFlop = true;
                 
             }
+           
             dialogueText.text += letter;
+            //pause longer on full stops
+            //if (letter = ".")
+            //{
+
+            //}
             yield return new WaitForSeconds(1f / lettersPerSecond);
         }
 
