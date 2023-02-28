@@ -12,8 +12,10 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] GameObject dialogueBox;
     [SerializeField] TextMeshProUGUI dialogueText;
     [SerializeField] int lettersPerSecond = 10;
+    [SerializeField] float PunctuationPauseTime = .8f;
     [SerializeField] string[] dialoguesScenarios;
     [SerializeField] AudioSource sfx;
+    [SerializeField] GameObject clickableCollider;
     public RawImage Narrator;
     private int textCountTracker = 0;
     private bool NarratorMovementFlipFlop = true;
@@ -32,9 +34,18 @@ public class DialogueManager : MonoBehaviour
         Narrator.transform.position.Set(300, 100, 200);
 
         Debug.Log("play dialgoue");
-        if (dialoguesScenarios[textCountTracker] == "HIDE")
+
+         if (dialoguesScenarios[textCountTracker] == "HIDE")
         {
             hideDialogue();
+        }
+        else if (dialoguesScenarios[textCountTracker] == "DISABLE")
+        {
+            disableDialogue();
+        }
+        else if (dialoguesScenarios[textCountTracker] == "RESUME")
+        {
+            resumeDialogue();
         }
         else
         {
@@ -44,11 +55,32 @@ public class DialogueManager : MonoBehaviour
         textCountTracker++;
     }
 
-    public void hideDialogue()
+    public void resumeDialogue()
     {
+        Debug.Log("resume dialogue");
+        dialogueBox.SetActive(true);
+        Narrator.enabled = true;
+        clickableCollider.SetActive(true);
+        playDialgoue();
+    }
+    public void disableDialogue()
+    {
+        Debug.Log("disable dialogue");
         dialogueBox.SetActive(false);
         Narrator.enabled = false;
+        clickableCollider.SetActive(false);
+       
     }
+
+    public void hideDialogue()
+    {
+        Debug.Log("hide dialogue");
+        dialogueBox.SetActive(false);
+        Narrator.enabled = false;
+        clickableCollider.SetActive(true);
+    }
+
+    
 
     public IEnumerator TypeDialogue(string dialogue)
     {
@@ -77,10 +109,10 @@ public class DialogueManager : MonoBehaviour
            
             dialogueText.text += letter;
             //pause longer on full stops
-            //if (letter = ".")
-            //{
-
-            //}
+            if (dialogueText.text.EndsWith(".") || dialogueText.text.EndsWith("?") || dialogueText.text.EndsWith("!"))
+            {
+                yield return new WaitForSeconds(PunctuationPauseTime);
+            }
             yield return new WaitForSeconds(1f / lettersPerSecond);
         }
 
