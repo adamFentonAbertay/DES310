@@ -33,28 +33,34 @@ public class Floor_Check : MonoBehaviour
             switch (other.gameObject.name)
             {
                 case "side1":
-                    Debug.Log("dice roll : 6");
+                    Debug.Log("dice roll : 2");
                     Dice_Text.diceNumber = 2;
+                    Dice_Text.crossNumber = 3;
                     break;
                 case "side2":
-                    Debug.Log("dice roll : 5");
+                    Debug.Log("dice roll : 3");
                     Dice_Text.diceNumber = 3;
+                    Dice_Text.crossNumber = 2;
                     break;
                 case "side3":
                     Debug.Log("dice roll : 4");
                     Dice_Text.diceNumber = 4;
+                    Dice_Text.crossNumber = 1;
                     break;
                 case "side4":
                     Debug.Log("dice roll : 3");
                     Dice_Text.diceNumber = 3;
+                    Dice_Text.crossNumber = 2;
                     break;
                 case "side5":
                     Debug.Log("dice roll : 2");
                     Dice_Text.diceNumber = 2;
+                    Dice_Text.crossNumber = 3;
                     break;
                 case "side6":
                     Debug.Log("dice roll : 1");
                     Dice_Text.diceNumber = 1;
+                    Dice_Text.crossNumber = 4;
                     break;
             }
         }
@@ -64,28 +70,34 @@ public class Floor_Check : MonoBehaviour
             switch (other.gameObject.name)
             {
                 case "side1_2":
-                    Debug.Log("dice roll : 6");
+                    Debug.Log("dice roll : 2");
                     Dice_Text.diceNumber2 = 2;
+                    Dice_Text.crossNumber2 = 3;
                     break;
                 case "side2_2":
-                    Debug.Log("dice roll : 5");
+                    Debug.Log("dice roll : 3");
                     Dice_Text.diceNumber2 = 3;
+                    Dice_Text.crossNumber2 = 2;
                     break;
                 case "side3_2":
                     Debug.Log("dice roll : 4");
                     Dice_Text.diceNumber2 = 4;
+                    Dice_Text.crossNumber2 = 1;
                     break;
                 case "side4_2":
                     Debug.Log("dice roll : 3");
                     Dice_Text.diceNumber2 = 3;
+                    Dice_Text.crossNumber2 = 2;
                     break;
                 case "side5_2":
                     Debug.Log("dice roll : 2");
                     Dice_Text.diceNumber2 = 2;
+                    Dice_Text.crossNumber2 = 3;
                     break;
                 case "side6_2":
                     Debug.Log("dice roll : 1");
                     Dice_Text.diceNumber2 = 1;
+                    Dice_Text.crossNumber2 = 4;
                     break;
             }
         }

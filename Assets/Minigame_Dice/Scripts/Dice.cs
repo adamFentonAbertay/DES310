@@ -25,7 +25,7 @@ public class Dice : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (diceVelocity.x == 0 && diceVelocity.y == 0 && diceVelocity.z == 0)
+        if (diceVelocity.x == 0 && diceVelocity.y == 0 && diceVelocity.z == 0 && diceland == false)
         {
             Debug.Log("land !!");
             diceland = true;
@@ -38,6 +38,7 @@ public class Dice : MonoBehaviour
         {
             Roll();
         }
+
     }
 
     // Update is called once per frame
