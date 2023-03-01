@@ -6,6 +6,11 @@ using TMPro;
 using System.Runtime.CompilerServices;
 using UnityEngine.XR.OpenXR.Input;
 
+//DOCS
+//To interact with this system, use the array for text within the scripts component.
+//Key messages HIDE, DISABLE, and RESUME are used to control the AI character.
+//To show the screen and bring text back on tap, use HIDE and then RESUME
+//To make the narrator stop compltely, use DISABLE and then call RESUME from whatever action you want narration to start from.
 public class DialogueManager : MonoBehaviour
 {
     // Start is called before the first frame update

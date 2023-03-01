@@ -58,6 +58,12 @@ public class buttonPress : MonoBehaviour
         //SceneManager.LoadSceneAsync()
     }
 
+    void scenario1ButResponse()
+    {
+        Debug.Log("Scenario 1 called");
+        SceneManager.LoadSceneAsync("Scenario 1");
+    }
+
     void menuResponse()
     {
         Debug.Log("menu called");

@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Minigame_Dice/Dice.unity
     guid: 9f55a3c1c0d361445851dce9b7db54c9
+  - enabled: 1
+    path: Assets/Scenes/Scenario 1.unity
+    guid: 31cc37a8ee7f18045ae3c2f9218a74f1
   m_configObjects:
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 744b813df90924c169af73489b8325de,
       type: 2}
