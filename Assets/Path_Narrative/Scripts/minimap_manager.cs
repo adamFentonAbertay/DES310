@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using Debug = UnityEngine.Debug;
 
 public class minimap_manager : MonoBehaviour
 {
@@ -11,10 +12,9 @@ public class minimap_manager : MonoBehaviour
     public static int[] gridId = new int[48];
 
     public Button unknow_button;
+    public Button[] monster_Button;
+    public Button[] chance_Button;
 
-    public GameObject Canvas;
-    public GameObject monster_button;
-    //public Button mb1,mb2,mb3,mb4,mb5,mb6,mb7,mb8,mb9,mb10;
     private bool map_show = false;
 
     // Start is called before the first frame update
@@ -22,9 +22,8 @@ public class minimap_manager : MonoBehaviour
     {
 
         Map_init();
+        
 
-      GameObject mb = Instantiate(monster_button, grid[2].transform.position, Quaternion.identity) as GameObject;
-                 mb.transform.SetParent(Canvas.transform, false);
     }
 
     // Update is called once per frame
@@ -32,24 +31,52 @@ public class minimap_manager : MonoBehaviour
     {
         if (map_show)
         {
+            bool[] mbutton_used = new bool[monster_Button.Length];
+            bool[] cbutton_used = new bool[chance_Button.Length];
+
             for (int i = 0; i < gridId.Length; i++)
             {
                 grid[i].sprite = gridSprite[gridId[i]];
-            }
-        }
 
-        //grid[2].transform.position = grid[3].transform.position;
+                if (gridId[i] == 1)
+                {
+                    for (int j = 0; j < monster_Button.Length; j++)
+                    {
+                        if (!cbutton_used[j])
+                        {
+                            cbutton_used[j] = true;
+                            chance_Button[j].transform.position = grid[i].transform.position;
+                            break;
+                        }
+                    }
+                }
+                if (gridId[i] == 2)
+                {
+                    for(int j = 0; j < monster_Button.Length; j++)
+                    {
+                        if (!mbutton_used[j])
+                        {
+                            mbutton_used[j] = true;
+                            monster_Button[j].transform.position = grid[i].transform.position;
+                            break;
+                        } 
+                    }
+                }
+            }
+
+
+        }
     }
 
     void Map_init()
     {
-        int[] tempMap = {4,0,2,0,0,4,
-                         4,0,0,0,0,4,
+        int[] tempMap = {4,0,2,0,1,4,
+                         4,0,1,0,0,4,
                          4,0,0,1,0,4,
-                         4,0,0,0,0,4,
-                         4,0,0,0,0,4,
-                         4,0,0,0,0,4,
-                         4,0,0,0,0,4,
+                         4,0,2,1,0,4,
+                         4,0,0,0,2,4,
+                         4,0,1,0,2,4,
+                         4,0,2,1,0,4,
                          4,0,0,0,0,4};
 
         for (int i = 0; i < gridId.Length; i++)

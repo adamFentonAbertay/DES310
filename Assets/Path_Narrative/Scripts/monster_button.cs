@@ -17,7 +17,8 @@ public class monster_button : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        gameObject.transform.position.Set(Mathf.Sin(Time.time * speed) * amount, Mathf.Sin(Time.time * speed) * amount, Mathf.Sin(Time.time * speed) * amount);
+       gameObject.transform.position.Set(Mathf.Sin(Time.time * speed) * amount, Mathf.Sin(Time.time * speed) * amount, Mathf.Sin(Time.time * speed) * amount);
+       // gameObject.transform.position.Set(gameObject.transform.position.x+1, gameObject.transform.position.y, gameObject.transform.position.z);
     }
 
    public void monster_click()
