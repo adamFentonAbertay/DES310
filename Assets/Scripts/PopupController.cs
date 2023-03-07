@@ -8,7 +8,7 @@ public class PopupController : MonoBehaviour
 
     [SerializeField] private RawImage popupImage;
     [SerializeField] private TMPro.TextMeshProUGUI popupText;
-    
+    [SerializeField] private TMPro.TextMeshProUGUI popupDesc;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +19,10 @@ public class PopupController : MonoBehaviour
     {
         Debug.Log(toDisplay.name);
         popupText.text = toDisplay.name;
-        popupImage.texture = toDisplay.GetComponent<RawImage>().texture;        
+        popupImage.texture = toDisplay.GetComponent<RawImage>().texture;
+        popupDesc.text = toDisplay.GetComponentInChildren<Text>().text;
+       // Debug.Log(toDisplay.GetComponentInChildren<Text>().text);
+
     }
     
   
