@@ -9,11 +9,14 @@ public class historyManager : MonoBehaviour
     public GameObject templatePrefab;
     public GameObject templatesParent;
     public GameObject popupBordRef;
-    private UnityAction HideHistoryAction;
+   
     public GameObject itemManager;
 
     // Start is called before the first frame update
     private GameObject history;
+
+
+    private UnityAction HideHistoryAction;
 
     public void creteHistoryItem(GameObject toDisplay)
     {
@@ -31,6 +34,7 @@ public class historyManager : MonoBehaviour
             //onclick disable this gameobject
             //activate popup border gameobject
             //popupcontroller.popupshow gameobject
+
     }
 
     void popup()
@@ -38,8 +42,14 @@ public class historyManager : MonoBehaviour
         popupBordRef.SetActive(true);
         for (int i = 0; i < itemManager.GetComponent<ItemEnabler>().itemArray.Length; i++)
         {
-            itemManager.GetComponent<ItemEnabler>().itemArray[i].name = newObj.name;
-            popupBordRef.GetComponentInChildren<PopupController>().popupShow(itemManager.GetComponent<ItemEnabler>().itemArray[i]);
+            //scripts running in panel n not the object BRUH
+            Debug.Log(name);
+            Debug.Log(itemManager.GetComponent<ItemEnabler>().itemArray[i].name);
+            //   if (itemManager.GetComponent<ItemEnabler>().itemArray[i].GetComponent<RawImage>().texture == gameObject.GetComponent<RawImage>().texture)
+            if (itemManager.GetComponent<ItemEnabler>().itemArray[i].name == name)
+            {
+                popupBordRef.GetComponentInChildren<PopupController>().popupShow(itemManager.GetComponent<ItemEnabler>().itemArray[i]);
+            }
             //search for NAME SEARCH FOR NAME GOD DAMN
         }
 
