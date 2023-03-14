@@ -7,6 +7,9 @@ using Debug = UnityEngine.Debug;
 
 public class minimap_manager : MonoBehaviour
 {
+    Vector3 touchStart;
+    Vector3 dir;
+
     public Image[] grid;
     public Sprite[] gridSprite;
     public static int[] gridId = new int[48];
@@ -16,13 +19,13 @@ public class minimap_manager : MonoBehaviour
     public Button[] chance_Button;
 
     public Image image;
-    public static int map_type =0;
+    public static int map_type =1;
     private bool map_show = false;
 
     // Start is called before the first frame update
     void Start()
     {
-       /* int[] tempMap2 = {        4,0,2,0,1,4,4,4,
+       /* int[] tempMap2 = {      4,0,2,0,1,4,4,4,
                                   4,0,0,4,4,0,0,4,
                                   4,4,4,0,2,1,0,4,
                                   4,0,0,0,2,4,4,4,
@@ -44,6 +47,20 @@ public class minimap_manager : MonoBehaviour
     void Update()
     {
 
+        if (Input.GetMouseButtonDown(0))
+        {
+            touchStart = Camera.main.ScreenToViewportPoint(Input.mousePosition);
+            if (Input.deviceOrientation == DeviceOrientation.LandscapeLeft) {
+                Debug.Log("touch!!");
+            }
+
+        }
+        if (Input.GetMouseButton(0))
+        {
+            dir = touchStart - Camera.main.ScreenToViewportPoint(Input.mousePosition);
+            Camera.main.transform.position += dir*5;
+        }
+        zoom(Input.GetAxis("Mouse ScrollWheel") * 20);
 
     }
 
@@ -142,5 +159,10 @@ public class minimap_manager : MonoBehaviour
             map_show = false;
             unknow_button.gameObject.SetActive(true);
         }
+    }
+
+    void zoom(float increment)
+    {
+        Camera.main.orthographicSize = Mathf.Clamp(Camera.main.orthographicSize - increment, 1.0f, 700.0f);
     }
 }

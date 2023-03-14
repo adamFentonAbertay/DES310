@@ -35,11 +35,11 @@ public class Fullmap_manager : MonoBehaviour
         {
             if (map_vivwed[i])
             {
-                map_Button[i].GetComponent<Image>().sprite = map_Image[0];
+                map_Button[i].GetComponent<Image>().sprite = map_Image[1];
             }
             else
             {
-                map_Button[i].GetComponent<Image>().sprite = map_Image[1];
+                map_Button[i].GetComponent<Image>().sprite = map_Image[0];
             }
         }
 
