@@ -12,12 +12,17 @@ public class Fullmap_manager : MonoBehaviour
 
     public Button[] map_Button;
     public Sprite[] map_Image;
+    public GameObject[] messages;
+  
+
+
     private int[] map_id = new int[7];
     public static bool[] map_vivwed = new bool[7];
 
     // Start is called before the first frame update
     void Start()
     {
+       
         map_id[0] = 2;
         map_id[3] = 2;
         map_id[6] = 2;
@@ -79,6 +84,7 @@ public class Fullmap_manager : MonoBehaviour
 
                 minimap_manager.map_type = 0;
 
+           
                 int[] tempMap = {4,0,2,0,1,4,
                                  4,0,1,0,0,4,
                                  4,0,0,1,0,4,
@@ -89,11 +95,14 @@ public class Fullmap_manager : MonoBehaviour
                                  4,0,0,0,0,4};
 
                 
-
+              
                 for (int i = 0; i < minimap_manager.gridId.Length; i++)
                 {
                     minimap_manager.gridId[i] = tempMap[i];
                 }
+
+                minimap_manager.onLoadMessages = messages[0].GetComponent<TileTextHolder>().onLoadMessages;
+
                 break;
             case 2:
 
@@ -112,6 +121,10 @@ public class Fullmap_manager : MonoBehaviour
                 {
                     minimap_manager.gridId[i] = tempMap2[i];
                 }
+
+               
+                 minimap_manager.onLoadMessages = messages[1].GetComponent<TileTextHolder>().onLoadMessages;
+              
 
                 break;
         }

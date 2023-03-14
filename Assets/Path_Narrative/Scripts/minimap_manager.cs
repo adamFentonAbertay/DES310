@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine.UI;
 using Debug = UnityEngine.Debug;
 
+
 public class minimap_manager : MonoBehaviour
 {
     public Image[] grid;
@@ -14,7 +15,9 @@ public class minimap_manager : MonoBehaviour
     public Button unknow_button;
     public Button[] monster_Button;
     public Button[] chance_Button;
+    public GameObject NarratorSceneDialogue;
 
+    public static List<string> onLoadMessages;
     public Image image;
     public static int map_type =0;
     private bool map_show = false;
@@ -54,9 +57,11 @@ public class minimap_manager : MonoBehaviour
         bool[] mbutton_used = new bool[monster_Button.Length];
         bool[] cbutton_used = new bool[chance_Button.Length];
 
+        NarratorSceneDialogue.GetComponent<DialogueManager>().dialoguesScenarios = onLoadMessages;
 
+   
 
-        if(map_type == 1)
+        if (map_type == 1)
         {
             int[] rotmap =
 {

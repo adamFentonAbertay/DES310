@@ -18,7 +18,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI dialogueText;
     [SerializeField] int lettersPerSecond = 10;
     [SerializeField] float PunctuationPauseTime = .8f;
-    [SerializeField] string[] dialoguesScenarios;
+    public List<string> dialoguesScenarios;
     [SerializeField] AudioSource sfx;
     [SerializeField] GameObject clickableCollider;
     public RawImage Narrator;
