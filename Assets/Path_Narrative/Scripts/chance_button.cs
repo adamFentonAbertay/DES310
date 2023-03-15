@@ -17,8 +17,13 @@ public class chance_button : MonoBehaviour
         
     }
 
+
+
     public void chance_click()
     {
         Debug.Log("chance card !!!!!");
     }
+
+
+ 
 }

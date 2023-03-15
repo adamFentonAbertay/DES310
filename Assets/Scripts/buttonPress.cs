@@ -61,7 +61,7 @@ public class buttonPress : MonoBehaviour
     void scenario1ButResponse()
     {
         Debug.Log("Scenario 1 called");
-        SceneManager.LoadSceneAsync("Scenario 1");
+        SceneManager.LoadSceneAsync("Full_map");
     }
 
     void menuResponse()

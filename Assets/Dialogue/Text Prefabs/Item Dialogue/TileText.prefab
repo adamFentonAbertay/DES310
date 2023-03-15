@@ -45,5 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onLoadMessages:
-  - YOOOO
+  - Dialogue for this item interaction
+  - What has happend now
   - DISABLE

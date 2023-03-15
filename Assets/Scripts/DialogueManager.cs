@@ -25,6 +25,12 @@ public class DialogueManager : MonoBehaviour
     private int textCountTracker = 0;
     private bool NarratorMovementFlipFlop = true;
     
+
+    public void setDialogue(GameObject textPrefabHolder)
+    {
+        textCountTracker = 0;
+        dialoguesScenarios = textPrefabHolder.GetComponent<TileTextHolder>().onLoadMessages;
+    }
     public void showDialogue()
     {
 

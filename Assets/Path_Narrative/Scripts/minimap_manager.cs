@@ -76,7 +76,7 @@ public class minimap_manager : MonoBehaviour
         };
             for (int i = 0; i < gridId.Length; i++)
             {
-                gridId[i] = rotmap[i];
+               
             }
 
             image.gameObject.transform.Rotate(0, 0, 90);
@@ -107,6 +107,7 @@ public class minimap_manager : MonoBehaviour
                     {
                         cbutton_used[j] = true;
                         chance_Button[j].transform.position = grid[i].transform.position;
+                        Debug.Log("popup?");
                         break;
                     }
                 }
