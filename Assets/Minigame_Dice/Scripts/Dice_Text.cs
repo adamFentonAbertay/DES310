@@ -32,7 +32,7 @@ public class Dice_Text : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        diceText.text = diceNumber.ToString();
+        
         if(d1.gameObject.activeSelf)
         {
             diceText.enabled = true;
@@ -40,6 +40,8 @@ public class Dice_Text : MonoBehaviour
             rerollText.enabled = true;
             rerollButton.enabled = true;
             rerollButton.gameObject.SetActive(true);
+
+
             if (d1.reRoll > 0)
             {
                 rerollText.text = d1.reRoll.ToString();
@@ -48,6 +50,15 @@ public class Dice_Text : MonoBehaviour
             {
                 rerollText.text = "None";
             }
+
+            if (Dice_Mode.dice_mode != 2)
+            {
+                diceText.text = diceNumber.ToString();
+            } else if(Dice_Mode.dice_mode == 2)
+            {
+                diceText.text = (Dice_Text.diceNumber+ Dice_Text.diceNumber2).ToString();
+            }
+            
         }
         else
         {
@@ -64,7 +75,9 @@ public class Dice_Text : MonoBehaviour
             rollText2.enabled = true;
             rerollText2.enabled = true;
             rerollButton2.gameObject.SetActive(true);
-            diceText2.text = diceNumber2.ToString();
+            
+
+
             if (d2.reRoll > 0)
             {
                 rerollText2.text = d2.reRoll.ToString();
@@ -73,6 +86,16 @@ public class Dice_Text : MonoBehaviour
             {
                 rerollText2.text = "None";
             }
+
+            if (Dice_Mode.dice_mode != 2)
+            {
+                diceText2.text = diceNumber2.ToString();
+            }
+            else if (Dice_Mode.dice_mode == 2)
+            {
+                diceText2.text = (Dice_Text.crossNumber + Dice_Text.crossNumber2).ToString();
+            }
+
         }
         else
         {

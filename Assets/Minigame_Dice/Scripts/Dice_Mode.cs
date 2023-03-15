@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using Debug = UnityEngine.Debug;
 
@@ -62,6 +63,7 @@ public class Dice_Mode : MonoBehaviour
 
     public void Mode_button_pressed()
     {
+        
         if (mode_button)
         {
             mode_button = false;
