@@ -13,8 +13,6 @@ public class historyManager : MonoBehaviour
     public GameObject itemManager;
 
     // Start is called before the first frame update
-    private GameObject history;
-
 
     private UnityAction HideHistoryAction;
 

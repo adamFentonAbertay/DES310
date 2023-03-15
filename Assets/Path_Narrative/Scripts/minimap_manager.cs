@@ -107,7 +107,7 @@ public class minimap_manager : MonoBehaviour
                     {
                         cbutton_used[j] = true;
                         chance_Button[j].transform.position = grid[i].transform.position;
-                        Debug.Log("popup?");
+         
                         break;
                     }
                 }

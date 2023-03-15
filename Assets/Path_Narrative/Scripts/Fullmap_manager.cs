@@ -85,6 +85,12 @@ public class Fullmap_manager : MonoBehaviour
                 minimap_manager.map_type = 0;
 
            
+                //0 - blank space
+                //1 - question mark
+                //2 - monster
+
+
+
                 int[] tempMap = {4,0,2,0,1,4,
                                  4,0,1,0,0,4,
                                  4,0,0,1,0,4,
