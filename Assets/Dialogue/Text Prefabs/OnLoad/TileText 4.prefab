@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6193564637059511707}
   - component: {fileID: 8337466559176050391}
   m_Layer: 0
-  m_Name: TileText 2
+  m_Name: TileText 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,6 +45,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onLoadMessages:
-  - This rooms seems to be some sort of... breakfast diner?
-  - Oh no look out! Breakfast slimes!
+  - HHOWW DARE YOU CRASH MY BIRTHDAY PARTY? PREPARE TO BE CRUSHED!
   - DISABLE

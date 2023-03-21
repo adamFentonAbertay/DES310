@@ -58,8 +58,9 @@ public class minimap_manager : MonoBehaviour
         bool[] cbutton_used = new bool[chance_Button.Length];
 
         NarratorSceneDialogue.GetComponent<DialogueManager>().dialoguesScenarios = onLoadMessages;
+        NarratorSceneDialogue.GetComponent<DialogueManager>().resumeDialogue();
 
-   
+
 
         if (map_type == 1)
         {
@@ -76,7 +77,7 @@ public class minimap_manager : MonoBehaviour
         };
             for (int i = 0; i < gridId.Length; i++)
             {
-               
+                gridId[i] = rotmap[i];
             }
 
             image.gameObject.transform.Rotate(0, 0, 90);

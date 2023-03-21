@@ -92,6 +92,7 @@ GameObject:
   - component: {fileID: 8451987132748247437}
   - component: {fileID: 3966523832459656778}
   - component: {fileID: 6118452145110705414}
+  - component: {fileID: 3901373790083721694}
   m_Layer: 5
   m_Name: Ethically Sourced Boots (+2)
   m_TagString: Untagged
@@ -135,7 +136,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7292151729833224801}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
   m_Name: 
@@ -155,3 +156,19 @@ MonoBehaviour:
     y: 0
     width: 1
     height: 1
+--- !u!114 &3901373790083721694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7292151729833224801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b970a176c0ec694ea00ca481b2170e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onLoadMessages:
+  - What lovely shoes!
+  - These would look great next to my jar of unethically sourced oil!
+  - DISABLE

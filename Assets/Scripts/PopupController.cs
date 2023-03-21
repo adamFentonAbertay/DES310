@@ -18,6 +18,7 @@ public class PopupController : MonoBehaviour
 
     public void popupShow(GameObject toDisplay)
     {
+        Debug.Log("popup show");
         Debug.Log(toDisplay.name);
         popupText.text = toDisplay.name;
         popupImage.texture = toDisplay.GetComponent<RawImage>().texture;
@@ -32,6 +33,7 @@ public class PopupController : MonoBehaviour
 
     private void popupHistory(GameObject toDisplay)
     {
+        Debug.Log("history add");
         if (toDisplay.GetComponentInChildren<RawImage>().enabled == true)
         {
             Debug.Log("first find of this object.");

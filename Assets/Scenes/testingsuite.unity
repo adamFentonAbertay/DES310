@@ -2556,7 +2556,8 @@ MonoBehaviour:
   PunctuationPauseTime: 0.8
   dialoguesScenarios:
   - Welcome adventurers to Scenario 1. Are you ready for the adventure of your lifetime?
-  - DISABLE
+  - HIDE
+  - RESUME
   sfx: {fileID: 715208438}
   clickableCollider: {fileID: 968560532}
   Narrator: {fileID: 876976058}

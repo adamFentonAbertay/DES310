@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Runtime.CompilerServices;
-using UnityEngine.XR.OpenXR.Input;
 
 //DOCS
 //To interact with this system, use the array for text within the scripts component.
@@ -21,7 +20,7 @@ public class DialogueManager : MonoBehaviour
     public List<string> dialoguesScenarios;
     [SerializeField] AudioSource sfx;
     [SerializeField] GameObject clickableCollider;
-    public RawImage Narrator;
+    public GameObject Narrator;
     private int textCountTracker = 0;
     private bool NarratorMovementFlipFlop = true;
     
@@ -35,7 +34,7 @@ public class DialogueManager : MonoBehaviour
     {
 
         dialogueBox.SetActive(true);
-        Narrator.enabled = true;
+        Narrator.SetActive(true);
         playDialgoue();
     }
 
@@ -73,9 +72,10 @@ public class DialogueManager : MonoBehaviour
     //having play in here causes a memory leak bruh
     public void resumeDialogue()
     {
+        dialogueText.text = "Press to resume dialogue";
         Debug.Log("resume dialogue");
         dialogueBox.SetActive(true);
-        Narrator.enabled = true;
+        Narrator.SetActive(true);
         clickableCollider.SetActive(true);
        
     }
@@ -84,7 +84,7 @@ public class DialogueManager : MonoBehaviour
         StopAllCoroutines();
         Debug.Log("disable dialogue");
         dialogueBox.SetActive(false);
-        Narrator.enabled = false;
+        Narrator.SetActive(false);
         clickableCollider.SetActive(false);
        
     }
@@ -94,8 +94,8 @@ public class DialogueManager : MonoBehaviour
         StopAllCoroutines();
         Debug.Log("hide dialogue");
         dialogueBox.SetActive(false);
-     
-        Narrator.enabled = false;
+
+        Narrator.SetActive(false);
         clickableCollider.SetActive(true);
     }
 

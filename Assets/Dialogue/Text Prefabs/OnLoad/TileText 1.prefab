@@ -45,5 +45,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onLoadMessages:
-  - Text for layout for board piece 0 (Horizontal)
+  - That was just a warmup! Hope you're ready!
   - DISABLE
