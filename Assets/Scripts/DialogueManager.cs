@@ -18,6 +18,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] int lettersPerSecond = 10;
     [SerializeField] float PunctuationPauseTime = .8f;
     public List<string> dialoguesScenarios;
+    public List<AudioClip> dialogueAudios;
     [SerializeField] AudioSource sfx;
     [SerializeField] GameObject clickableCollider;
     public GameObject Narrator;
@@ -29,6 +30,7 @@ public class DialogueManager : MonoBehaviour
     {
         textCountTracker = 0;
         dialoguesScenarios = textPrefabHolder.GetComponent<TileTextHolder>().onLoadMessages;
+        dialogueAudios = textPrefabHolder.GetComponent<TileTextHolder>().audios;
     }
     public void showDialogue()
     {
@@ -40,9 +42,10 @@ public class DialogueManager : MonoBehaviour
 
     public void playDialgoue()
     {
+        sfx.Stop();
         StopAllCoroutines();
         Narrator.transform.position.Set(300, 100, 200);
-
+        
         Debug.Log("play dialgoue");
 
          if (dialoguesScenarios[textCountTracker] == "HIDE")
@@ -56,13 +59,17 @@ public class DialogueManager : MonoBehaviour
         else if (dialoguesScenarios[textCountTracker] == "RESUME")
         {
             resumeDialogue();
+           
             textCountTracker++;
             StartCoroutine(TypeDialogue(dialoguesScenarios[textCountTracker]));
         }
         else
         {
+            Debug.Log(textCountTracker);
+          
             StartCoroutine(TypeDialogue(dialoguesScenarios[textCountTracker]));
             
+
         }
         textCountTracker++;
     }
@@ -104,9 +111,12 @@ public class DialogueManager : MonoBehaviour
     public IEnumerator TypeDialogue(string dialogue)
     {
         dialogueText.text = "";
+        sfx.clip = dialogueAudios[0];
+        sfx.Play();
         foreach (var letter in dialogue.ToCharArray())
         {
-            sfx.Play();
+        
+            
             if (NarratorMovementFlipFlop == true)
             {
                 float posX = Narrator.transform.position.x;

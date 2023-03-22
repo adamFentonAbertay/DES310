@@ -92,6 +92,7 @@ GameObject:
   - component: {fileID: 8451987132748247437}
   - component: {fileID: 3966523832459656778}
   - component: {fileID: 6118452145110705414}
+  - component: {fileID: 5339111893806882389}
   m_Layer: 5
   m_Name: Holy Guardian Chestplate (+3)
   m_TagString: Untagged
@@ -155,3 +156,24 @@ MonoBehaviour:
     y: 0
     width: 1
     height: 1
+--- !u!114 &5339111893806882389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7292151729833224801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b970a176c0ec694ea00ca481b2170e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onLoadMessages:
+  - No way! You found a holy guardian chestplate!
+  - Try it on!
+  - Oh look at you go! Have you ever considered modeling?
+  - DISABLE
+  audios:
+  - {fileID: 8300000, guid: a718680a1d43c1e4284a73af7cceb9ba, type: 3}
+  - {fileID: 8300000, guid: a718680a1d43c1e4284a73af7cceb9ba, type: 3}
+  - {fileID: 8300000, guid: a718680a1d43c1e4284a73af7cceb9ba, type: 3}
