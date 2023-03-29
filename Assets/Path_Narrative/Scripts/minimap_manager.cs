@@ -18,6 +18,7 @@ public class minimap_manager : MonoBehaviour
     public GameObject NarratorSceneDialogue;
 
     public static List<string> onLoadMessages;
+    public static List<AudioClip> onLoadAudios;
     public Image image;
     public static int map_type =0;
     private bool map_show = false;
@@ -58,6 +59,8 @@ public class minimap_manager : MonoBehaviour
         bool[] cbutton_used = new bool[chance_Button.Length];
 
         NarratorSceneDialogue.GetComponent<DialogueManager>().dialoguesScenarios = onLoadMessages;
+
+        NarratorSceneDialogue.GetComponent<DialogueManager>().dialogueAudios = onLoadAudios;
         NarratorSceneDialogue.GetComponent<DialogueManager>().resumeDialogue();
 
 

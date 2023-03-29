@@ -5,4 +5,5 @@ using UnityEngine;
 public class PerPopupDialogue : MonoBehaviour
 {
     public List<string> myMessages;
+    public List<AudioClip> myAudio;
 }

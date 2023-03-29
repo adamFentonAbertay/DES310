@@ -116,9 +116,9 @@ public class Fullmap_manager : MonoBehaviour
 
 
                 minimap_manager.onLoadMessages = messages[0].GetComponent<TileTextHolder>().onLoadMessages;
+                minimap_manager.onLoadAudios = messages[0].GetComponent<TileTextHolder>().audios;
 
 
-              
 
                 break;
 
@@ -154,6 +154,7 @@ public class Fullmap_manager : MonoBehaviour
 
 
                 minimap_manager.onLoadMessages = messages[1].GetComponent<TileTextHolder>().onLoadMessages;
+                minimap_manager.onLoadAudios = messages[1].GetComponent<TileTextHolder>().audios;
                 break;
 
 
@@ -192,6 +193,7 @@ public class Fullmap_manager : MonoBehaviour
                 }
 
                 minimap_manager.onLoadMessages = messages[2].GetComponent<TileTextHolder>().onLoadMessages;
+                minimap_manager.onLoadAudios = messages[2].GetComponent<TileTextHolder>().audios;
 
                 break;
 
@@ -221,6 +223,7 @@ public class Fullmap_manager : MonoBehaviour
                 }
 
                 minimap_manager.onLoadMessages = messages[3].GetComponent<TileTextHolder>().onLoadMessages;
+                minimap_manager.onLoadAudios = messages[3].GetComponent<TileTextHolder>().audios;
 
                 break;
 
@@ -253,6 +256,7 @@ public class Fullmap_manager : MonoBehaviour
 
 
                 minimap_manager.onLoadMessages = messages[4].GetComponent<TileTextHolder>().onLoadMessages;
+                minimap_manager.onLoadAudios = messages[4].GetComponent<TileTextHolder>().audios;
                 break;
 
 
@@ -289,6 +293,7 @@ public class Fullmap_manager : MonoBehaviour
 
 
                 minimap_manager.onLoadMessages = messages[5].GetComponent<TileTextHolder>().onLoadMessages;
+                minimap_manager.onLoadAudios = messages[5].GetComponent<TileTextHolder>().audios;
                 break;
 
         }

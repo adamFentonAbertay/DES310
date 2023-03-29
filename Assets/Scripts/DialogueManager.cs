@@ -31,6 +31,8 @@ public class DialogueManager : MonoBehaviour
         textCountTracker = 0;
         dialoguesScenarios = textPrefabHolder.GetComponent<TileTextHolder>().onLoadMessages;
         dialogueAudios = textPrefabHolder.GetComponent<TileTextHolder>().audios;
+        sfx.Stop();
+      
     }
     public void showDialogue()
     {
@@ -111,8 +113,15 @@ public class DialogueManager : MonoBehaviour
     public IEnumerator TypeDialogue(string dialogue)
     {
         dialogueText.text = "";
-        sfx.clip = dialogueAudios[0];
-        sfx.Play();
+        if (dialogueAudios.Count == 0)
+        {
+            Debug.Log("no audio on this popup");
+        }
+        else
+        {
+            sfx.clip = dialogueAudios[textCountTracker];
+            sfx.Play();
+        }
         foreach (var letter in dialogue.ToCharArray())
         {
         
