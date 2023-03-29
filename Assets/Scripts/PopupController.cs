@@ -16,8 +16,10 @@ public class PopupController : MonoBehaviour
        
     }
 
+    
     public void popupShow(GameObject toDisplay)
     {
+        //sets the popups images and text spaces to the values held by the game object (prefabbed)
         Debug.Log("popup show");
         Debug.Log(toDisplay.name);
         popupText.text = toDisplay.name;
@@ -26,16 +28,17 @@ public class PopupController : MonoBehaviour
         // Debug.Log(toDisplay.GetComponentInChildren<Text>().text);
         popupHistory(toDisplay);
    
-
-        //using this as a bool for if its first time being discovered as this dos not affct the rawimage
         
     }
 
     private void popupHistory(GameObject toDisplay)
     {
+        //adds opened item to history if its the first time the object has been opened
+        //does this by having PREFAB of item image enabled if its first time opened
         Debug.Log("history add");
         if (toDisplay.GetComponentInChildren<RawImage>().enabled == true)
         {
+            //create da thing les gooooo
             Debug.Log("first find of this object.");
             HistoryContainer.GetComponent<historyManager>().creteHistoryItem(toDisplay);
             toDisplay.GetComponentInChildren<RawImage>().enabled = false;

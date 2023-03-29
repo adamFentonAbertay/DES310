@@ -9,7 +9,10 @@ public class BowMechanic : MonoBehaviour
     public float speed = 10;
     private Vector2 dragBeginPosition;
     private Vector2 dragEndPosition;
- 
+
+    //deprecated, redacted, old, dead, cryin for its mumma, THIS CODE AINT BEIN USED
+
+
     // Start is called before the first frame update
     void Start()
     {

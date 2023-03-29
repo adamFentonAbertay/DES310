@@ -8,6 +8,8 @@ public class ItemEnabler : MonoBehaviour
 
     public GameObject[] itemArray;
     // Start is called before the first frame update
+  
+    //image state of prefabs used to track if its been opened - all need enabled on launch
     void Start()
     {
         for (int i = 0; i < itemArray.Length; i++)

@@ -28,6 +28,7 @@ public class DialogueManager : MonoBehaviour
 
     public void setDialogue(GameObject textPrefabHolder)
     {
+        //sets the local variables to that held in the text prefab param
         textCountTracker = 0;
         dialoguesScenarios = textPrefabHolder.GetComponent<TileTextHolder>().onLoadMessages;
         dialogueAudios = textPrefabHolder.GetComponent<TileTextHolder>().audios;
@@ -36,7 +37,7 @@ public class DialogueManager : MonoBehaviour
     }
     public void showDialogue()
     {
-
+        //enables on screen
         dialogueBox.SetActive(true);
         Narrator.SetActive(true);
         playDialgoue();
@@ -44,12 +45,13 @@ public class DialogueManager : MonoBehaviour
 
     public void playDialgoue()
     {
+        //stop what ur doing
         sfx.Stop();
         StopAllCoroutines();
-        Narrator.transform.position.Set(300, 100, 200);
+
         
         Debug.Log("play dialgoue");
-
+        //checking for dev keylogs
          if (dialoguesScenarios[textCountTracker] == "HIDE")
         {
             hideDialogue();
@@ -75,10 +77,11 @@ public class DialogueManager : MonoBehaviour
         }
         textCountTracker++;
     }
-    //make invisible without setactive? maybe causing memory leak as still being used?
-    //think memory leaks are the couroutines tbf
+    
+    //think memory leaks can be caused by couroutines be wary traveller
 
-    //having play in here causes a memory leak bruh
+   
+   
     public void resumeDialogue()
     {
         dialogueText.text = "Press to resume dialogue";
@@ -112,6 +115,7 @@ public class DialogueManager : MonoBehaviour
 
     public IEnumerator TypeDialogue(string dialogue)
     {
+        //play audio if theres audio to play
         dialogueText.text = "";
         if (dialogueAudios.Count == 0)
         {
@@ -122,26 +126,28 @@ public class DialogueManager : MonoBehaviour
             sfx.clip = dialogueAudios[textCountTracker];
             sfx.Play();
         }
+
+        //display lettr by letter ur message
         foreach (var letter in dialogue.ToCharArray())
         {
         
             
-            if (NarratorMovementFlipFlop == true)
-            {
-                float posX = Narrator.transform.position.x;
-                float posZ = Narrator.transform.position.z;
-                Narrator.gameObject.transform.position.Set(posX, 100, posZ);
-                NarratorMovementFlipFlop = false;
+            //if (NarratorMovementFlipFlop == true)
+            //{
+            //    float posX = Narrator.transform.position.x;
+            //    float posZ = Narrator.transform.position.z;
+            //    Narrator.gameObject.transform.position.Set(posX, 100, posZ);
+            //    NarratorMovementFlipFlop = false;
                 
-            }
-            else
-            {
-                float posX = Narrator.transform.position.x;
-                float posZ = Narrator.transform.position.z;
-                Narrator.transform.position.Set(posX, -100, posZ);
-                NarratorMovementFlipFlop = true;
+            //}
+            //else
+            //{
+            //    float posX = Narrator.transform.position.x;
+            //    float posZ = Narrator.transform.position.z;
+            //    Narrator.transform.position.Set(posX, -100, posZ);
+            //    NarratorMovementFlipFlop = true;
                 
-            }
+            //}
            
             dialogueText.text += letter;
             //pause longer on full stops
