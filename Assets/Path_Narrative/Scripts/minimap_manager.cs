@@ -15,7 +15,9 @@ public class minimap_manager : MonoBehaviour
     public Button unknow_button;
     public Button[] monster_Button;
     public Button[] chance_Button;
+    public Button boss_Button;
     public GameObject NarratorSceneDialogue;
+    private List<Vector3> crabPositions;
 
     public static List<string> onLoadMessages;
     public static List<AudioClip> onLoadAudios;
@@ -57,6 +59,7 @@ public class minimap_manager : MonoBehaviour
 
         bool[] mbutton_used = new bool[monster_Button.Length];
         bool[] cbutton_used = new bool[chance_Button.Length];
+        bool bossbutton_used = false;
 
         NarratorSceneDialogue.GetComponent<DialogueManager>().dialoguesScenarios = onLoadMessages;
 
@@ -128,7 +131,28 @@ public class minimap_manager : MonoBehaviour
                     }
                 }
             }
+            if (gridId[i] == 10)
+            {
+                //if (!bossbutton_used)
+                //{
+                //    bossbutton_used = true;
+                //  boss_Button.transform.position = grid[i].transform.position;
+                //Debug.Log(grid[i].transform.position);
+                //crabPositions.Add(grid[i].transform.position);
+
+                //}
+            }
         }
+
+        //getting middle of tiles for crab boss to overlay game object
+
+        //Vector3 tempPos;
+        //tempPos.x = crabPositions[2].x - crabPositions[0].x;
+        //tempPos.y = crabPositions[3].y - crabPositions[2].y;
+        //tempPos.z = boss_Button.transform.position.z;
+
+        //boss_Button.transform.position = tempPos;
+    
     }
 
     public void view_map()

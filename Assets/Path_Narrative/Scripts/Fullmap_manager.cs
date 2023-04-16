@@ -99,6 +99,7 @@ public class Fullmap_manager : MonoBehaviour
                 //7 - key door
                 //8 - cartographer floor
                 //9 - shop
+                //10 - crab boss
 
                 int[] tempMap = {0,8,0,0,0,0,8,0,
                                   0,1,0,1,1,0,1,0,
@@ -240,8 +241,8 @@ public class Fullmap_manager : MonoBehaviour
                 //                  0,0,0,0,0,0,0,0,
                 //                  0,0,0,0,0,0,0,0};
 
-                int[] tempMap5 = {4,4,4,0,0,4,4,4,
-                                  4,4,4,0,0,4,4,4,
+                int[] tempMap5 = {4,4,4,10,10,4,4,4,
+                                  4,4,4,10,10,4,4,4,
                                   0,0,0,0,0,0,1,0,
                                   1,4,9,0,8,0,4,0,
                                   0,2,4,0,0,0,2,0,

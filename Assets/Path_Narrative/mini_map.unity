@@ -907,6 +907,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: ca14869947fe5154fbe4549a557b1404, type: 3}
   - {fileID: 21300000, guid: 76d0dc7d2b4a9474f841ff8ed47fcbdc, type: 3}
   - {fileID: 21300000, guid: 0e8f7d146363a5c479080ba9f29de20d, type: 3}
+  - {fileID: 7482667652216324306, guid: 580f5afb75c8642449e02c3d22ba90dd, type: 3}
   unknow_button: {fileID: 1400335134}
   monster_Button:
   - {fileID: 2089927295}
@@ -920,6 +921,7 @@ MonoBehaviour:
   - {fileID: 322651803}
   - {fileID: 2141755764}
   - {fileID: 582289480}
+  boss_Button: {fileID: 1647846678}
   NarratorSceneDialogue: {fileID: 1894732889}
   image: {fileID: 1959599282}
 --- !u!1 &74072554
@@ -2041,7 +2043,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -324.89282, y: 497.64816}
+  m_AnchoredPosition: {x: -269, y: 533}
   m_SizeDelta: {x: 152.2143, y: 68.7036}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &193887503
@@ -2378,10 +2380,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Back
+  m_text: back
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f2d3d77a9703695439b8d26eb75d88ad, type: 2}
+  m_sharedMaterial: {fileID: 2270076701892869865, guid: f2d3d77a9703695439b8d26eb75d88ad,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2405,8 +2408,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -8462,12 +8465,12 @@ PrefabInstance:
     - target: {fileID: 8210152686130001137, guid: 217ce12c8399b074283eb5f9647e3623,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 286
+      value: -739
       objectReference: {fileID: 0}
     - target: {fileID: 8210152686130001137, guid: 217ce12c8399b074283eb5f9647e3623,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 417
+      value: -274
       objectReference: {fileID: 0}
     - target: {fileID: 8210152686130001137, guid: 217ce12c8399b074283eb5f9647e3623,
         type: 3}
@@ -8721,6 +8724,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1647846676}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1647846678 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8210152686130001148, guid: 217ce12c8399b074283eb5f9647e3623,
+    type: 3}
+  m_PrefabInstance: {fileID: 1647846676}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647846679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1647846679 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8210152686130001149, guid: 217ce12c8399b074283eb5f9647e3623,
