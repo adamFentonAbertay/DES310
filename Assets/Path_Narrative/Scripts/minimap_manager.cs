@@ -15,9 +15,11 @@ public class minimap_manager : MonoBehaviour
     public Button unknow_button;
     public Button[] monster_Button;
     public Button[] chance_Button;
-    public Button boss_Button;
+    public Button[] boss_Buttons;
+    public Button crab_button;
     public GameObject NarratorSceneDialogue;
     private List<Vector3> crabPositions;
+    private Vector3[] crabBossPositions;
 
     public static List<string> onLoadMessages;
     public static List<AudioClip> onLoadAudios;
@@ -59,7 +61,7 @@ public class minimap_manager : MonoBehaviour
 
         bool[] mbutton_used = new bool[monster_Button.Length];
         bool[] cbutton_used = new bool[chance_Button.Length];
-        bool bossbutton_used = false;
+        bool[] bbutton_used = new bool[boss_Buttons.Length];
 
         NarratorSceneDialogue.GetComponent<DialogueManager>().dialoguesScenarios = onLoadMessages;
 
@@ -133,26 +135,39 @@ public class minimap_manager : MonoBehaviour
             }
             if (gridId[i] == 10)
             {
-                //if (!bossbutton_used)
-                //{
-                //    bossbutton_used = true;
-                //  boss_Button.transform.position = grid[i].transform.position;
-                //Debug.Log(grid[i].transform.position);
-                //crabPositions.Add(grid[i].transform.position);
 
-                //}
+                for (int j = 0; j < boss_Buttons.Length; j++)
+                {
+                    if (!bbutton_used[j])
+                    {
+                        bbutton_used[j] = true;
+                        //  boss_Button.transform.position = grid[i].transform.position;
+                        boss_Buttons[j].transform.position = grid[i].transform.position;
+                        break;
+                    }
+                    // crabPositions.Add(grid[i].transform.position);
+                    //  break;
+                }
             }
         }
 
+
+
         //getting middle of tiles for crab boss to overlay game object
 
-        //Vector3 tempPos;
-        //tempPos.x = crabPositions[2].x - crabPositions[0].x;
-        //tempPos.y = crabPositions[3].y - crabPositions[2].y;
-        //tempPos.z = boss_Button.transform.position.z;
+        Vector3 tempPos;
 
-        //boss_Button.transform.position = tempPos;
-    
+
+        tempPos.x = boss_Buttons[0].transform.position.x + ((boss_Buttons[2].transform.position.x - boss_Buttons[0].transform.position.x) / 2);
+        tempPos.y = boss_Buttons[2].transform.position.y + ((boss_Buttons[3].transform.position.y - boss_Buttons[0].transform.position.y) / 2);
+        tempPos.z = boss_Buttons[0].transform.position.z;
+        Debug.Log(boss_Buttons[0].transform.position);
+        Debug.Log(boss_Buttons[1].transform.position);
+        Debug.Log(boss_Buttons[2].transform.position);
+        Debug.Log(boss_Buttons[3].transform.position);
+
+        crab_button.transform.position = tempPos;
+
     }
 
     public void view_map()
