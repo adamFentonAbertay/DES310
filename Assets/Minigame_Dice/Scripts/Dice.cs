@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.InputSystem.Controls;
+//using UnityEngine.InputSystem.Controls;
 using UnityEngine.UIElements;
 using Debug = UnityEngine.Debug;
 public class Dice : MonoBehaviour

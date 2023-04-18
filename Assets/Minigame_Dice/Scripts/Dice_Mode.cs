@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.InputSystem;
+//using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using Debug = UnityEngine.Debug;
 
@@ -43,7 +43,7 @@ public class Dice_Mode : MonoBehaviour
             case 0:
                 if (d2.gameObject.activeSelf)
                 {
-                    d2.gameObject.SetActive(false);
+                    d2.gameObject.SetActive(true);
                 }
                 break;
             case 1:

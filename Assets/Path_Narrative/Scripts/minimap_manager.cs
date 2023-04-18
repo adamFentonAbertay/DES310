@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using Debug = UnityEngine.Debug;
+using UnityEngine.SceneManagement;
 
 public class minimap_manager : MonoBehaviour
 {
@@ -18,10 +19,15 @@ public class minimap_manager : MonoBehaviour
     public Button[] monster_Button;
     public Button[] chance_Button;
 
-    public Image image;
+    //background
+    public Image background_image;
+    public Sprite[] background_sprite;
+    public static int background_id;
+
     public static int map_type =1;
     private bool map_show = false;
-
+    //timer 
+    public static int turn_timer;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,8 +45,7 @@ public class minimap_manager : MonoBehaviour
             minimap_manager.gridId[i] = tempMap2[i];
         }*/
         Map_init();
-
-        
+        backgroundchange();
     }
 
     // Update is called once per frame
@@ -91,7 +96,7 @@ public class minimap_manager : MonoBehaviour
                 gridId[i] = rotmap[i];
             }
 
-            image.gameObject.transform.Rotate(0, 0, 90);
+            background_image.gameObject.transform.Rotate(0, 0, 90);
             for (int i = 0; i < gridId.Length; i++)
             {
                 grid[i].gameObject.transform.Rotate(0, 0, -90);
@@ -164,5 +169,17 @@ public class minimap_manager : MonoBehaviour
     void zoom(float increment)
     {
         Camera.main.orthographicSize = Mathf.Clamp(Camera.main.orthographicSize - increment, 1.0f, 700.0f);
+    }
+
+    void backgroundchange()
+    {
+
+        background_image.GetComponent<Image>().sprite = background_sprite[background_id];
+    }
+
+    public void back()
+    {
+        //Fullmap_manager.turn_timer = turn_timer;
+        SceneManager.LoadScene("Full_map");
     }
 }

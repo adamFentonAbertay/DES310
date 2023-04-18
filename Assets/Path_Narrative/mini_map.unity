@@ -781,7 +781,10 @@ MonoBehaviour:
   - {fileID: 322651803}
   - {fileID: 2141755764}
   - {fileID: 582289480}
-  image: {fileID: 1959599282}
+  background_image: {fileID: 1959599282}
+  background_sprite:
+  - {fileID: 21300000, guid: 035d4c0154638f54bbe3291b1352b4b3, type: 3}
+  - {fileID: 21300000, guid: e137f144de8f5994c856488544cbcc49, type: 3}
 --- !u!114 &78822745 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5700917738795049389, guid: 60424ea31a508014dadf61a8dca2b2cc,
@@ -1381,10 +1384,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 193887503}
-        m_TargetAssemblyTypeName: Back_button, Assembly-CSharp
-        m_MethodName: BackTo
-        m_Mode: 5
+      - m_Target: {fileID: 62201966}
+        m_TargetAssemblyTypeName: minimap_manager, Assembly-CSharp
+        m_MethodName: back
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4817,7 +4820,7 @@ GameObject:
   - component: {fileID: 1628317068}
   - component: {fileID: 1628317067}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: UICanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
