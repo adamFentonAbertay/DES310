@@ -13,7 +13,7 @@ public class Fullmap_manager : MonoBehaviour
     public Button[] map_Button;
     public Sprite[] map_Image;
     public GameObject[] messages;
-  
+    public GameObject[] monster_types;
 
 
     private int[] map_id = new int[6];
@@ -108,11 +108,18 @@ public class Fullmap_manager : MonoBehaviour
                                   4,0,0,0,0,0,0,4,
                                   4,0,0,0,0,0,0,4};
 
-
-
+                
                 for (int i = 0; i < minimap_manager.gridId.Length; i++)
                 {
                     minimap_manager.gridId[i] = tempMap[i];
+                }
+
+                int[] tempMonsterMap = { 0, 1, 2, 3, 4 };
+
+
+                for (int i = 0; i < minimap_manager.monsterId.Length; i++)
+                {
+                    minimap_manager.monsterId[i] = tempMonsterMap[i];
                 }
 
 
@@ -153,6 +160,13 @@ public class Fullmap_manager : MonoBehaviour
                     minimap_manager.gridId[i] = tempMap2[i];
                 }
 
+                int[] tempMonsterMap2 = { 5, 6, 7, 8, 9 };
+
+
+                for (int i = 0; i < minimap_manager.monsterId.Length; i++)
+                {
+                    minimap_manager.monsterId[i] = tempMonsterMap2[i];
+                }
 
                 minimap_manager.onLoadMessages = messages[1].GetComponent<TileTextHolder>().onLoadMessages;
                 minimap_manager.onLoadAudios = messages[1].GetComponent<TileTextHolder>().audios;
@@ -182,7 +196,7 @@ public class Fullmap_manager : MonoBehaviour
                                  3,4,0,2,0,1,
                                  3,0,0,4,5,8,
                                  4,0,2,1,0,0,
-                                 3,0,4,0,0,0,
+                                 3,0,4,0,2,0,
                                  0,0,0,0,4,0,
                                  0,4,0,0,0,0};
 
@@ -192,6 +206,15 @@ public class Fullmap_manager : MonoBehaviour
                 {
                     minimap_manager.gridId[i] = tempMap3[i];
                 }
+
+                int[] tempMonsterMap3 = { 10, 11, 12, 13, 14 };
+
+
+                for (int i = 0; i < minimap_manager.monsterId.Length; i++)
+                {
+                    minimap_manager.monsterId[i] = tempMonsterMap3[i];
+                }
+
 
                 minimap_manager.onLoadMessages = messages[2].GetComponent<TileTextHolder>().onLoadMessages;
                 minimap_manager.onLoadAudios = messages[2].GetComponent<TileTextHolder>().audios;
@@ -222,6 +245,16 @@ public class Fullmap_manager : MonoBehaviour
                 {
                     minimap_manager.gridId[i] = tempMap4[i];
                 }
+
+
+                int[] tempMonsterMap4 = { 15, 16, 17, 18, 19 };
+
+
+                for (int i = 0; i < minimap_manager.monsterId.Length; i++)
+                {
+                    minimap_manager.monsterId[i] = tempMonsterMap4[i];
+                }
+
 
                 minimap_manager.onLoadMessages = messages[3].GetComponent<TileTextHolder>().onLoadMessages;
                 minimap_manager.onLoadAudios = messages[3].GetComponent<TileTextHolder>().audios;
@@ -255,6 +288,13 @@ public class Fullmap_manager : MonoBehaviour
                     minimap_manager.gridId[i] = tempMap5[i];
                 }
 
+                int[] tempMonsterMap5 = { 20, 21, 22, 23, 24 };
+
+
+                for (int i = 0; i < minimap_manager.monsterId.Length; i++)
+                {
+                    minimap_manager.monsterId[i] = tempMonsterMap5[i];
+                }
 
                 minimap_manager.onLoadMessages = messages[4].GetComponent<TileTextHolder>().onLoadMessages;
                 minimap_manager.onLoadAudios = messages[4].GetComponent<TileTextHolder>().audios;
@@ -290,6 +330,15 @@ public class Fullmap_manager : MonoBehaviour
                 for (int i = 0; i < minimap_manager.gridId.Length; i++)
                 {
                     minimap_manager.gridId[i] = tempMap6[i];
+                }
+
+
+                int[] tempMonsterMap6 = { 25, 26, 27, 28, 29 };
+
+
+                for (int i = 0; i < minimap_manager.monsterId.Length; i++)
+                {
+                    minimap_manager.monsterId[i] = tempMonsterMap6[i];
                 }
 
 

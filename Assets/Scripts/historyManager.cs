@@ -14,6 +14,8 @@ public class historyManager : MonoBehaviour
 
     // Start is called before the first frame update
 
+
+    //unity action needs a custom subclass that has this as parent but allows params
     private UnityAction HideHistoryAction;
 
     public void creteHistoryItem(GameObject toDisplay)
@@ -27,22 +29,28 @@ public class historyManager : MonoBehaviour
        //think of this as a function call for "popup" - it looks different as it is a unityaction to be called by OnClick
         HideHistoryAction += popup;
         //this just assigning to show the correct preview image dont mind me
-        newObj.GetComponent<RawImage>().texture = toDisplay.GetComponent<RawImage>().texture;   
+        newObj.GetComponent<RawImage>().texture = toDisplay.GetComponent<RawImage>().texture;
+        newObj.GetComponent<RawImage>().name = toDisplay.GetComponent<RawImage>().name;
         newObj.GetComponent<Button>().onClick.AddListener(HideHistoryAction);
-  
 
+       
     }
 
     void popup()
     {
+
+       
         popupBordRef.SetActive(true);
         //to display image still not working to show the right preview on touch
+        Debug.Log(GetComponentInChildren<RawImage>().name);
         for (int i = 0; i < itemManager.GetComponent<ItemEnabler>().itemArray.Length; i++)
         {
-         
-            
+
+           // Debug.Log(GetComponentInChildren<RawImage>().name);
+            //the problem!!! ur about to get smacked silly
             if (itemManager.GetComponent<ItemEnabler>().itemArray[i].name == GetComponentInChildren<RawImage>().name)
             {
+              
                 popupBordRef.GetComponentInChildren<PopupController>().popupShow(itemManager.GetComponent<ItemEnabler>().itemArray[i]);
             }
            

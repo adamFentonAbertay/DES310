@@ -21,7 +21,7 @@ public class PopupController : MonoBehaviour
     {
         //sets the popups images and text spaces to the values held by the game object (prefabbed)
         Debug.Log("popup show");
-        Debug.Log(toDisplay.name);
+      //  Debug.Log(toDisplay.name);
         popupText.text = toDisplay.name;
         popupImage.texture = toDisplay.GetComponent<RawImage>().texture;
         popupDesc.text = toDisplay.GetComponentInChildren<Text>().text;
@@ -35,6 +35,7 @@ public class PopupController : MonoBehaviour
     {
         //adds opened item to history if its the first time the object has been opened
         //does this by having PREFAB of item image enabled if its first time opened
+
         Debug.Log("history add");
         if (toDisplay.GetComponentInChildren<RawImage>().enabled == true)
         {

@@ -11,6 +11,7 @@ public class minimap_manager : MonoBehaviour
     public Image[] grid;
     public Sprite[] gridSprite;
     public static int[] gridId = new int[48];
+    public static int[] monsterId = new int[5];
 
     public Button unknow_button;
     public Button[] monster_Button;
@@ -18,8 +19,7 @@ public class minimap_manager : MonoBehaviour
     public Button[] boss_Buttons;
     public Button crab_button;
     public GameObject NarratorSceneDialogue;
-    private List<Vector3> crabPositions;
-    private Vector3[] crabBossPositions;
+    
 
     public static List<string> onLoadMessages;
     public static List<AudioClip> onLoadAudios;
@@ -110,7 +110,7 @@ public class minimap_manager : MonoBehaviour
 
             if (gridId[i] == 1)
             {
-                for (int j = 0; j < monster_Button.Length; j++)
+                for (int j = 0; j < chance_Button.Length; j++)
                 {
                     if (!cbutton_used[j])
                     {
@@ -127,8 +127,9 @@ public class minimap_manager : MonoBehaviour
                 {
                     if (!mbutton_used[j])
                     {
+
                         mbutton_used[j] = true;
-                        monster_Button[j].transform.position = grid[i].transform.position;
+                        monster_Button[monsterId[j]].transform.position = grid[i].transform.position;
                         break;
                     }
                 }
