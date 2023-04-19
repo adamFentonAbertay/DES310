@@ -1,14 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Debug = UnityEngine.Debug;
 
 public class Fullmap_manager : MonoBehaviour
 {
+
+    public bool drag;
     Vector3 touchStart;
     Vector3 dir;
+    Vector3 cam_start;
 
     public Button[] map_Button;
     public Sprite[] map_Image;
@@ -37,7 +41,7 @@ public class Fullmap_manager : MonoBehaviour
         map_id[4] = 5;
         map_id[5] = 6;
 
-
+        cam_start = Camera.main.transform.position;
         backgroundchange();
 
     }
@@ -45,33 +49,34 @@ public class Fullmap_manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //delete?
-        for (int i = 0; i < map_id.Length; i++)
+
+        for (int i = 0; i < map_Button.Length; i++)
         {
-            if (map_vivwed[i])
-            {
-                map_Button[i].GetComponent<Image>().sprite = map_Image[0];
-            }
-            else
-            {
-                map_Button[i].GetComponent<Image>().sprite = map_Image[1];
-            }
+            map_Button[i].enabled = true;
         }
 
         if (Input.GetMouseButtonDown(0))
-        {
+            {
             touchStart = Camera.main.ScreenToViewportPoint(Input.mousePosition);
-            //Debug.Log("touch!!");
-        }
-        if (Input.GetMouseButton(0))
-        {
-            dir = touchStart - Camera.main.ScreenToViewportPoint(Input.mousePosition);
-            Camera.main.transform.position += dir;
-        }
-        zoom(Input.GetAxis("Mouse ScrollWheel") * 2);
 
+            }
+                if (Input.GetMouseButton(0))
+                {
+            
+                dir = touchStart - Camera.main.ScreenToViewportPoint(Input.mousePosition);
+                Camera.main.transform.position += dir;
+                if (touchStart != Camera.main.ScreenToViewportPoint(Input.mousePosition)) { 
+                    for (int i = 0; i < map_Button.Length; i++)
+                {
+                    map_Button[i].enabled = false;
+                }
+                }
+            }   
 
-        board_check();
+            zoom(Input.GetAxis("Mouse ScrollWheel") * 2);
+
+            cam_limt();
+            board_check();
 
     }
     void zoom(float increment)
@@ -81,13 +86,16 @@ public class Fullmap_manager : MonoBehaviour
 
     public void SwitchMap(int mapid)
     {
-        Debug.Log("LOADING MAP ID " + mapid);
-        if (!map_vivwed[mapid])
+        if (!drag)
         {
-            map_vivwed[mapid] = true;
+            Debug.Log("LOADING MAP ID " + mapid);
+            if (!map_vivwed[mapid])
+            {
+                map_vivwed[mapid] = true;
+            }
+            LoadMap(map_id[mapid]);
+            SceneManager.LoadScene("mini_map");
         }
-        LoadMap(map_id[mapid]);
-        SceneManager.LoadScene("mini_map");
     }
 
 
@@ -192,82 +200,83 @@ public class Fullmap_manager : MonoBehaviour
         }
     }
 
-        public void LoadMap(int mapid )
+    public void LoadMap(int mapid )
     {
-        switch (mapid)
-        {
-            case 1:
 
-                Debug.Log("CASE1");
+            switch (mapid)
+            {
+                case 1:
 
-                minimap_manager.map_type = 0;
-                minimap_manager.background_id = 0;
-                //0 - blank space
-                //1 - question mark
-                //2 - monster
-                //3 - slow
-                //4 - wall
-                //5 - fence
-                //6 - key
-                //7 - key door
-                //8 - cartographer floor
-                //9 - shop
-                //10 - crab boss
+                    Debug.Log("CASE1");
 
-                int[] tempMap = {0,8,0,0,0,0,8,0,
+                    minimap_manager.map_type = 0;
+                    minimap_manager.background_id = 0;
+                    //0 - blank space
+                    //1 - question mark
+                    //2 - monster
+                    //3 - slow
+                    //4 - wall
+                    //5 - fence
+                    //6 - key
+                    //7 - key door
+                    //8 - cartographer floor
+                    //9 - shop
+                    //10 - crab boss
+
+                    int[] tempMap = {0,8,0,0,0,0,8,0,
                                   0,1,0,1,1,0,1,0,
                                   2,0,0,8,8,0,0,2,
                                   4,0,0,0,0,0,0,4,
                                   4,0,0,0,0,0,0,4,
                                   4,0,0,0,0,0,0,4};
 
-                
-                for (int i = 0; i < minimap_manager.gridId.Length; i++)
-                {
-                    minimap_manager.gridId[i] = tempMap[i];
-                }
 
-                int[] tempMonsterMap = { 0, 1, 2, 3, 4 };
+                    for (int i = 0; i < minimap_manager.gridId.Length; i++)
+                    {
+                        minimap_manager.gridId[i] = tempMap[i];
+                    }
 
-
-                for (int i = 0; i < minimap_manager.monsterId.Length; i++)
-                {
-                    minimap_manager.monsterId[i] = tempMonsterMap[i];
-                }
-
-                int[] tempItemMap = { 0, 1, 2, 3, 4 };
+                    int[] tempMonsterMap = { 0, 1, 2, 3, 4 };
 
 
-                for (int i = 0; i < minimap_manager.itemId.Length; i++)
-                {
-                    minimap_manager.itemId[i] = tempItemMap[i];
-                }
+                    for (int i = 0; i < minimap_manager.monsterId.Length; i++)
+                    {
+                        minimap_manager.monsterId[i] = tempMonsterMap[i];
+                    }
+
+                    int[] tempItemMap = { 0, 1, 2, 3, 4 };
 
 
-                minimap_manager.onLoadMessages = messages[0].GetComponent<TileTextHolder>().onLoadMessages;
-                minimap_manager.onLoadAudios = messages[0].GetComponent<TileTextHolder>().audios;
+                    for (int i = 0; i < minimap_manager.itemId.Length; i++)
+                    {
+                        minimap_manager.itemId[i] = tempItemMap[i];
+                    }
+
+
+                    minimap_manager.onLoadMessages = messages[0].GetComponent<TileTextHolder>().onLoadMessages;
+                    minimap_manager.onLoadAudios = messages[0].GetComponent<TileTextHolder>().audios;
 
 
 
-                break;
+                    break;
 
-            case 2:
+                case 2:
 
-                Debug.Log("CASE2");
-                minimap_manager.map_type = 1;
-                minimap_manager.background_id = 1;
-                //0 - blank space
-                //1 - question mark
-                //2 - monster
-                //3 - slow
-                //4 - wall
-                //5 - fence
-                //6 - key
-                //7 - key door
-                //8 - cartographer floor
-                //9 - shop
+                    Debug.Log("CASE2");
+                    minimap_manager.map_type = 1;
+                    minimap_manager.background_id = 1;
+                    //0 - blank space
+                    //1 - question mark
+                    //2 - monster
+                    //3 - slow
+                    //4 - wall
+                    //5 - fence
+                    //6 - key
+                    //7 - key door
+                    //8 - cartographer floor
+                    //9 - shop
 
-                int[] tempMap2 = {3,3,0,0,0,0,3,3,
+                    int[] tempMap2 = {3,3,0,0,0,0,3,3,
                                   0,0,2,4,4,2,0,0,
                                   1,0,4,4,4,4,0,1,
                                   0,0,4,2,9,4,0,0,
@@ -276,51 +285,51 @@ public class Fullmap_manager : MonoBehaviour
 
 
 
-                for (int i = 0; i < minimap_manager.gridId.Length; i++)
-                {
-                    minimap_manager.gridId[i] = tempMap2[i];
-                }
+                    for (int i = 0; i < minimap_manager.gridId.Length; i++)
+                    {
+                        minimap_manager.gridId[i] = tempMap2[i];
+                    }
 
-                int[] tempMonsterMap2 = { 5, 6, 7, 8, 9 };
-
-
-                for (int i = 0; i < minimap_manager.monsterId.Length; i++)
-                {
-                    minimap_manager.monsterId[i] = tempMonsterMap2[i];
-                }
-
-                int[] tempItemMap2 = {5 , 6, 7, 8, 9 };
+                    int[] tempMonsterMap2 = { 5, 6, 7, 8, 9 };
 
 
-                for (int i = 0; i < minimap_manager.itemId.Length; i++)
-                {
-                    minimap_manager.itemId[i] = tempItemMap2[i];
-                }
+                    for (int i = 0; i < minimap_manager.monsterId.Length; i++)
+                    {
+                        minimap_manager.monsterId[i] = tempMonsterMap2[i];
+                    }
 
-                minimap_manager.onLoadMessages = messages[1].GetComponent<TileTextHolder>().onLoadMessages;
-                minimap_manager.onLoadAudios = messages[1].GetComponent<TileTextHolder>().audios;
-                break;
+                    int[] tempItemMap2 = { 5, 6, 7, 8, 9 };
 
 
+                    for (int i = 0; i < minimap_manager.itemId.Length; i++)
+                    {
+                        minimap_manager.itemId[i] = tempItemMap2[i];
+                    }
 
-            case 3:
-
-                minimap_manager.map_type = 0;
-                minimap_manager.background_id = 0;
+                    minimap_manager.onLoadMessages = messages[1].GetComponent<TileTextHolder>().onLoadMessages;
+                    minimap_manager.onLoadAudios = messages[1].GetComponent<TileTextHolder>().audios;
+                    break;
 
 
 
-                //int[] tempMap3 = {0,0,0,0,0,0,
-                //                 0,0,0,0,0,0,
-                //                 0,0,0,0,0,0,
-                //                 0,0,0,0,0,0,
-                //                 0,0,0,0,0,0,
-                //                 0,0,0,0,0,0,
-                //                 0,0,0,0,0,0,
-                //                 0,0,0,0,0,0};
+                case 3:
+
+                    minimap_manager.map_type = 0;
+                    minimap_manager.background_id = 0;
 
 
-                int[] tempMap3 = {0,0,0,3,0,0,
+
+                    //int[] tempMap3 = {0,0,0,0,0,0,
+                    //                 0,0,0,0,0,0,
+                    //                 0,0,0,0,0,0,
+                    //                 0,0,0,0,0,0,
+                    //                 0,0,0,0,0,0,
+                    //                 0,0,0,0,0,0,
+                    //                 0,0,0,0,0,0,
+                    //                 0,0,0,0,0,0};
+
+
+                    int[] tempMap3 = {0,0,0,3,0,0,
                                  0,1,4,3,4,0,
                                  3,4,0,2,0,1,
                                  3,0,0,4,5,8,
@@ -331,40 +340,40 @@ public class Fullmap_manager : MonoBehaviour
 
 
 
-                for (int i = 0; i < minimap_manager.gridId.Length; i++)
-                {
-                    minimap_manager.gridId[i] = tempMap3[i];
-                }
+                    for (int i = 0; i < minimap_manager.gridId.Length; i++)
+                    {
+                        minimap_manager.gridId[i] = tempMap3[i];
+                    }
 
-                int[] tempMonsterMap3 = { 10, 11, 12, 13, 14 };
-
-
-                for (int i = 0; i < minimap_manager.monsterId.Length; i++)
-                {
-                    minimap_manager.monsterId[i] = tempMonsterMap3[i];
-                }
-
-                int[] tempItemMap3 = { 10, 11, 12, 13, 14 };
+                    int[] tempMonsterMap3 = { 10, 11, 12, 13, 14 };
 
 
-                for (int i = 0; i < minimap_manager.itemId.Length; i++)
-                {
-                    minimap_manager.itemId[i] = tempItemMap3[i];
-                }
+                    for (int i = 0; i < minimap_manager.monsterId.Length; i++)
+                    {
+                        minimap_manager.monsterId[i] = tempMonsterMap3[i];
+                    }
 
-                minimap_manager.onLoadMessages = messages[2].GetComponent<TileTextHolder>().onLoadMessages;
-                minimap_manager.onLoadAudios = messages[2].GetComponent<TileTextHolder>().audios;
-
-                break;
-
-            case 4:
-
-                minimap_manager.map_type = 0;
-                minimap_manager.background_id = 0;
+                    int[] tempItemMap3 = { 10, 11, 12, 13, 14 };
 
 
+                    for (int i = 0; i < minimap_manager.itemId.Length; i++)
+                    {
+                        minimap_manager.itemId[i] = tempItemMap3[i];
+                    }
 
-                int[] tempMap4 = {4,4,0,0,0,0,
+                    minimap_manager.onLoadMessages = messages[2].GetComponent<TileTextHolder>().onLoadMessages;
+                    minimap_manager.onLoadAudios = messages[2].GetComponent<TileTextHolder>().audios;
+
+                    break;
+
+                case 4:
+
+                    minimap_manager.map_type = 0;
+                    minimap_manager.background_id = 0;
+
+
+
+                    int[] tempMap4 = {4,4,0,0,0,0,
                                  4,7,0,0,2,0,
                                  0,0,4,4,0,0,
                                  0,1,4,4,0,0,
@@ -377,48 +386,48 @@ public class Fullmap_manager : MonoBehaviour
 
 
 
-                for (int i = 0; i < minimap_manager.gridId.Length; i++)
-                {
-                    minimap_manager.gridId[i] = tempMap4[i];
-                }
+                    for (int i = 0; i < minimap_manager.gridId.Length; i++)
+                    {
+                        minimap_manager.gridId[i] = tempMap4[i];
+                    }
 
 
-                int[] tempMonsterMap4 = { 15, 16, 17, 18, 19 };
+                    int[] tempMonsterMap4 = { 15, 16, 17, 18, 19 };
 
 
-                for (int i = 0; i < minimap_manager.monsterId.Length; i++)
-                {
-                    minimap_manager.monsterId[i] = tempMonsterMap4[i];
-                }
+                    for (int i = 0; i < minimap_manager.monsterId.Length; i++)
+                    {
+                        minimap_manager.monsterId[i] = tempMonsterMap4[i];
+                    }
 
 
-                int[] tempItemMap4 = { 15, 16, 17, 18, 19 };
+                    int[] tempItemMap4 = { 15, 16, 17, 18, 19 };
 
 
-                for (int i = 0; i < minimap_manager.itemId.Length; i++)
-                {
-                    minimap_manager.itemId[i] = tempItemMap4[i];
-                }
+                    for (int i = 0; i < minimap_manager.itemId.Length; i++)
+                    {
+                        minimap_manager.itemId[i] = tempItemMap4[i];
+                    }
 
-                minimap_manager.onLoadMessages = messages[3].GetComponent<TileTextHolder>().onLoadMessages;
-                minimap_manager.onLoadAudios = messages[3].GetComponent<TileTextHolder>().audios;
+                    minimap_manager.onLoadMessages = messages[3].GetComponent<TileTextHolder>().onLoadMessages;
+                    minimap_manager.onLoadAudios = messages[3].GetComponent<TileTextHolder>().audios;
 
-                break;
+                    break;
 
-            case 5:
+                case 5:
 
-                minimap_manager.map_type = 1;
-                minimap_manager.background_id = 1;
+                    minimap_manager.map_type = 1;
+                    minimap_manager.background_id = 1;
 
 
-                //int[] tempMap5 = {0,0,0,0,0,0,0,0,
-                //                  0,0,0,0,0,0,0,0,
-                //                  0,0,0,0,0,0,0,0,
-                //                  0,0,0,0,0,0,0,0,
-                //                  0,0,0,0,0,0,0,0,
-                //                  0,0,0,0,0,0,0,0};
+                    //int[] tempMap5 = {0,0,0,0,0,0,0,0,
+                    //                  0,0,0,0,0,0,0,0,
+                    //                  0,0,0,0,0,0,0,0,
+                    //                  0,0,0,0,0,0,0,0,
+                    //                  0,0,0,0,0,0,0,0,
+                    //                  0,0,0,0,0,0,0,0};
 
-                int[] tempMap5 = {4,4,4,10,10,4,4,4,
+                    int[] tempMap5 = {4,4,4,10,10,4,4,4,
                                   4,4,4,10,10,4,4,4,
                                   0,0,0,0,0,0,1,0,
                                   1,4,9,0,8,0,4,0,
@@ -427,48 +436,48 @@ public class Fullmap_manager : MonoBehaviour
 
 
 
-                for (int i = 0; i < minimap_manager.gridId.Length; i++)
-                {
-                    minimap_manager.gridId[i] = tempMap5[i];
-                }
+                    for (int i = 0; i < minimap_manager.gridId.Length; i++)
+                    {
+                        minimap_manager.gridId[i] = tempMap5[i];
+                    }
 
-                int[] tempMonsterMap5 = { 20, 21, 22, 23, 24 };
-
-
-                for (int i = 0; i < minimap_manager.monsterId.Length; i++)
-                {
-                    minimap_manager.monsterId[i] = tempMonsterMap5[i];
-                }
-
-                int[] tempItemMap5 = { 20, 21, 22, 23, 24 };
+                    int[] tempMonsterMap5 = { 20, 21, 22, 23, 24 };
 
 
-                for (int i = 0; i < minimap_manager.itemId.Length; i++)
-                {
-                    minimap_manager.itemId[i] = tempItemMap5[i];
-                }
+                    for (int i = 0; i < minimap_manager.monsterId.Length; i++)
+                    {
+                        minimap_manager.monsterId[i] = tempMonsterMap5[i];
+                    }
 
-                minimap_manager.onLoadMessages = messages[4].GetComponent<TileTextHolder>().onLoadMessages;
-                minimap_manager.onLoadAudios = messages[4].GetComponent<TileTextHolder>().audios;
-                break;
+                    int[] tempItemMap5 = { 20, 21, 22, 23, 24 };
 
 
-            case 6:
+                    for (int i = 0; i < minimap_manager.itemId.Length; i++)
+                    {
+                        minimap_manager.itemId[i] = tempItemMap5[i];
+                    }
 
-                minimap_manager.map_type = 1;
-                minimap_manager.background_id = 1;
-                //0 - blank space
-                //1 - question mark
-                //2 - monster
-                //3 - slow
-                //4 - wall
-                //5 - fence
-                //6 - key
-                //7 - key door
-                //8 - cartographer floor
-                //9 - shop
+                    minimap_manager.onLoadMessages = messages[4].GetComponent<TileTextHolder>().onLoadMessages;
+                    minimap_manager.onLoadAudios = messages[4].GetComponent<TileTextHolder>().audios;
+                    break;
 
-                int[] tempMap6 = {4,4,0,0,0,0,4,4,
+
+                case 6:
+
+                    minimap_manager.map_type = 1;
+                    minimap_manager.background_id = 1;
+                    //0 - blank space
+                    //1 - question mark
+                    //2 - monster
+                    //3 - slow
+                    //4 - wall
+                    //5 - fence
+                    //6 - key
+                    //7 - key door
+                    //8 - cartographer floor
+                    //9 - shop
+
+                    int[] tempMap6 = {4,4,0,0,0,0,4,4,
                                   4,2,0,0,0,0,2,4,
                                   1,0,0,3,3,0,0,1,
                                   0,0,0,0,0,0,0,0,
@@ -479,32 +488,69 @@ public class Fullmap_manager : MonoBehaviour
 
 
 
-                for (int i = 0; i < minimap_manager.gridId.Length; i++)
-                {
-                    minimap_manager.gridId[i] = tempMap6[i];
-                }
+                    for (int i = 0; i < minimap_manager.gridId.Length; i++)
+                    {
+                        minimap_manager.gridId[i] = tempMap6[i];
+                    }
 
 
-                int[] tempMonsterMap6 = { 25, 26, 27, 28, 29 };
+                    int[] tempMonsterMap6 = { 25, 26, 27, 28, 29 };
 
 
-                for (int i = 0; i < minimap_manager.monsterId.Length; i++)
-                {
-                    minimap_manager.monsterId[i] = tempMonsterMap6[i];
-                }
+                    for (int i = 0; i < minimap_manager.monsterId.Length; i++)
+                    {
+                        minimap_manager.monsterId[i] = tempMonsterMap6[i];
+                    }
 
-                int[] tempItemMap6 = { 25, 26, 27, 28, 29 };
+                    int[] tempItemMap6 = { 25, 26, 27, 28, 29 };
 
 
-                for (int i = 0; i < minimap_manager.itemId.Length; i++)
-                {
-                    minimap_manager.itemId[i] = tempItemMap6[i];
-                }
+                    for (int i = 0; i < minimap_manager.itemId.Length; i++)
+                    {
+                        minimap_manager.itemId[i] = tempItemMap6[i];
+                    }
 
-                minimap_manager.onLoadMessages = messages[5].GetComponent<TileTextHolder>().onLoadMessages;
-                minimap_manager.onLoadAudios = messages[5].GetComponent<TileTextHolder>().audios;
-                break;
+                    minimap_manager.onLoadMessages = messages[5].GetComponent<TileTextHolder>().onLoadMessages;
+                    minimap_manager.onLoadAudios = messages[5].GetComponent<TileTextHolder>().audios;
+                    break;
 
+            }
+        
+    }
+
+    void cam_limt()
+    {
+        float Xmax, Xmin, Ymax, Ymin;
+        float range = 10.0f;
+
+        Xmax = cam_start.x + range;
+        Xmin = cam_start.x - range;
+
+        Ymax = cam_start.y + range;
+        Ymin = cam_start.y - range;
+
+        Vector3 campos = Camera.main.transform.position;
+
+        if (Camera.main.transform.position.x > Xmax)
+        {
+            campos.x = Xmax;
+            Camera.main.transform.position = campos;
+        }
+        if (Camera.main.transform.position.y > Ymax)
+        {
+            campos.y = Ymax;
+            Camera.main.transform.position = campos;
+        }
+        if (Camera.main.transform.position.x < Xmin)
+        {
+            campos.x = Xmin;
+            Camera.main.transform.position = campos;
+        }
+        if (Camera.main.transform.position.y < Ymin)
+        {
+            campos.y = Ymin;
+            Camera.main.transform.position = campos;
         }
     }
+
 }

@@ -18,7 +18,6 @@ public class minimap_manager : MonoBehaviour
     Vector3 touchStart;
     Vector3 dir;
 
-
     public Button unknow_button;
     public Button[] monster_Button;
     public Button[] chance_Button;
@@ -45,44 +44,34 @@ public class minimap_manager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       /* int[] tempMap2 = {        4,0,2,0,1,4,4,4,
-                                  4,0,0,4,4,0,0,4,
-                                  4,4,4,0,2,1,0,4,
-                                  4,0,0,0,2,4,4,4,
-                                  4,0,2,4,4,0,2,4,
-                                  4,4,4,0,0,0,0,4};
-
-
-
-        for (int i = 0; i < minimap_manager.gridId.Length; i++)
-        {
-            minimap_manager.gridId[i] = tempMap2[i];
-        }*/
         Map_init();
         backgroundchange();
-
-    }
+    }   
 
     // Update is called once per frame
     void Update()
     {
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            touchStart = Camera.main.ScreenToViewportPoint(Input.mousePosition);
-            if (Input.deviceOrientation == DeviceOrientation.LandscapeLeft)
+
+
+            if (Input.GetMouseButtonDown(0))
             {
-                Debug.Log("touch!!");
+                touchStart = Camera.main.ScreenToViewportPoint(Input.mousePosition);
+                if (Input.deviceOrientation == DeviceOrientation.LandscapeLeft)
+                {
+                    Debug.Log("touch!!");
+                }
+
+            }
+            if (Input.GetMouseButton(0))
+            {
+
+                dir = touchStart - Camera.main.ScreenToViewportPoint(Input.mousePosition);
+                Camera.main.transform.position += dir * 5;
             }
 
-        }
-        if (Input.GetMouseButton(0))
-        {
-            dir = touchStart - Camera.main.ScreenToViewportPoint(Input.mousePosition);
-            Camera.main.transform.position += dir * 5;
-        }
-        zoom(Input.GetAxis("Mouse ScrollWheel") * 20);
-
+            zoom(Input.GetAxis("Mouse ScrollWheel") * 20);
+        
     }
 
     void backgroundchange()
