@@ -122,6 +122,14 @@ public class Fullmap_manager : MonoBehaviour
                     minimap_manager.monsterId[i] = tempMonsterMap[i];
                 }
 
+                int[] tempItemMap = { 0, 1, 2, 3, 4 };
+
+
+                for (int i = 0; i < minimap_manager.itemId.Length; i++)
+                {
+                    minimap_manager.itemId[i] = tempItemMap[i];
+                }
+
 
                 minimap_manager.onLoadMessages = messages[0].GetComponent<TileTextHolder>().onLoadMessages;
                 minimap_manager.onLoadAudios = messages[0].GetComponent<TileTextHolder>().audios;
@@ -166,6 +174,14 @@ public class Fullmap_manager : MonoBehaviour
                 for (int i = 0; i < minimap_manager.monsterId.Length; i++)
                 {
                     minimap_manager.monsterId[i] = tempMonsterMap2[i];
+                }
+
+                int[] tempItemMap2 = {5 , 6, 7, 8, 9 };
+
+
+                for (int i = 0; i < minimap_manager.itemId.Length; i++)
+                {
+                    minimap_manager.itemId[i] = tempItemMap2[i];
                 }
 
                 minimap_manager.onLoadMessages = messages[1].GetComponent<TileTextHolder>().onLoadMessages;
@@ -215,6 +231,13 @@ public class Fullmap_manager : MonoBehaviour
                     minimap_manager.monsterId[i] = tempMonsterMap3[i];
                 }
 
+                int[] tempItemMap3 = { 10, 11, 12, 13, 14 };
+
+
+                for (int i = 0; i < minimap_manager.itemId.Length; i++)
+                {
+                    minimap_manager.itemId[i] = tempItemMap3[i];
+                }
 
                 minimap_manager.onLoadMessages = messages[2].GetComponent<TileTextHolder>().onLoadMessages;
                 minimap_manager.onLoadAudios = messages[2].GetComponent<TileTextHolder>().audios;
@@ -256,6 +279,14 @@ public class Fullmap_manager : MonoBehaviour
                 }
 
 
+                int[] tempItemMap4 = { 15, 16, 17, 18, 19 };
+
+
+                for (int i = 0; i < minimap_manager.itemId.Length; i++)
+                {
+                    minimap_manager.itemId[i] = tempItemMap4[i];
+                }
+
                 minimap_manager.onLoadMessages = messages[3].GetComponent<TileTextHolder>().onLoadMessages;
                 minimap_manager.onLoadAudios = messages[3].GetComponent<TileTextHolder>().audios;
 
@@ -294,6 +325,14 @@ public class Fullmap_manager : MonoBehaviour
                 for (int i = 0; i < minimap_manager.monsterId.Length; i++)
                 {
                     minimap_manager.monsterId[i] = tempMonsterMap5[i];
+                }
+
+                int[] tempItemMap5 = { 20, 21, 22, 23, 24 };
+
+
+                for (int i = 0; i < minimap_manager.itemId.Length; i++)
+                {
+                    minimap_manager.itemId[i] = tempItemMap5[i];
                 }
 
                 minimap_manager.onLoadMessages = messages[4].GetComponent<TileTextHolder>().onLoadMessages;
@@ -341,6 +380,13 @@ public class Fullmap_manager : MonoBehaviour
                     minimap_manager.monsterId[i] = tempMonsterMap6[i];
                 }
 
+                int[] tempItemMap6 = { 25, 26, 27, 28, 29 };
+
+
+                for (int i = 0; i < minimap_manager.itemId.Length; i++)
+                {
+                    minimap_manager.itemId[i] = tempItemMap6[i];
+                }
 
                 minimap_manager.onLoadMessages = messages[5].GetComponent<TileTextHolder>().onLoadMessages;
                 minimap_manager.onLoadAudios = messages[5].GetComponent<TileTextHolder>().audios;

@@ -12,6 +12,7 @@ public class minimap_manager : MonoBehaviour
     public Sprite[] gridSprite;
     public static int[] gridId = new int[48];
     public static int[] monsterId = new int[5];
+    public static int[] itemId = new int[5];
 
     public Button unknow_button;
     public Button[] monster_Button;
@@ -115,7 +116,7 @@ public class minimap_manager : MonoBehaviour
                     if (!cbutton_used[j])
                     {
                         cbutton_used[j] = true;
-                        chance_Button[j].transform.position = grid[i].transform.position;
+                        chance_Button[monsterId[j]].transform.position = grid[i].transform.position;
          
                         break;
                     }
