@@ -45,5 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onLoadMessages:
-  - HHOWW DARE YOU CRASH MY BIRTHDAY PARTY? PREPARE TO BE CRUSHED!
+  - Oh no!
+  - We've crashed the Candle Crabs birthday!
+  - 'We didn''t bring a gift! '
   - DISABLE
+  audios: []
