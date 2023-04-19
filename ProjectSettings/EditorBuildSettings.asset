@@ -14,6 +14,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MinigameExample.unity
     guid: 2a3c4d2dedf3cd7428cae1ee009e1dc8
+  - enabled: 1
+    path: Assets/Minigame_Dice/Dice.unity
+    guid: 9f55a3c1c0d361445851dce9b7db54c9
+  - enabled: 1
+    path: Assets/Scenes/Scenario 1.unity
+    guid: 31cc37a8ee7f18045ae3c2f9218a74f1
+  - enabled: 1
+    path: Assets/Path_Narrative/mini_map.unity
+    guid: 27c0cc6e951702d42b54f6d7faec1ab0
+  - enabled: 1
+    path: Assets/Path_Narrative/Full_map.unity
+    guid: f1b14d83f008a7341a3910f76659001f
   m_configObjects:
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 744b813df90924c169af73489b8325de,
       type: 2}

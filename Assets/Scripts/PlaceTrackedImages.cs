@@ -9,6 +9,9 @@ using UnityEngine.XR.ARSubsystems;
 [RequireComponent(typeof(ARTrackedImageManager))]
 public class PlaceTrackedImages : MonoBehaviour
 {
+
+    //ew AR we aint doing AR anymore get outta here
+
     // Start is called before the first frame update
     private ARTrackedImageManager _trackedImageManager;
     public GameObject[] ArPrefabs;
