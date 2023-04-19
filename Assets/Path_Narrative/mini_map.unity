@@ -23945,7 +23945,7 @@ MonoBehaviour:
         m_MethodName: popupShow
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7292151729833224801, guid: 1a1b3036f037ddc4ebf231c1e8813541,
+          m_ObjectArgument: {fileID: 7292151729833224801, guid: aa454360b3ec9f941b002d057507f73e,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
@@ -23970,7 +23970,7 @@ MonoBehaviour:
         m_MethodName: setDialogue
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7292151729833224801, guid: 1a1b3036f037ddc4ebf231c1e8813541,
+          m_ObjectArgument: {fileID: 7292151729833224801, guid: aa454360b3ec9f941b002d057507f73e,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
