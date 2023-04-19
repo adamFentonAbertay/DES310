@@ -15,6 +15,10 @@ public class minimap_manager : MonoBehaviour
     public static int[] monsterId = new int[5];
     public static int[] itemId = new int[5];
 
+    Vector3 touchStart;
+    Vector3 dir;
+
+
     public Button unknow_button;
     public Button[] monster_Button;
     public Button[] chance_Button;
@@ -63,6 +67,21 @@ public class minimap_manager : MonoBehaviour
     void Update()
     {
 
+        if (Input.GetMouseButtonDown(0))
+        {
+            touchStart = Camera.main.ScreenToViewportPoint(Input.mousePosition);
+            if (Input.deviceOrientation == DeviceOrientation.LandscapeLeft)
+            {
+                Debug.Log("touch!!");
+            }
+
+        }
+        if (Input.GetMouseButton(0))
+        {
+            dir = touchStart - Camera.main.ScreenToViewportPoint(Input.mousePosition);
+            Camera.main.transform.position += dir * 5;
+        }
+        zoom(Input.GetAxis("Mouse ScrollWheel") * 20);
 
     }
 
@@ -212,6 +231,11 @@ public class minimap_manager : MonoBehaviour
         }
     }
 
+
+    void zoom(float increment)
+    {
+        Camera.main.orthographicSize = Mathf.Clamp(Camera.main.orthographicSize - increment, 1.0f, 700.0f);
+    }
     public void back()
     {
         //Fullmap_manager.turn_timer = turn_timer;

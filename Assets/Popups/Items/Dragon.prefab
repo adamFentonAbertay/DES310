@@ -79,12 +79,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0
-  m_Text: 'ATTACK LEVEL: 1
-
-
-    Crabs of this type normally originate in the sea
-    and beaches but this silly little guy mistook this very dark dungeon for the
-    Pacific.'
+  m_Text: These boots spent their days frolicking in beautiful free range field,
+    until a point where they were ready to become a lovely pair of trainers.
 --- !u!1 &7292151729833224801
 GameObject:
   m_ObjectHideFlags: 0
@@ -96,9 +92,9 @@ GameObject:
   - component: {fileID: 8451987132748247437}
   - component: {fileID: 3966523832459656778}
   - component: {fileID: 6118452145110705414}
-  - component: {fileID: 5339111893806882389}
+  - component: {fileID: 3901373790083721694}
   m_Layer: 5
-  m_Name: Giant enemy crab
+  m_Name: Dragon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -140,7 +136,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7292151729833224801}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
   m_Name: 
@@ -153,14 +149,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: e9c759690e60672489ebc08713ac9cf8, type: 3}
+  m_Texture: {fileID: 2800000, guid: e13c757d354b2514aa3e5a59933865fe, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
     y: 0
     width: 1
     height: 1
---- !u!114 &5339111893806882389
+--- !u!114 &3901373790083721694
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -173,12 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onLoadMessages:
-  - A giant enemy crab!?
-  - "You won\u2019t stop us from reaching our toilet goals!"
-  - How does a crab end up in a dungeon anyway?
+  - Well now.
+  - That is a weird looking horse.
   - DISABLE
-  audios:
-  - {fileID: 8300000, guid: 59c457eb26e43f741a69ff95b07f8c0f, type: 3}
-  - {fileID: 8300000, guid: bf30ac484d8124d47905be61c4556690, type: 3}
-  - {fileID: 8300000, guid: b5dfcc23ca4c7404eb736335a123de56, type: 3}
-  - {fileID: 8300000, guid: a718680a1d43c1e4284a73af7cceb9ba, type: 3}
+  audios: []

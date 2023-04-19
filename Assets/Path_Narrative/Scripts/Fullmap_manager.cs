@@ -200,8 +200,8 @@ public class Fullmap_manager : MonoBehaviour
 
                 Debug.Log("CASE1");
 
-                minimap_manager.map_type = 1;
-
+                minimap_manager.map_type = 0;
+                minimap_manager.background_id = 0;
                 //0 - blank space
                 //1 - question mark
                 //2 - monster
@@ -255,7 +255,7 @@ public class Fullmap_manager : MonoBehaviour
 
                 Debug.Log("CASE2");
                 minimap_manager.map_type = 1;
-
+                minimap_manager.background_id = 1;
                 //0 - blank space
                 //1 - question mark
                 //2 - monster
@@ -306,7 +306,7 @@ public class Fullmap_manager : MonoBehaviour
             case 3:
 
                 minimap_manager.map_type = 0;
-
+                minimap_manager.background_id = 0;
 
 
 
@@ -360,7 +360,7 @@ public class Fullmap_manager : MonoBehaviour
             case 4:
 
                 minimap_manager.map_type = 0;
-
+                minimap_manager.background_id = 0;
 
 
 
@@ -408,8 +408,8 @@ public class Fullmap_manager : MonoBehaviour
             case 5:
 
                 minimap_manager.map_type = 1;
+                minimap_manager.background_id = 1;
 
-              
 
                 //int[] tempMap5 = {0,0,0,0,0,0,0,0,
                 //                  0,0,0,0,0,0,0,0,
@@ -456,7 +456,7 @@ public class Fullmap_manager : MonoBehaviour
             case 6:
 
                 minimap_manager.map_type = 1;
-
+                minimap_manager.background_id = 1;
                 //0 - blank space
                 //1 - question mark
                 //2 - monster
