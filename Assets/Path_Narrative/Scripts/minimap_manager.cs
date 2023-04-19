@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using Debug = UnityEngine.Debug;
+using UnityEngine.SceneManagement;
 
 
 public class minimap_manager : MonoBehaviour
@@ -20,7 +21,16 @@ public class minimap_manager : MonoBehaviour
     public Button[] boss_Buttons;
     public Button crab_button;
     public GameObject NarratorSceneDialogue;
-    
+
+
+    public static int turn_timer;
+
+    //background
+    public Image background_image;
+    public Sprite[] background_sprite;
+    public static int background_id;
+
+
 
     public static List<string> onLoadMessages;
     public static List<AudioClip> onLoadAudios;
@@ -45,8 +55,8 @@ public class minimap_manager : MonoBehaviour
             minimap_manager.gridId[i] = tempMap2[i];
         }*/
         Map_init();
+        backgroundchange();
 
-        
     }
 
     // Update is called once per frame
@@ -55,6 +65,13 @@ public class minimap_manager : MonoBehaviour
 
 
     }
+
+    void backgroundchange()
+    {
+
+        background_image.GetComponent<Image>().sprite = background_sprite[background_id];
+    }
+
 
     void Map_init()
     {
@@ -193,5 +210,11 @@ public class minimap_manager : MonoBehaviour
             map_show = false;
             unknow_button.gameObject.SetActive(true);
         }
+    }
+
+    public void back()
+    {
+        //Fullmap_manager.turn_timer = turn_timer;
+        SceneManager.LoadScene("Full_map");
     }
 }
