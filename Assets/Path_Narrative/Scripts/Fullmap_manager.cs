@@ -50,33 +50,8 @@ public class Fullmap_manager : MonoBehaviour
     void Update()
     {
 
-        for (int i = 0; i < map_Button.Length; i++)
-        {
-            map_Button[i].enabled = true;
-        }
-
-        if (Input.GetMouseButtonDown(0))
-            {
-            touchStart = Camera.main.ScreenToViewportPoint(Input.mousePosition);
-
-            }
-                if (Input.GetMouseButton(0))
-                {
-            
-                dir = touchStart - Camera.main.ScreenToViewportPoint(Input.mousePosition);
-                Camera.main.transform.position += dir;
-                if (touchStart != Camera.main.ScreenToViewportPoint(Input.mousePosition)) { 
-                    for (int i = 0; i < map_Button.Length; i++)
-                {
-                    map_Button[i].enabled = false;
-                }
-                }
-            }   
-
-            zoom(Input.GetAxis("Mouse ScrollWheel") * 2);
-
-            cam_limt();
-            board_check();
+        cam_update();
+        board_check();
 
     }
     void zoom(float increment)
@@ -518,10 +493,39 @@ public class Fullmap_manager : MonoBehaviour
         
     }
 
+
+
+    void cam_update()
+    {
+        for (int i = 0; i < map_Button.Length; i++)
+        {
+            map_Button[i].enabled = true;
+        }
+        if (Input.GetMouseButtonDown(0))
+        {
+            touchStart = Camera.main.ScreenToViewportPoint(Input.mousePosition);
+
+        }
+        if (Input.GetMouseButton(0))
+        {
+
+            dir = touchStart - Camera.main.ScreenToViewportPoint(Input.mousePosition);
+            Camera.main.transform.position += dir;
+            if (touchStart != Camera.main.ScreenToViewportPoint(Input.mousePosition))
+            {
+                for (int i = 0; i < map_Button.Length; i++)
+                {
+                    map_Button[i].enabled = false;
+                }
+            }
+        }
+        zoom(Input.GetAxis("Mouse ScrollWheel") * 2);
+        cam_limt();
+    }
     void cam_limt()
     {
         float Xmax, Xmin, Ymax, Ymin;
-        float range = 10.0f;
+        float range = 20.0f;
 
         Xmax = cam_start.x + range;
         Xmin = cam_start.x - range;

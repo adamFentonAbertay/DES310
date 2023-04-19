@@ -15,8 +15,10 @@ public class minimap_manager : MonoBehaviour
     public static int[] monsterId = new int[5];
     public static int[] itemId = new int[5];
 
+    public bool drag;
     Vector3 touchStart;
     Vector3 dir;
+    Vector3 cam_start;
 
     public Button unknow_button;
     public Button[] monster_Button;
@@ -54,23 +56,7 @@ public class minimap_manager : MonoBehaviour
 
 
 
-            if (Input.GetMouseButtonDown(0))
-            {
-                touchStart = Camera.main.ScreenToViewportPoint(Input.mousePosition);
-                if (Input.deviceOrientation == DeviceOrientation.LandscapeLeft)
-                {
-                    Debug.Log("touch!!");
-                }
-
-            }
-            if (Input.GetMouseButton(0))
-            {
-
-                dir = touchStart - Camera.main.ScreenToViewportPoint(Input.mousePosition);
-                Camera.main.transform.position += dir * 5;
-            }
-
-            zoom(Input.GetAxis("Mouse ScrollWheel") * 20);
+        cam_update();
         
     }
 
@@ -224,6 +210,78 @@ public class minimap_manager : MonoBehaviour
     void zoom(float increment)
     {
         Camera.main.orthographicSize = Mathf.Clamp(Camera.main.orthographicSize - increment, 1.0f, 700.0f);
+    }
+
+    void cam_update()
+    {
+        for (int i = 0; i < monster_Button.Length; i++)
+        {
+            monster_Button[i].enabled = true;
+        }
+        for (int i = 0; i < chance_Button.Length; i++)
+        {
+            chance_Button[i].enabled = true;
+        }
+        crab_button.enabled = true;
+        if (Input.GetMouseButtonDown(0))
+        {
+            touchStart = Camera.main.ScreenToViewportPoint(Input.mousePosition);
+
+        }
+        if (Input.GetMouseButton(0))
+        {
+
+            dir = touchStart - Camera.main.ScreenToViewportPoint(Input.mousePosition);
+            Camera.main.transform.position += dir*25;
+            if (touchStart != Camera.main.ScreenToViewportPoint(Input.mousePosition))
+            {
+                for (int i = 0; i < monster_Button.Length; i++)
+                {
+                    monster_Button[i].enabled = false;
+                }
+                for (int i = 0; i < chance_Button.Length; i++)
+                {
+                    chance_Button[i].enabled = false;
+                }
+                crab_button.enabled = false;
+            }
+        }
+        zoom(Input.GetAxis("Mouse ScrollWheel") * 20);
+        cam_limt();
+    }
+    void cam_limt()
+    {
+        float Xmax, Xmin, Ymax, Ymin;
+        float range = 300.0f;
+
+        Xmax = cam_start.x + range;
+        Xmin = cam_start.x - range;
+
+        Ymax = cam_start.y + range;
+        Ymin = cam_start.y - range;
+
+        Vector3 campos = Camera.main.transform.position;
+
+        if (Camera.main.transform.position.x > Xmax)
+        {
+            campos.x = Xmax;
+            Camera.main.transform.position = campos;
+        }
+        if (Camera.main.transform.position.y > Ymax)
+        {
+            campos.y = Ymax;
+            Camera.main.transform.position = campos;
+        }
+        if (Camera.main.transform.position.x < Xmin)
+        {
+            campos.x = Xmin;
+            Camera.main.transform.position = campos;
+        }
+        if (Camera.main.transform.position.y < Ymin)
+        {
+            campos.y = Ymin;
+            Camera.main.transform.position = campos;
+        }
     }
     public void back()
     {

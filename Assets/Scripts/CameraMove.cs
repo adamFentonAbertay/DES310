@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraMove : MonoBehaviour
 {
 
-     public Camera camera;
+   public Camera camera;
    static  Vector3 cameraPos = new Vector3( 49.5f, 11.55f, 0);
    static bool scrolled = false;
     // Start is called before the first frame update
