@@ -82,8 +82,7 @@ MonoBehaviour:
   m_Text: 'ATTACK LEVEL: 2
 
 
-    A fearsome creature who strikes fire-like fear into
-    wimpy adventurers.'
+    I am not entirely sure what a lindwyrm is...'
 --- !u!1 &7292151729833224801
 GameObject:
   m_ObjectHideFlags: 0
@@ -97,7 +96,7 @@ GameObject:
   - component: {fileID: 6118452145110705414}
   - component: {fileID: 3901373790083721694}
   m_Layer: 5
-  m_Name: Dragon
+  m_Name: LindWyrm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -152,7 +151,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: e13c757d354b2514aa3e5a59933865fe, type: 3}
+  m_Texture: {fileID: 2800000, guid: 12b74449abc65f54192f79dfef51a00b, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -172,7 +171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onLoadMessages:
-  - Well now.
-  - That is a weird looking horse.
+  - What a cute lindwyrm!
+  - Aww whos a good little killing machine!?
   - DISABLE
   audios: []

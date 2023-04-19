@@ -22,21 +22,21 @@ public class historyManager : MonoBehaviour
     {
         //create history item according to prefab when called by first time open
         //assign param as the image to show in the history tab
-       
+
         GameObject newObj = Instantiate(templatePrefab, templatesParent.transform);
         newObj.name = toDisplay.name;
-      
-       //think of this as a function call for "popup" - it looks different as it is a unityaction to be called by OnClick
-        HideHistoryAction += popup;
+
+        //think of this as a function call for "popup" - it looks different as it is a unityaction to be called by OnClick
+
         //this just assigning to show the correct preview image dont mind me
         newObj.GetComponent<RawImage>().texture = toDisplay.GetComponent<RawImage>().texture;
         newObj.GetComponent<RawImage>().name = toDisplay.GetComponent<RawImage>().name;
-        newObj.GetComponent<Button>().onClick.AddListener(HideHistoryAction);
+        newObj.GetComponent<Button>().onClick.AddListener(() => { popup(newObj.GetComponent<RawImage>().name); });
 
        
     }
 
-    void popup()
+    void popup(string name)
     {
 
        
@@ -48,7 +48,7 @@ public class historyManager : MonoBehaviour
 
            // Debug.Log(GetComponentInChildren<RawImage>().name);
             //the problem!!! ur about to get smacked silly
-            if (itemManager.GetComponent<ItemEnabler>().itemArray[i].name == GetComponentInChildren<RawImage>().name)
+            if (itemManager.GetComponent<ItemEnabler>().itemArray[i].name == name)
             {
               
                 popupBordRef.GetComponentInChildren<PopupController>().popupShow(itemManager.GetComponent<ItemEnabler>().itemArray[i]);

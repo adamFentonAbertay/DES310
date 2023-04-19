@@ -1128,7 +1128,7 @@ MonoBehaviour:
         m_MethodName: popupShow
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7292151729833224801, guid: d56f45cd15236e74ab34cdd86dd6b1ea,
+          m_ObjectArgument: {fileID: 7292151729833224801, guid: aa454360b3ec9f941b002d057507f73e,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
@@ -1153,7 +1153,7 @@ MonoBehaviour:
         m_MethodName: setDialogue
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7292151729833224801, guid: d56f45cd15236e74ab34cdd86dd6b1ea,
+          m_ObjectArgument: {fileID: 7292151729833224801, guid: aa454360b3ec9f941b002d057507f73e,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
@@ -1877,7 +1877,7 @@ MonoBehaviour:
         m_MethodName: popupShow
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7292151729833224801, guid: 489ed2ecee6b2c1469daa9076affba41,
+          m_ObjectArgument: {fileID: 7292151729833224801, guid: 0837bd16957e20b47b3499d3976b86e2,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
@@ -1902,7 +1902,7 @@ MonoBehaviour:
         m_MethodName: setDialogue
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7292151729833224801, guid: 489ed2ecee6b2c1469daa9076affba41,
+          m_ObjectArgument: {fileID: 7292151729833224801, guid: 0837bd16957e20b47b3499d3976b86e2,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
@@ -3699,7 +3699,7 @@ MonoBehaviour:
         m_MethodName: popupShow
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7292151729833224801, guid: 489ed2ecee6b2c1469daa9076affba41,
+          m_ObjectArgument: {fileID: 7292151729833224801, guid: 6cfb0f8dd38693a428a6f621c4df78b7,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
@@ -3724,7 +3724,7 @@ MonoBehaviour:
         m_MethodName: setDialogue
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7292151729833224801, guid: 489ed2ecee6b2c1469daa9076affba41,
+          m_ObjectArgument: {fileID: 7292151729833224801, guid: 6cfb0f8dd38693a428a6f621c4df78b7,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
@@ -4464,7 +4464,7 @@ MonoBehaviour:
         m_MethodName: popupShow
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7292151729833224801, guid: 489ed2ecee6b2c1469daa9076affba41,
+          m_ObjectArgument: {fileID: 7292151729833224801, guid: e8c21eb2e499d5a42b9efcc86579fb20,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
@@ -4489,7 +4489,7 @@ MonoBehaviour:
         m_MethodName: setDialogue
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7292151729833224801, guid: 489ed2ecee6b2c1469daa9076affba41,
+          m_ObjectArgument: {fileID: 7292151729833224801, guid: e8c21eb2e499d5a42b9efcc86579fb20,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
@@ -4660,7 +4660,7 @@ MonoBehaviour:
         m_MethodName: popupShow
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7292151729833224801, guid: 489ed2ecee6b2c1469daa9076affba41,
+          m_ObjectArgument: {fileID: 7292151729833224801, guid: 0a193f207fae9ce4680e78b9006ac728,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
@@ -4685,7 +4685,7 @@ MonoBehaviour:
         m_MethodName: setDialogue
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7292151729833224801, guid: 489ed2ecee6b2c1469daa9076affba41,
+          m_ObjectArgument: {fileID: 7292151729833224801, guid: 0a193f207fae9ce4680e78b9006ac728,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
@@ -5412,7 +5412,7 @@ MonoBehaviour:
         m_MethodName: popupShow
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7292151729833224801, guid: 489ed2ecee6b2c1469daa9076affba41,
+          m_ObjectArgument: {fileID: 7292151729833224801, guid: 6cfb0f8dd38693a428a6f621c4df78b7,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
@@ -5437,7 +5437,7 @@ MonoBehaviour:
         m_MethodName: setDialogue
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7292151729833224801, guid: 489ed2ecee6b2c1469daa9076affba41,
+          m_ObjectArgument: {fileID: 7292151729833224801, guid: 6cfb0f8dd38693a428a6f621c4df78b7,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
@@ -6805,7 +6805,7 @@ MonoBehaviour:
         m_MethodName: popupShow
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7292151729833224801, guid: 489ed2ecee6b2c1469daa9076affba41,
+          m_ObjectArgument: {fileID: 7292151729833224801, guid: 0837bd16957e20b47b3499d3976b86e2,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
@@ -6830,7 +6830,7 @@ MonoBehaviour:
         m_MethodName: setDialogue
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7292151729833224801, guid: 489ed2ecee6b2c1469daa9076affba41,
+          m_ObjectArgument: {fileID: 7292151729833224801, guid: 0837bd16957e20b47b3499d3976b86e2,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
@@ -7212,7 +7212,7 @@ MonoBehaviour:
         m_MethodName: popupShow
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7292151729833224801, guid: 489ed2ecee6b2c1469daa9076affba41,
+          m_ObjectArgument: {fileID: 7292151729833224801, guid: 0837bd16957e20b47b3499d3976b86e2,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
@@ -7237,7 +7237,7 @@ MonoBehaviour:
         m_MethodName: setDialogue
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7292151729833224801, guid: 489ed2ecee6b2c1469daa9076affba41,
+          m_ObjectArgument: {fileID: 7292151729833224801, guid: 0837bd16957e20b47b3499d3976b86e2,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
@@ -7689,7 +7689,7 @@ MonoBehaviour:
         m_MethodName: popupShow
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7292151729833224801, guid: 489ed2ecee6b2c1469daa9076affba41,
+          m_ObjectArgument: {fileID: 7292151729833224801, guid: 99f76039bec3c3e4dabd0a41f1460b77,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
@@ -7714,7 +7714,7 @@ MonoBehaviour:
         m_MethodName: setDialogue
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7292151729833224801, guid: 489ed2ecee6b2c1469daa9076affba41,
+          m_ObjectArgument: {fileID: 7292151729833224801, guid: 99f76039bec3c3e4dabd0a41f1460b77,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
@@ -11427,7 +11427,7 @@ MonoBehaviour:
         m_MethodName: popupShow
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7292151729833224801, guid: 489ed2ecee6b2c1469daa9076affba41,
+          m_ObjectArgument: {fileID: 7292151729833224801, guid: 99f76039bec3c3e4dabd0a41f1460b77,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
@@ -11452,7 +11452,7 @@ MonoBehaviour:
         m_MethodName: setDialogue
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7292151729833224801, guid: 489ed2ecee6b2c1469daa9076affba41,
+          m_ObjectArgument: {fileID: 7292151729833224801, guid: 99f76039bec3c3e4dabd0a41f1460b77,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
@@ -12346,7 +12346,7 @@ MonoBehaviour:
         m_MethodName: popupShow
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7292151729833224801, guid: 489ed2ecee6b2c1469daa9076affba41,
+          m_ObjectArgument: {fileID: 7292151729833224801, guid: e8c21eb2e499d5a42b9efcc86579fb20,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
@@ -12371,7 +12371,7 @@ MonoBehaviour:
         m_MethodName: setDialogue
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7292151729833224801, guid: 489ed2ecee6b2c1469daa9076affba41,
+          m_ObjectArgument: {fileID: 7292151729833224801, guid: e8c21eb2e499d5a42b9efcc86579fb20,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
@@ -13599,7 +13599,7 @@ MonoBehaviour:
         m_MethodName: popupShow
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7292151729833224801, guid: 489ed2ecee6b2c1469daa9076affba41,
+          m_ObjectArgument: {fileID: 7292151729833224801, guid: 0a193f207fae9ce4680e78b9006ac728,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
@@ -13624,7 +13624,7 @@ MonoBehaviour:
         m_MethodName: setDialogue
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7292151729833224801, guid: 489ed2ecee6b2c1469daa9076affba41,
+          m_ObjectArgument: {fileID: 7292151729833224801, guid: 0a193f207fae9ce4680e78b9006ac728,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
@@ -14076,7 +14076,7 @@ MonoBehaviour:
         m_MethodName: popupShow
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7292151729833224801, guid: 489ed2ecee6b2c1469daa9076affba41,
+          m_ObjectArgument: {fileID: 7292151729833224801, guid: aa454360b3ec9f941b002d057507f73e,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
@@ -14101,7 +14101,7 @@ MonoBehaviour:
         m_MethodName: setDialogue
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7292151729833224801, guid: 489ed2ecee6b2c1469daa9076affba41,
+          m_ObjectArgument: {fileID: 7292151729833224801, guid: aa454360b3ec9f941b002d057507f73e,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
@@ -14348,7 +14348,7 @@ MonoBehaviour:
         m_MethodName: popupShow
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7292151729833224801, guid: 489ed2ecee6b2c1469daa9076affba41,
+          m_ObjectArgument: {fileID: 7292151729833224801, guid: 6cfb0f8dd38693a428a6f621c4df78b7,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
@@ -14373,7 +14373,7 @@ MonoBehaviour:
         m_MethodName: setDialogue
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7292151729833224801, guid: 489ed2ecee6b2c1469daa9076affba41,
+          m_ObjectArgument: {fileID: 7292151729833224801, guid: 6cfb0f8dd38693a428a6f621c4df78b7,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
@@ -16095,7 +16095,7 @@ MonoBehaviour:
         m_MethodName: popupShow
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7292151729833224801, guid: 489ed2ecee6b2c1469daa9076affba41,
+          m_ObjectArgument: {fileID: 7292151729833224801, guid: 0a193f207fae9ce4680e78b9006ac728,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
@@ -16120,7 +16120,7 @@ MonoBehaviour:
         m_MethodName: setDialogue
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7292151729833224801, guid: 489ed2ecee6b2c1469daa9076affba41,
+          m_ObjectArgument: {fileID: 7292151729833224801, guid: 0a193f207fae9ce4680e78b9006ac728,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
@@ -17178,11 +17178,11 @@ RectTransform:
   m_Children:
   - {fileID: 1775526663}
   - {fileID: 193887502}
-  - {fileID: 685557759}
   - {fileID: 1400335137}
   - {fileID: 361223173}
   - {fileID: 74072558}
   - {fileID: 555774738}
+  - {fileID: 685557759}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -18579,7 +18579,7 @@ MonoBehaviour:
         m_MethodName: popupShow
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7292151729833224801, guid: 489ed2ecee6b2c1469daa9076affba41,
+          m_ObjectArgument: {fileID: 7292151729833224801, guid: bdba84cca3610d943ba7179244995092,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
@@ -18604,7 +18604,7 @@ MonoBehaviour:
         m_MethodName: setDialogue
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7292151729833224801, guid: 489ed2ecee6b2c1469daa9076affba41,
+          m_ObjectArgument: {fileID: 7292151729833224801, guid: bdba84cca3610d943ba7179244995092,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
@@ -19619,7 +19619,7 @@ MonoBehaviour:
         m_MethodName: popupShow
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7292151729833224801, guid: 489ed2ecee6b2c1469daa9076affba41,
+          m_ObjectArgument: {fileID: 7292151729833224801, guid: 6cfb0f8dd38693a428a6f621c4df78b7,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
@@ -19644,7 +19644,7 @@ MonoBehaviour:
         m_MethodName: setDialogue
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7292151729833224801, guid: 489ed2ecee6b2c1469daa9076affba41,
+          m_ObjectArgument: {fileID: 7292151729833224801, guid: 6cfb0f8dd38693a428a6f621c4df78b7,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
@@ -19892,7 +19892,7 @@ MonoBehaviour:
         m_MethodName: popupShow
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7292151729833224801, guid: 489ed2ecee6b2c1469daa9076affba41,
+          m_ObjectArgument: {fileID: 7292151729833224801, guid: 0a193f207fae9ce4680e78b9006ac728,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
@@ -19917,7 +19917,7 @@ MonoBehaviour:
         m_MethodName: setDialogue
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7292151729833224801, guid: 489ed2ecee6b2c1469daa9076affba41,
+          m_ObjectArgument: {fileID: 7292151729833224801, guid: 0a193f207fae9ce4680e78b9006ac728,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
@@ -20348,7 +20348,7 @@ MonoBehaviour:
         m_MethodName: popupShow
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7292151729833224801, guid: 489ed2ecee6b2c1469daa9076affba41,
+          m_ObjectArgument: {fileID: 7292151729833224801, guid: bdba84cca3610d943ba7179244995092,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
@@ -20373,7 +20373,7 @@ MonoBehaviour:
         m_MethodName: setDialogue
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7292151729833224801, guid: 489ed2ecee6b2c1469daa9076affba41,
+          m_ObjectArgument: {fileID: 7292151729833224801, guid: bdba84cca3610d943ba7179244995092,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0

@@ -79,8 +79,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0
-  m_Text: These boots spent their days frolicking in beautiful free range field,
-    until a point where they were ready to become a lovely pair of trainers.
+  m_Text: 'ATTACK LEVEL: 1
+
+
+    An elegant breed of beast, originating from the
+    land of FiveODay.'
 --- !u!1 &7292151729833224801
 GameObject:
   m_ObjectHideFlags: 0
