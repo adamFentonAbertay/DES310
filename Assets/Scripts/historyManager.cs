@@ -22,9 +22,10 @@ public class historyManager : MonoBehaviour
     {
         //create history item according to prefab when called by first time open
         //assign param as the image to show in the history tab
-       
+
         GameObject newObj = Instantiate(templatePrefab, templatesParent.transform);
         newObj.name = toDisplay.name;
+
       
        //think of this as a function call for "popup" - it looks different as it is a unityaction to be called by OnClick
        //this just assigning to show the correct preview image dont mind me
@@ -33,6 +34,15 @@ public class historyManager : MonoBehaviour
         newObj.GetComponent<Button>().onClick.AddListener(() => { popup(newObj.GetComponent<RawImage>().name); });
 
         Debug.Log("create:"+ newObj.GetComponentInChildren<RawImage>().name);
+
+
+        //think of this as a function call for "popup" - it looks different as it is a unityaction to be called by OnClick
+
+        //this just assigning to show the correct preview image dont mind me
+        newObj.GetComponent<RawImage>().texture = toDisplay.GetComponent<RawImage>().texture;
+        newObj.GetComponent<RawImage>().name = toDisplay.GetComponent<RawImage>().name;
+        newObj.GetComponent<Button>().onClick.AddListener(() => { popup(newObj.GetComponent<RawImage>().name); });
+
 
     }
 
