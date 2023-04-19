@@ -209,8 +209,8 @@ public class Fullmap_manager : MonoBehaviour
 
                     Debug.Log("CASE1");
 
-                    minimap_manager.map_type = 0;
-                    minimap_manager.background_id = 0;
+                    minimap_manager.map_type = 1;
+                    minimap_manager.background_id = 1;
                     //0 - blank space
                     //1 - question mark
                     //2 - monster
