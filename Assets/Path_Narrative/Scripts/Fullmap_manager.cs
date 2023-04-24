@@ -510,7 +510,7 @@ public class Fullmap_manager : MonoBehaviour
         {
 
             dir = touchStart - Camera.main.ScreenToViewportPoint(Input.mousePosition);
-            Camera.main.transform.position += dir;
+            Camera.main.transform.position += dir*SettingsController.sensitivity;
             if (touchStart != Camera.main.ScreenToViewportPoint(Input.mousePosition))
             {
                 for (int i = 0; i < map_Button.Length; i++)

@@ -232,7 +232,7 @@ public class minimap_manager : MonoBehaviour
         {
 
             dir = touchStart - Camera.main.ScreenToViewportPoint(Input.mousePosition);
-            Camera.main.transform.position += dir*25;
+            Camera.main.transform.position += dir*25*SettingsController.sensitivity;
             if (touchStart != Camera.main.ScreenToViewportPoint(Input.mousePosition))
             {
                 for (int i = 0; i < monster_Button.Length; i++)
