@@ -91,7 +91,7 @@ public class buttonPress : MonoBehaviour
     {
         hideAllUI();
         mainMenuHolder.SetActive(true);    
-        ThisButtonImage.color = Color.cyan;
+   //     ThisButtonImage.color = Color.cyan;
         Debug.Log("menu called");
     }
 

@@ -67,8 +67,16 @@ public class Fullmap_manager : MonoBehaviour
             if (!map_vivwed[mapid])
             {
                 map_vivwed[mapid] = true;
+                LoadMap(map_id[mapid]);
             }
-            LoadMap(map_id[mapid]);
+            else
+            {
+                Debug.Log("NOT first load");
+                LoadMap(map_id[mapid]);
+                minimap_manager.onLoadMessages = null;
+                minimap_manager.onLoadAudios = null;
+            }
+         
             SceneManager.LoadScene("mini_map");
         }
     }

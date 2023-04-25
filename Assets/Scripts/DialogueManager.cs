@@ -17,6 +17,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI dialogueText;
     [SerializeField] int lettersPerSecond = 10;
     [SerializeField] float PunctuationPauseTime = .8f;
+    [SerializeField] GameObject skipButton;
     public List<string> dialoguesScenarios;
     public List<AudioClip> dialogueAudios;
     [SerializeField] AudioSource sfx;
@@ -40,9 +41,17 @@ public class DialogueManager : MonoBehaviour
         //enables on screen
         dialogueBox.SetActive(true);
         Narrator.SetActive(true);
+        skipButton.SetActive(true);
         playDialgoue();
     }
 
+    public void skipDialogue()
+    {
+        sfx.Stop();
+        StopAllCoroutines();
+        textCountTracker = dialoguesScenarios.Count;
+        disableDialogue();
+    }
     public void playDialgoue()
     {
         //stop what ur doing
@@ -89,7 +98,8 @@ public class DialogueManager : MonoBehaviour
         dialogueBox.SetActive(true);
         Narrator.SetActive(true);
         clickableCollider.SetActive(true);
-       
+        skipButton.SetActive(true);
+
     }
     public void disableDialogue()
     {
@@ -98,7 +108,8 @@ public class DialogueManager : MonoBehaviour
         dialogueBox.SetActive(false);
         Narrator.SetActive(false);
         clickableCollider.SetActive(false);
-       
+        skipButton.SetActive(false);
+
     }
 
     public void hideDialogue()
@@ -109,6 +120,7 @@ public class DialogueManager : MonoBehaviour
 
         Narrator.SetActive(false);
         clickableCollider.SetActive(true);
+        skipButton.SetActive(false);
     }
 
     

@@ -78,7 +78,13 @@ public class minimap_manager : MonoBehaviour
         NarratorSceneDialogue.GetComponent<DialogueManager>().dialoguesScenarios = onLoadMessages;
 
         NarratorSceneDialogue.GetComponent<DialogueManager>().dialogueAudios = onLoadAudios;
-        NarratorSceneDialogue.GetComponent<DialogueManager>().resumeDialogue();
+
+
+        Debug.Log(onLoadMessages);
+        if (onLoadMessages != null)
+        {
+            NarratorSceneDialogue.GetComponent<DialogueManager>().resumeDialogue();
+        }
 
 
 
@@ -223,6 +229,8 @@ public class minimap_manager : MonoBehaviour
             chance_Button[i].enabled = true;
         }
         crab_button.enabled = true;
+
+   
         if (Input.GetMouseButtonDown(0))
         {
             touchStart = Camera.main.ScreenToViewportPoint(Input.mousePosition);
