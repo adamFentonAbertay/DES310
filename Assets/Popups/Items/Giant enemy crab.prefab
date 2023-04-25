@@ -173,9 +173,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onLoadMessages:
-  - A giant enemy crab!?
-  - "You won\u2019t stop us from reaching our toilet goals!"
-  - How does a crab end up in a dungeon anyway?
+  - SETTOCRAB
+  - Hey! I did not invite YOU!
+  - WHERE IS MY PRESENT!!?
   - DISABLE
   audios:
   - {fileID: 8300000, guid: 59c457eb26e43f741a69ff95b07f8c0f, type: 3}

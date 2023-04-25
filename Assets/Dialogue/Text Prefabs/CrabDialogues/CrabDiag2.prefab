@@ -93,6 +93,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onLoadMessages:
+  - SETTOCRAB
   - STOP IT!!!
   - YOU ARE RUINING MY BIRTHDAY!!
   - DISABLE

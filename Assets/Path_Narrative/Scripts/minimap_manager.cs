@@ -27,6 +27,7 @@ public class minimap_manager : MonoBehaviour
     public Button crab_button;
     public GameObject NarratorSceneDialogue;
 
+    public GameObject dropdownHistory;
 
     public static int turn_timer;
 
@@ -230,28 +231,31 @@ public class minimap_manager : MonoBehaviour
         }
         crab_button.enabled = true;
 
-   
-        if (Input.GetMouseButtonDown(0))
-        {
-            touchStart = Camera.main.ScreenToViewportPoint(Input.mousePosition);
 
-        }
-        if (Input.GetMouseButton(0))
+        if (dropdownHistory.activeSelf == false)
         {
-
-            dir = touchStart - Camera.main.ScreenToViewportPoint(Input.mousePosition);
-            Camera.main.transform.position += dir*25*SettingsController.sensitivity;
-            if (touchStart != Camera.main.ScreenToViewportPoint(Input.mousePosition))
+            if (Input.GetMouseButtonDown(0))
             {
-                for (int i = 0; i < monster_Button.Length; i++)
+                touchStart = Camera.main.ScreenToViewportPoint(Input.mousePosition);
+
+            }
+            if (Input.GetMouseButton(0))
+            {
+
+                dir = touchStart - Camera.main.ScreenToViewportPoint(Input.mousePosition);
+                Camera.main.transform.position += dir * 25 * SettingsController.sensitivity;
+                if (touchStart != Camera.main.ScreenToViewportPoint(Input.mousePosition))
                 {
-                    monster_Button[i].enabled = false;
+                    for (int i = 0; i < monster_Button.Length; i++)
+                    {
+                        monster_Button[i].enabled = false;
+                    }
+                    for (int i = 0; i < chance_Button.Length; i++)
+                    {
+                        chance_Button[i].enabled = false;
+                    }
+                    crab_button.enabled = false;
                 }
-                for (int i = 0; i < chance_Button.Length; i++)
-                {
-                    chance_Button[i].enabled = false;
-                }
-                crab_button.enabled = false;
             }
         }
         zoom(Input.GetAxis("Mouse ScrollWheel") * 20);

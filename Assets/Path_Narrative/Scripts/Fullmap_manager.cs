@@ -73,12 +73,14 @@ public class Fullmap_manager : MonoBehaviour
             {
                 Debug.Log("NOT first load");
                 LoadMap(map_id[mapid]);
-                minimap_manager.onLoadMessages = null;
-                minimap_manager.onLoadAudios = null;
+
             }
-         
+
             SceneManager.LoadScene("mini_map");
         }
+
+
+
     }
 
 
@@ -153,6 +155,24 @@ public class Fullmap_manager : MonoBehaviour
             {
                 map_crashed[2] = true;
                 Debug.Log("map 2" + map_crashed[2]);
+            }
+
+            if (turn_timer <= 30)
+            {
+                map_crashed[3] = true;
+                Debug.Log("map 3" + map_crashed[2]);
+            }
+
+            if (turn_timer <= 20)
+            {
+                map_crashed[4] = true;
+                Debug.Log("map 4" + map_crashed[2]);
+            }
+
+            if (turn_timer <= 10)
+            {
+                map_crashed[5] = true;
+                Debug.Log("map 5" + map_crashed[2]);
             }
         }
         else if (Time_button.backward)

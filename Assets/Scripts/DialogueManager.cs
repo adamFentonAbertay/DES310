@@ -25,7 +25,8 @@ public class DialogueManager : MonoBehaviour
     public GameObject Narrator;
     private int textCountTracker = 0;
     private bool NarratorMovementFlipFlop = true;
-    
+
+    [SerializeField] Texture[] narratorImages;
 
     public void setDialogue(GameObject textPrefabHolder)
     {
@@ -61,6 +62,7 @@ public class DialogueManager : MonoBehaviour
         
         Debug.Log("play dialgoue");
         //checking for dev keylogs
+
          if (dialoguesScenarios[textCountTracker] == "HIDE")
         {
             hideDialogue();
@@ -73,6 +75,13 @@ public class DialogueManager : MonoBehaviour
         {
             resumeDialogue();
            
+            textCountTracker++;
+            StartCoroutine(TypeDialogue(dialoguesScenarios[textCountTracker]));
+        }
+        else if (dialoguesScenarios[textCountTracker] == "SETTOCRAB")
+        {
+            SetToCrab();
+            resumeDialogue();
             textCountTracker++;
             StartCoroutine(TypeDialogue(dialoguesScenarios[textCountTracker]));
         }
@@ -89,10 +98,15 @@ public class DialogueManager : MonoBehaviour
     
     //think memory leaks can be caused by couroutines be wary traveller
 
-   
+   public void SetToCrab()
+    {
+        //remember to change disable or end to reset the narrator
+        Narrator.GetComponent<RawImage>().texture = narratorImages[1];
+    }
    
     public void resumeDialogue()
     {
+       
         dialogueText.text = "Press to resume dialogue";
         Debug.Log("resume dialogue");
         dialogueBox.SetActive(true);
@@ -103,6 +117,7 @@ public class DialogueManager : MonoBehaviour
     }
     public void disableDialogue()
     {
+        Narrator.GetComponent<RawImage>().texture = narratorImages[0];
         StopAllCoroutines();
         Debug.Log("disable dialogue");
         dialogueBox.SetActive(false);

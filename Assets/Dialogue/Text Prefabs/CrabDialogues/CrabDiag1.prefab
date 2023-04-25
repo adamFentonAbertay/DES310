@@ -93,6 +93,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onLoadMessages:
+  - SETTOCRAB
   - Ow!
   - Don't hurt me on my birthday!
   - DISABLE
