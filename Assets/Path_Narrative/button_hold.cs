@@ -6,20 +6,19 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class Time_button : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
+public class button_hold : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
-    public static bool backward;
+    // Start is called before the first frame update
 
     private bool pointerDown;
     private float downTimer;
-    private float requiredHold = 2.0f;
+    private float requiredHold = 1.5f;
 
 
     public UnityEvent onLongClick;
 
     public Image fill;
-    public TextMeshProUGUI text;
-    public TextMeshProUGUI time_text;
+
     public void OnPointerDown(PointerEventData eventData)
     {
         pointerDown = true;
@@ -30,7 +29,6 @@ public class Time_button : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
         reset();
     }
 
-    // Start is called before the first frame update
     void Start()
     {
         
@@ -44,21 +42,17 @@ public class Time_button : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
             downTimer += Time.deltaTime;
             if (downTimer > requiredHold)
             {
-                //if (onLongClick != null)
-                //{
-                // onLongClick.Invoke();
-                //}
-                clock_switch();
+                if (onLongClick != null)
+                {
+                    onLongClick.Invoke();
+                }
                 reset();
             }
-            if (downTimer > requiredHold/9.5)
+            if (downTimer > requiredHold / 9.5)
             {
                 fill.fillAmount = downTimer / requiredHold;
             }
         }
-
-
-        time_text.text = Fullmap_manager.turn_timer.ToString();
     }
 
     void reset()
@@ -66,21 +60,5 @@ public class Time_button : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
         pointerDown = false;
         downTimer = 0;
         fill.fillAmount = downTimer / requiredHold;
-    }
-
-    void clock_switch()
-    {
-        if (!backward)
-        {
-            backward = true;
-            text.text = "Turn Back";
-        }
-        else if (backward)
-        {
-            backward = false;
-            text.text = "Turn End";
-        }
-
-
     }
 }

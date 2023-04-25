@@ -182,4 +182,9 @@ public class minimap_manager : MonoBehaviour
         //Fullmap_manager.turn_timer = turn_timer;
         SceneManager.LoadScene("Full_map");
     }
+
+    public void turn_end()
+    {
+        Fullmap_manager.turn_end();
+    }
 }
