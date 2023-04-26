@@ -216,7 +216,7 @@ public class minimap_manager : MonoBehaviour
 
     void zoom(float increment)
     {
-        Camera.main.orthographicSize = Mathf.Clamp(Camera.main.orthographicSize - increment, 1.0f, 700.0f);
+        Camera.main.orthographicSize = Mathf.Clamp(Camera.main.orthographicSize - increment, 1.0f, 750.0f);
     }
 
     void cam_update()
@@ -264,7 +264,7 @@ public class minimap_manager : MonoBehaviour
     void cam_limt()
     {
         float Xmax, Xmin, Ymax, Ymin;
-        float range = 300.0f;
+        float range = 500.0f    ;
 
         Xmax = cam_start.x + range;
         Xmin = cam_start.x - range;
