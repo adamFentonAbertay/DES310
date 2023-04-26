@@ -47,6 +47,9 @@ MonoBehaviour:
   onLoadMessages:
   - Oh no!
   - We've crashed the Candle Crabs birthday!
+  - I think we may of made the small blunder of hurting all his guests along the
+    way...
+  - And worst of all...
   - 'We didn''t bring a gift! '
   - DISABLE
   audios: []
