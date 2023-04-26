@@ -41,7 +41,7 @@ public class minimap_manager : MonoBehaviour
     public static List<string> onLoadMessages;
     public static List<AudioClip> onLoadAudios;
     public Image image;
-    public static int map_type =0;
+    public static int map_type = 0;
     private bool map_show = false;
 
     // Start is called before the first frame update
@@ -49,7 +49,7 @@ public class minimap_manager : MonoBehaviour
     {
         Map_init();
         backgroundchange();
-    }   
+    }
 
     // Update is called once per frame
     void Update()
@@ -58,7 +58,7 @@ public class minimap_manager : MonoBehaviour
 
 
         cam_update();
-        
+
     }
 
     void backgroundchange()
@@ -135,7 +135,7 @@ public class minimap_manager : MonoBehaviour
                     {
                         cbutton_used[j] = true;
                         chance_Button[monsterId[j]].transform.position = grid[i].transform.position;
-         
+
                         break;
                     }
                 }

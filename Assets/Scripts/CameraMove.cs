@@ -28,6 +28,42 @@ public class CameraMove : MonoBehaviour
             scrolled = true;
         }
 
-       
+        cam_limt();
     }
+
+    void cam_limt()
+    {
+        float Xmax, Xmin, Ymax, Ymin;
+        float range = 20.0f;
+
+        Xmax = cameraPos.x + range;
+        Xmin = cameraPos.x - range;
+
+        Ymax = cameraPos.y + range;
+        Ymin = cameraPos.y - range;
+
+        Vector3 campos = Camera.main.transform.position;
+
+        if (Camera.main.transform.position.x > Xmax)
+        {
+            campos.x = Xmax;
+            Camera.main.transform.position = campos;
+        }
+        if (Camera.main.transform.position.y > Ymax)
+        {
+            campos.y = Ymax;
+            Camera.main.transform.position = campos;
+        }
+        if (Camera.main.transform.position.x < Xmin)
+        {
+            campos.x = Xmin;
+            Camera.main.transform.position = campos;
+        }
+        if (Camera.main.transform.position.y < Ymin)
+        {
+            campos.y = Ymin;
+            Camera.main.transform.position = campos;
+        }
+    }
+
 }

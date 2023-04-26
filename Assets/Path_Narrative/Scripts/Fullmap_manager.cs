@@ -1,57 +1,67 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Debug = UnityEngine.Debug;
 
 public class Fullmap_manager : MonoBehaviour
 {
-
-    public bool drag;
     Vector3 touchStart;
     Vector3 dir;
     Vector3 cam_start;
 
     public Button[] map_Button;
     public Sprite[] map_Image;
+
+
+
     public GameObject[] messages;
     public GameObject[] monster_types;
+    public Canvas codeUI_canvas;
 
     public static bool[] map_vivwed = new bool[7];
     public static bool[] map_crashed = new bool[7];
     public static int turn_timer = 70;
+    public static bool codeUI;
 
-    private int[] map_id = new int[6];
+    private int[] map_id = new int[7];
 
 
 
+    //background
     public Image background_image;
     public Sprite[] background_sprite;
     private int background_id;
+
     // Start is called before the first frame update
     void Start()
     {
-       
-        map_id[0] = 1;
-        map_id[1] = 2;
-        map_id[2] = 3;
-        map_id[3] = 4;
-        map_id[4] = 5;
-        map_id[5] = 6;
+        map_id[0] = 2;
+        map_id[3] = 2;
+        map_id[6] = 2;
 
-        cam_start = Camera.main.transform.position;
+        map_id[1] = 1;
+        map_id[2] = 1;
+        map_id[4] = 1;
+        map_id[5] = 1;
+
         backgroundchange();
-
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        cam_update();
         board_check();
+        cam_update();
+        if (codeUI)
+        {
+            codeUI_canvas.gameObject.SetActive(true);
+        } else
+        {
+            codeUI_canvas.gameObject.SetActive(false);
+        }
 
     }
     void zoom(float increment)
@@ -61,31 +71,21 @@ public class Fullmap_manager : MonoBehaviour
 
     public void SwitchMap(int mapid)
     {
-        if (!drag)
-        {
+
+            
             Debug.Log("LOADING MAP ID " + mapid);
             if (!map_vivwed[mapid])
             {
-                map_vivwed[mapid] = true;
-                LoadMap(map_id[mapid]);
+                codeUI = true;
+                code_manager.map_codeid = mapid;
             }
             else
             {
-                Debug.Log("NOT first load");
                 LoadMap(map_id[mapid]);
-
+                SceneManager.LoadScene("mini_map");
             }
-
-            SceneManager.LoadScene("mini_map");
-        }
-
-
-
+        
     }
-
-
-
-
 
 
     void backgroundchange()
@@ -96,18 +96,6 @@ public class Fullmap_manager : MonoBehaviour
 
     void board_check()
     {
-        //for (int i = 0; i < map_id.Length; i++)
-        //{
-        //    if (map_vivwed[i])
-        //    {
-        //        map_Button[i].GetComponent<Image>().sprite = map_Image[1];
-        //    }
-        //    else
-        //    {
-        //        map_Button[i].GetComponent<Image>().sprite = map_Image[0];
-        //    }
-        //}
-
         for (int i = 0; i < map_id.Length; i++)
         {
             if (map_vivwed[i])
@@ -119,17 +107,18 @@ public class Fullmap_manager : MonoBehaviour
                 map_Button[i].GetComponent<Image>().sprite = map_Image[0];
             }
         }
+
         for (int i = 0; i < map_crashed.Length; i++)
         {
             if (map_crashed[i])
             {
-                // map_Button[i].enabled = false;
+               // map_Button[i].enabled = false;
                 map_Button[i].GetComponent<Image>().sprite = map_Image[2];
             }
-        }
+        }     
     }
 
-    public void turn_end()
+    public static void turn_end()
     {
         if (!Time_button.backward)
         {
@@ -155,24 +144,6 @@ public class Fullmap_manager : MonoBehaviour
             {
                 map_crashed[2] = true;
                 Debug.Log("map 2" + map_crashed[2]);
-            }
-
-            if (turn_timer <= 30)
-            {
-                map_crashed[3] = true;
-                Debug.Log("map 3" + map_crashed[2]);
-            }
-
-            if (turn_timer <= 20)
-            {
-                map_crashed[4] = true;
-                Debug.Log("map 4" + map_crashed[2]);
-            }
-
-            if (turn_timer <= 10)
-            {
-                map_crashed[5] = true;
-                Debug.Log("map 5" + map_crashed[2]);
             }
         }
         else if (Time_button.backward)
@@ -201,6 +172,7 @@ public class Fullmap_manager : MonoBehaviour
                 Debug.Log("map 2" + map_crashed[2]);
             }
         }
+
     }
 
     public void LoadMap(int mapid )
@@ -213,7 +185,7 @@ public class Fullmap_manager : MonoBehaviour
                     Debug.Log("CASE1");
 
                     minimap_manager.map_type = 1;
-                    minimap_manager.background_id = 1;
+                    minimap_manager.background_id = 0;
                     //0 - blank space
                     //1 - question mark
                     //2 - monster
@@ -521,8 +493,6 @@ public class Fullmap_manager : MonoBehaviour
         
     }
 
-
-
     void cam_update()
     {
         for (int i = 0; i < map_Button.Length; i++)
@@ -538,7 +508,7 @@ public class Fullmap_manager : MonoBehaviour
         {
 
             dir = touchStart - Camera.main.ScreenToViewportPoint(Input.mousePosition);
-            Camera.main.transform.position += dir*SettingsController.sensitivity;
+            Camera.main.transform.position += dir;
             if (touchStart != Camera.main.ScreenToViewportPoint(Input.mousePosition))
             {
                 for (int i = 0; i < map_Button.Length; i++)
@@ -548,7 +518,7 @@ public class Fullmap_manager : MonoBehaviour
             }
         }
         zoom(Input.GetAxis("Mouse ScrollWheel") * 2);
-        cam_limt();
+        //cam_limt();
     }
     void cam_limt()
     {
@@ -585,4 +555,67 @@ public class Fullmap_manager : MonoBehaviour
         }
     }
 
+
+    public void codeUI_switch()
+    {
+        if (!codeUI)
+        {
+            codeUI = true;
+        }
+        else if (codeUI)
+        {
+            codeUI = false;
+        }
+    }
+
+    public void code_load()
+    {
+        int  code = 0;
+        code += 1000 * code_manager.code[0];
+        code += 100 * code_manager.code[1];
+        code += 10 * code_manager.code[2];
+        code += 1 * code_manager.code[3];
+
+        switch (code)
+        {
+            default:
+                Debug.Log("code not found !!!");
+                break;
+            case 2134:
+                map_id[code_manager.map_codeid] = 1;
+                map_vivwed[code_manager.map_codeid] = true;
+                codeUI_switch();
+                break;
+            case 3142:
+                map_id[code_manager.map_codeid] = 2;
+                map_vivwed[code_manager.map_codeid] = true;
+                codeUI_switch();
+                break;
+            case 4132:
+                map_id[code_manager.map_codeid] = 3;
+                map_vivwed[code_manager.map_codeid] = true;
+                codeUI_switch();
+                break;
+            case 1324:
+                map_id[code_manager.map_codeid] = 4;
+                map_vivwed[code_manager.map_codeid] = true;
+                codeUI_switch();
+                break;
+            case 1243:
+                map_id[code_manager.map_codeid] = 5;
+                map_vivwed[code_manager.map_codeid] = true;
+                codeUI_switch();
+                break;
+            case 1423:
+                map_id[code_manager.map_codeid] = 6;
+                map_vivwed[code_manager.map_codeid] = true;
+                codeUI_switch();
+                break;
+        }
+    }
+
+    public void map_reset(int id)
+    {
+        map_vivwed[id] = false;
+    }
 }
