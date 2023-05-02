@@ -34,10 +34,6 @@ public class Dice : MonoBehaviour
         {
             diceland = false;
         }
-        if (Input.touchCount > 0 && diceland && reRoll > 0 &&!MouseOverUI())
-        {
-            Roll();
-        }
     }
 
     // Update is called once per frame
@@ -53,7 +49,8 @@ public class Dice : MonoBehaviour
 
     public void Roll()
     {
-
+        if (diceland)
+        {
             Debug.Log("ROLL");
             reRoll--;
 
@@ -65,7 +62,7 @@ public class Dice : MonoBehaviour
             transform.rotation = Quaternion.identity;
             diceBody.AddForce(transform.up * 500);
             diceBody.AddTorque(dx, dy, dz);
-        
+        }
     }
 
     private bool MouseOverUI()
