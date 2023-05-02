@@ -6,12 +6,13 @@ using UnityEngine.UI;
 
 public class buttonPress : MonoBehaviour
 {
-    public Image ThisButtonImage;
+    //public Image ThisButtonImage;
 
-    public GameObject AIPlayerHolder;
+    public GameObject TitleScreenHolder;
     public GameObject mainMenuHolder;
     public GameObject settingsMenuHolder;
     public GameObject scenarioMenuHolder;
+    public static bool first_start = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,35 +23,30 @@ public class buttonPress : MonoBehaviour
     void Update()
     {
 
-        //deprecated
 
-        //foreach (Touch touch in Input.touches)
-        //{
-        //    if (touch.phase == TouchPhase.Began)
-        //    {
-        //        // Construct a ray from the current touch coordinates
-        //        Debug.Log("touch");
-        //    }
-        //}
+        if (!first_start)
+        {
+            TitleScreenHolder.SetActive(false);
+        }
     }
 
     void hideAllUI()
     {
         mainMenuHolder.SetActive(false);
         settingsMenuHolder.SetActive(false);
-        AIPlayerHolder.SetActive(false);
+        TitleScreenHolder.SetActive(false);
         scenarioMenuHolder.SetActive(false);
     }
 
     //Uses buttons On Clock - SendMessage to envoke
-    void minigameResponse()
+    public void minigameResponse()
     {
         Debug.Log("start game called");
         SceneManager.LoadSceneAsync("MinigameExample");
         
     }
 
-    void scenarioResponse()
+    public void scenarioResponse()
     {
         hideAllUI();
         scenarioMenuHolder.SetActive(true);
@@ -58,40 +54,42 @@ public class buttonPress : MonoBehaviour
         //SceneManager.LoadSceneAsync()
     }
 
-    void scenario1ButResponse()
+    public void scenario1ButResponse()
     {
         Debug.Log("Scenario 1 called");
         SceneManager.LoadSceneAsync("Full_map");
     }
 
-    void menuResponse()
+    public void menuResponse()
     {
         Debug.Log("menu called");
         SceneManager.LoadSceneAsync("Startup");
     }
-    void ARResponse()
+    public void TutorialResponse()
     {
-        Debug.Log("how to play called");
-        SceneManager.LoadSceneAsync("BlankAR");
+        Debug.Log("Tutorial!");
     }
 
-    void DiceResponse()
+    public void DiceResponse()
     {
         Debug.Log("dice game called");
         SceneManager.LoadSceneAsync("Dice");
     }
-    void MenuToSettingsResponse()
+    public void MenuToSettingsResponse()
     {
         hideAllUI();
         settingsMenuHolder.SetActive(true);
         Debug.Log("settings called");
     }
 
-    void settingsToMenuResponse()
+    public void settingsToMenuResponse()
     {
+        if (first_start)
+        {
+            first_start = false;
+        }
         hideAllUI();
-        mainMenuHolder.SetActive(true);    
-   //     ThisButtonImage.color = Color.cyan;
+        mainMenuHolder.SetActive(true);
         Debug.Log("menu called");
     }
 
