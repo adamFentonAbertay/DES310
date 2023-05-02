@@ -172,7 +172,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onLoadMessages:
-  - Well now.
-  - That is a weird looking horse.
+  - SETTODRAGON
+  - ' I mean, seriously, is this what you guys do all day?'
+  - Hunt down dragons and steal their treasure? Get a hobby.
+  - Maybe take up knitting or something.
   - DISABLE
   audios: []

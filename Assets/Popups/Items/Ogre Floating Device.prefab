@@ -79,8 +79,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0
-  m_Text: a cloth used for those well skilled at the barbecues. This not only protects
-    you from damage, but also your burgers!
+  m_Text: "EFFECT: \n\nThis player is no longer affected by slowing tiles.\n\n*This
+    item effect is permenant to this player and does not need to be equipped"
 --- !u!1 &7292151729833224801
 GameObject:
   m_ObjectHideFlags: 0
@@ -92,9 +92,9 @@ GameObject:
   - component: {fileID: 8451987132748247437}
   - component: {fileID: 3966523832459656778}
   - component: {fileID: 6118452145110705414}
-  - component: {fileID: 6552671331379541224}
+  - component: {fileID: 3901373790083721694}
   m_Layer: 5
-  m_Name: Chef's Apron (+1)
+  m_Name: Ogre Floating Device
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -149,14 +149,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: e652a1634cc085649bd2e75d300e49e1, type: 3}
+  m_Texture: {fileID: 2800000, guid: 6c1915f23135b0344b946651607bc342, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
     y: 0
     width: 1
     height: 1
---- !u!114 &6552671331379541224
+--- !u!114 &3901373790083721694
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -169,7 +169,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onLoadMessages:
-  - Let me be clear..
-  - I will NOT be kissing the cook!
+  - Behold.. One of the most guarded secrets of the ogre race.
+  - This magical device allows them to conquer not only land but water!
+  - 'Go on.. You know you want to try it on! '
   - DISABLE
   audios: []

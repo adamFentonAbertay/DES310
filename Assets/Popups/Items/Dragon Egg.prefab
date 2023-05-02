@@ -79,8 +79,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0
-  m_Text: a cloth used for those well skilled at the barbecues. This not only protects
-    you from damage, but also your burgers!
+  m_Text: 'EFFECT:  +1 to every Action Bar roll.
+
+
+    *This item effect is permenant
+    to this player and does not need to be equipped'
 --- !u!1 &7292151729833224801
 GameObject:
   m_ObjectHideFlags: 0
@@ -94,7 +97,7 @@ GameObject:
   - component: {fileID: 6118452145110705414}
   - component: {fileID: 6552671331379541224}
   m_Layer: 5
-  m_Name: Chef's Apron (+1)
+  m_Name: Dragon Egg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -136,7 +139,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7292151729833224801}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
   m_Name: 
@@ -149,7 +152,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: e652a1634cc085649bd2e75d300e49e1, type: 3}
+  m_Texture: {fileID: 2800000, guid: efc27a8223f952644abc3c118263c702, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -169,7 +172,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onLoadMessages:
-  - Let me be clear..
-  - I will NOT be kissing the cook!
+  - Listen up!
+  - "You\u2019ve hit the jackpot and found a rare dragon egg."
+  - But be warned, raising a dragon is not for the faint of heart.
+  - "It\u2019s like having a toddler with a flamethrower!"
+  - 'Best of luck, and may the fire extinguisher be with you! '
   - DISABLE
   audios: []

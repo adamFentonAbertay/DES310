@@ -78,9 +78,30 @@ public class DialogueManager : MonoBehaviour
             textCountTracker++;
             StartCoroutine(TypeDialogue(dialoguesScenarios[textCountTracker]));
         }
+        else if (dialoguesScenarios[textCountTracker] == "SETTONARRATOR")
+        {
+            SetToImage(0);
+            resumeDialogue();
+            textCountTracker++;
+            StartCoroutine(TypeDialogue(dialoguesScenarios[textCountTracker]));
+        }
         else if (dialoguesScenarios[textCountTracker] == "SETTOCRAB")
         {
-            SetToCrab();
+            SetToImage(1);
+            resumeDialogue();
+            textCountTracker++;
+            StartCoroutine(TypeDialogue(dialoguesScenarios[textCountTracker]));
+        }
+        else if (dialoguesScenarios[textCountTracker] == "SETTODRAGON")
+        {
+            SetToImage(2);
+            resumeDialogue();
+            textCountTracker++;
+            StartCoroutine(TypeDialogue(dialoguesScenarios[textCountTracker]));
+        }
+        else if (dialoguesScenarios[textCountTracker] == "SETTOORGE")
+        {
+            SetToImage(3);
             resumeDialogue();
             textCountTracker++;
             StartCoroutine(TypeDialogue(dialoguesScenarios[textCountTracker]));
@@ -98,10 +119,10 @@ public class DialogueManager : MonoBehaviour
     
     //think memory leaks can be caused by couroutines be wary traveller
 
-   public void SetToCrab()
+   public void SetToImage(int i)
     {
         //remember to change disable or end to reset the narrator
-        Narrator.GetComponent<RawImage>().texture = narratorImages[1];
+        Narrator.GetComponent<RawImage>().texture = narratorImages[i];
     }
    
     public void resumeDialogue()

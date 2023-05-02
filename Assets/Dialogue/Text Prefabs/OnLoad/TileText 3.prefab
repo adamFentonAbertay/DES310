@@ -45,5 +45,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onLoadMessages:
-  - I see the last challenge was too easy, the next room will be more fun!
+  - 'Looks like we''ve stumbled upon Bartholomew the Terrible''s lair. '
+  - 'Don''t be scared! He''s a big softie at heart!  '
+  - SETTODRAGON
+  - ' Speak for yourself, Narrator. Im plenty scary, thank you very much!  '
+  - SETTONARRATOR
+  - 'Apologies Bart! Im sure the adventurers are quaking in their boots just looking
+    at you! '
+  - SETTODRAGON
+  - 'Hey, are you guys heading to the birthday par.. '
+  - 'Hey! Why are you poking me with your swords? '
   - DISABLE
+  audios: []

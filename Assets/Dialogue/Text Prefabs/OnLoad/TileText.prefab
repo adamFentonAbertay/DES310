@@ -93,12 +93,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onLoadMessages:
-  - Ahoy there, young lads and lassies!
-  - I've heard you are on your way
-  - Disgusting! Anyway, your mission today is simple.
-  - Reach the toilets JUST outside of this dungeon!
-  - (You REALLY have to go)
-  - Good luck!
+  - Well well well, look who we have here!
+  - How are we brave adventurers?
+  - "Shut up - there\u2019s no time for chit chat!"
+  - "We\u2019re about to embark on a journey that\u2019s not for the faint of heart."
+  - What lies in wait for us at the end of our path only comes around once a year!
+  - "Be careful \u2013 the beasts you\u2019ll encounter will say anything to get
+    out of danger! "
   - DISABLE
   audios:
   - {fileID: 8300000, guid: 83fe34d61c11f8b4c8a94f59f804d157, type: 3}

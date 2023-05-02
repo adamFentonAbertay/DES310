@@ -45,6 +45,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onLoadMessages:
-  - Hurry! You don't want to miss the BIG suprise!
+  - Oh no! I heard a rumour this room existed long ago but I was too foolish to believe
+    it real
+  - The room of.. Lost Ogres Looking for the Swimming Pool!
+  - 'Run for your lives! '
   - DISABLE
   audios: []

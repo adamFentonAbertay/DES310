@@ -14,6 +14,7 @@ public class minimap_manager : MonoBehaviour
     public static int[] gridId = new int[48];
     public static int[] monsterId = new int[5];
     public static int[] itemId = new int[5];
+    public static int[] uniqueIds = new int[2];
 
     public bool drag;
     Vector3 touchStart;
@@ -23,6 +24,7 @@ public class minimap_manager : MonoBehaviour
     public Button unknow_button;
     public Button[] monster_Button;
     public Button[] chance_Button;
+    public Button[] item_Button;
     public Button[] boss_Buttons;
     public Button crab_button;
     public GameObject NarratorSceneDialogue;
@@ -75,6 +77,7 @@ public class minimap_manager : MonoBehaviour
         bool[] mbutton_used = new bool[monster_Button.Length];
         bool[] cbutton_used = new bool[chance_Button.Length];
         bool[] bbutton_used = new bool[boss_Buttons.Length];
+        bool[] ibutton_used = new bool[item_Button.Length];
 
         NarratorSceneDialogue.GetComponent<DialogueManager>().dialoguesScenarios = onLoadMessages;
 
@@ -120,6 +123,14 @@ public class minimap_manager : MonoBehaviour
             {
                 chance_Button[i].gameObject.transform.Rotate(0, 0, -90);
             }
+            for (int i = 0; i < boss_Buttons.Length; i++)
+            {
+                boss_Buttons[i].gameObject.transform.Rotate(0, 0, -90);
+            }
+            for (int i = 0; i < item_Button.Length; i++)
+            {
+                item_Button[i].gameObject.transform.Rotate(0, 0, -90);
+            }
         }
 
 
@@ -163,6 +174,22 @@ public class minimap_manager : MonoBehaviour
                         bbutton_used[j] = true;
                         //  boss_Button.transform.position = grid[i].transform.position;
                         boss_Buttons[j].transform.position = grid[i].transform.position;
+                        break;
+                    }
+                    // crabPositions.Add(grid[i].transform.position);
+                    //  break;
+                }
+            }
+            if (gridId[i] == 11)
+            {
+
+                for (int j = 0; j < item_Button.Length; j++)
+                {
+                    if (!ibutton_used[j])
+                    {
+                        ibutton_used[j] = true;
+                        //  boss_Button.transform.position = grid[i].transform.position;
+                        item_Button[j].transform.position = grid[i].transform.position;
                         break;
                     }
                     // crabPositions.Add(grid[i].transform.position);
@@ -229,6 +256,10 @@ public class minimap_manager : MonoBehaviour
         {
             chance_Button[i].enabled = true;
         }
+        for (int i = 0; i < item_Button.Length; i++)
+        {
+            item_Button[i].enabled = true;
+        }
         crab_button.enabled = true;
 
 
@@ -253,6 +284,10 @@ public class minimap_manager : MonoBehaviour
                     for (int i = 0; i < chance_Button.Length; i++)
                     {
                         chance_Button[i].enabled = false;
+                    }
+                    for (int i = 0; i < chance_Button.Length; i++)
+                    {
+                        item_Button[i].enabled = false;
                     }
                     crab_button.enabled = false;
                 }
