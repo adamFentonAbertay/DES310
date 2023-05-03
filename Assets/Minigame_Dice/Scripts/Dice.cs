@@ -15,7 +15,7 @@ public class Dice : MonoBehaviour
     public static Vector3 diceVelocity;
 
     public  int reRoll = 1;
-    private bool diceland;
+    public static bool diceland;
 
 
     void Start()
@@ -58,7 +58,7 @@ public class Dice : MonoBehaviour
             float dy = Random.Range(90, 500);
             float dz = Random.Range(70, 500);
 
-            transform.position = new Vector3(4.5f, 2, 2.5f);
+            transform.position = new Vector3(1.0f, 2.0f, 2.0f);
             transform.rotation = Quaternion.identity;
             diceBody.AddForce(transform.up * 500);
             diceBody.AddTorque(dx, dy, dz);

@@ -12,10 +12,15 @@ public class Dice_Mode : MonoBehaviour
 
     public Button mb1,mb2,mb3; // modebutton
 
-    public static int dice_mode = 0; //0-move , 1-pvp , 2-pve
+    public static int dice_mode = 1; //0-pve , 1-move , 2-pvp
     public bool dice1_spawn = true;
     public bool dice2_spawn = false;
     public bool mode_button = false; //check if the mode button is pressed
+
+    public bool both_landed = false;
+
+    public static int[,] history_number = new int[5,3];
+ 
 
 
     // Start is called before the first frame update
@@ -24,25 +29,78 @@ public class Dice_Mode : MonoBehaviour
         
     }
 
+     void FixedUpdate()
+    {
+        if (Dice.diceland&&Dice2.diceland)
+        {
+            both_landed = true;
+        }
+        else
+        {
+            both_landed = false;
+        }
+    }
     // Update is called once per frame
     void Update()
     {
-        if (mode_button)
+        dice_mode_update();
+
+    }
+
+    public void Roll_both(int mode)
+    {
+        switch(mode)
         {
-            mb1.gameObject.SetActive(true); 
-            mb2.gameObject.SetActive(true);
-            mb3.gameObject.SetActive(true);
-        } else if(!mode_button){
-            mb1.gameObject.SetActive(false);
-            mb2.gameObject.SetActive(false);
-            mb3.gameObject.SetActive(false);
+            case 0:
+                if (both_landed)
+                {
+                    dice_mode = 0;
+                    dice_mode_update();
+                    Debug.Log("pve roll!");
+                    d1.Roll();
+                    d2.Roll();
+                }
+                break;
+            case 1:
+                if (both_landed)
+                {
+                    dice_mode = 1;
+                    dice_mode_update();
+                    Debug.Log("Move roll!");
+                    d1.Roll();
+                    d2.Roll();
+                }
+                break;
+            case 2:
+                if (Dice.diceland)
+                {
+                    dice_mode = 2;
+                    Debug.Log("PVP roll!");
+                    d1.Roll();
+                }
+                break;
+        }
+    }
+
+    public void history_update(int mode)
+    {
+        switch (mode)
+        {
+
+
         }
 
-        switch (dice_mode){ 
+        }
+    public void dice_mode_update()
+    {
+        switch (dice_mode)
+        {
+            //0-pve 1-move 2-pvp
             case 0:
-                if (d2.gameObject.activeSelf)
+
+                if (!d2.gameObject.activeSelf)
                 {
-                    d2.gameObject.SetActive(false);
+                    d2.gameObject.SetActive(true);
                 }
                 break;
             case 1:
@@ -52,31 +110,11 @@ public class Dice_Mode : MonoBehaviour
                 }
                 break;
             case 2:
-                if (!d2.gameObject.activeSelf)
+                if (d2.gameObject.activeSelf)
                 {
-                    d2.gameObject.SetActive(true);
+                    d2.gameObject.SetActive(false);
                 }
                 break;
         }
-    }
-
-    public void Mode_button_pressed()
-    {
-        if (mode_button)
-        {
-            mode_button = false;
-        } else if (!mode_button)
-        {
-            mode_button = true;
-        }
-    }
-    public void Mode_switch(int mode)
-    {
-        dice_mode = mode;   
-    }
-    public int Get_dice_mode()
-    {
-        Debug.Log("dice mode:" +dice_mode);
-        return dice_mode;
     }
 }
