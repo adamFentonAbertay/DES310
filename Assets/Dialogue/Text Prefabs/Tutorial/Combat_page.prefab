@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7583493028916039679
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6193564637059511707}
+  - component: {fileID: 8337466559176050391}
+  m_Layer: 0
+  m_Name: Combat_page
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6193564637059511707
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7583493028916039679}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 136.88602, y: 110.48466, z: 16.675566}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8337466559176050391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7583493028916039679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b970a176c0ec694ea00ca481b2170e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onLoadMessages:
+  - 'You will find yourself in combat with monsters and your fellow players on your
+    journey throughout the cave.   '
+  - 'Combat happens when a player lands on the same tile as a monster or player.  '
+  - When you turn over a new board piece you will notice monster spawn points, these
+    are defined with this symbol.
+  - Take the monsters from the tier pile based on the tier area and place on the
+    spawn points face up.
+  - 'When encountered by a monster, roll both dice. Circles are the players hits,
+    and the crosses are the monster''s hits. '
+  - 'Count all the circles and crosses from both dice. The winner is the one with
+    the most hits. '
+  - 'Armour and Weapons give you extra hits. Monster''s gain extra hits based on
+    their level I.e. a level 3 monster will gain +3 hits.  '
+  - 'In the result of a draw, REROLL the dice. '
+  - 'Here is an example of an intense monster encounter.  '
+  - 'On the left we have a nasty level 3 monster and on the right, we have a player
+    chancing his luck with a level two weapon and nothing else.  '
+  - "Let\u2019s roll some dice and see how he gets on.  "
+  - 'In total we have 5 circles and 5 crosses. The enemy has +3 hits for being level
+    3 and the player has +2 from their weapon.  '
+  - "This means the monster hits the player 8 times beating the player\u2019s measly
+    7 hits.  "
+  - 'When beaten by a monster the player will be sent back to the start of the board
+    piece they are on. '
+  - 'They can place themselves on any tile along the first row of the board piece
+    as shown. '
+  - 'Combat with fellow players happens when two players land on the same tile. Each
+    player will roll one dice. '
+  - 'The players will count the circles on the dice they roll and add on any plus
+    damage points they have from their inventory. '
+  - 'The player with the most hit points wins and the player that loses will be sent
+    to the start of the board piece they are on. '
+  - 'A key action ability that can be used is REROLL. If a player rolls and loses,
+    they can use their action points to reroll they dice.  '
+  - 'In the event of a draw, the defending player wins! '
+  - DISABLE
+  - 
+  audios: []
