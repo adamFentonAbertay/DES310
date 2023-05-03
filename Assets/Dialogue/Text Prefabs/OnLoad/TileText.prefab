@@ -1,0 +1,111 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7410826610059242496
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 617832752883044959}
+  - component: {fileID: 4350781749722355676}
+  m_Layer: 0
+  m_Name: MonsterText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &617832752883044959
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7410826610059242496}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6193564637059511707}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4350781749722355676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7410826610059242496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b970a176c0ec694ea00ca481b2170e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onLoadMessages:
+  - Rahhh! A monster
+  audios: []
+--- !u!1 &7583493028916039679
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6193564637059511707}
+  - component: {fileID: 8337466559176050391}
+  m_Layer: 0
+  m_Name: TileText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6193564637059511707
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7583493028916039679}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 136.88602, y: 110.48466, z: 16.675566}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 617832752883044959}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8337466559176050391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7583493028916039679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b970a176c0ec694ea00ca481b2170e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onLoadMessages:
+  - Well well well, look who we have here!
+  - How are we brave adventurers?
+  - "Shut up - there\u2019s no time for chit chat!"
+  - "We\u2019re about to embark on a journey that\u2019s not for the faint of heart."
+  - What lies in wait for us at the end of our path only comes around once a year!
+  - "Be careful \u2013 the beasts you\u2019ll encounter will say anything to get
+    out of danger! "
+  - DISABLE
+  audios:
+  - {fileID: 8300000, guid: 83fe34d61c11f8b4c8a94f59f804d157, type: 3}
+  - {fileID: 8300000, guid: d2a0a0d26e210ba4aa281eb8a9796dca, type: 3}
+  - {fileID: 8300000, guid: 7374f4780c0feea488ea328f362a6a1c, type: 3}
+  - {fileID: 8300000, guid: 546e1622ce25ef44e9c20c59d84f0d3a, type: 3}
+  - {fileID: 8300000, guid: cd1a17264bcbb7a4eabb551e0de34e77, type: 3}
+  - {fileID: 8300000, guid: 786b912506894684cb6aac0e1baa9eda, type: 3}
+  - {fileID: 8300000, guid: 19ed36c992e471d47bbc9a1e3102b786, type: 3}
