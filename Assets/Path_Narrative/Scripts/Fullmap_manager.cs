@@ -17,7 +17,7 @@ public class Fullmap_manager : MonoBehaviour
     public Button[] map_Button;
     public Sprite[] map_Image;
     public GameObject[] messages;
-    public GameObject[] monster_types;
+  
 
     public static bool[] map_vivwed = new bool[7];
     public static bool[] map_crashed = new bool[7];

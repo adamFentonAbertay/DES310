@@ -79,11 +79,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0
-  m_Text: 'ATTACK LEVEL: 3
-
-
-    A fearsome creature, said to have descened from
-    an ancient shug-like breed. In olden tongue, this ancestor was called a Cha-wah-wah.'
+  m_Text: "ATTACK LEVEL: 3\nMODIFIER: Loot\r (Take an additional item card)\r\n\nA
+    fearsome creature, said to have descened from an ancient shug-like breed. In
+    olden tongue, this ancestor was called a Cha-wah-wah."
 --- !u!1 &7292151729833224801
 GameObject:
   m_ObjectHideFlags: 0

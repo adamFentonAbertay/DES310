@@ -79,10 +79,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0
-  m_Text: 'ATTACK LEVEL: 2
-
-
-    I am not entirely sure what a lindwyrm is...'
+  m_Text: "ATTACK LEVEL: 2\nMODIFIER: Edible\r (Roll one die to move again after
+    defeating this monster)\r\n"
 --- !u!1 &7292151729833224801
 GameObject:
   m_ObjectHideFlags: 0

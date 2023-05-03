@@ -263,6 +263,31 @@ public class minimap_manager : MonoBehaviour
         crab_button.enabled = true;
 
 
+        //for (int i = 0; i < map_Button.Length; i++)
+        //{
+        //    map_Button[i].enabled = true;
+        //}
+        //if (Input.GetMouseButtonDown(0))
+        //{
+        //    touchStart = Camera.main.ScreenToViewportPoint(Input.mousePosition);
+
+        //}
+        //if (Input.GetMouseButton(0))
+        //{
+
+        //    dir = touchStart - Camera.main.ScreenToViewportPoint(Input.mousePosition);
+        //    Camera.main.transform.position += dir * SettingsController.sensitivity;
+        //    if (touchStart != Camera.main.ScreenToViewportPoint(Input.mousePosition))
+        //    {
+        //        for (int i = 0; i < map_Button.Length; i++)
+        //        {
+        //            map_Button[i].enabled = false;
+        //        }
+        //    }
+        //}
+        //zoom(Input.GetAxis("Mouse ScrollWheel") * 2);
+        //cam_limt();
+        cam_limt();
         if (dropdownHistory.activeSelf == false)
         {
             if (Input.GetMouseButtonDown(0))
@@ -294,7 +319,7 @@ public class minimap_manager : MonoBehaviour
             }
         }
         zoom(Input.GetAxis("Mouse ScrollWheel") * 20);
-        cam_limt();
+      
     }
     void cam_limt()
     {

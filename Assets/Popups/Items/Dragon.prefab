@@ -79,11 +79,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0
-  m_Text: 'ATTACK LEVEL: 2
-
-
-    A fearsome creature who strikes fire-like fear into
-    wimpy adventurers.'
+  m_Text: "ATTACK LEVEL: 2\nMODIFIER: Ranged\r (attack a player in an adjacent tile)\r\n\nA
+    fearsome creature who strikes fire-like fear into wimpy adventurers."
 --- !u!1 &7292151729833224801
 GameObject:
   m_ObjectHideFlags: 0

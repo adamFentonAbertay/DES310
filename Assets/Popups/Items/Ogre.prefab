@@ -79,12 +79,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0
-  m_Text: 'ATTACK LEVEL: 2
-
-
-    A simple breed, ogres often get lost and wander
-    into dungeons. Careful when you encounter them, as they often blame others for
-    their misfortune!'
+  m_Text: "ATTACK LEVEL: 2\nArmour Piercing\r (Ignore player armour combat value)\r\n\nA
+    simple breed, ogres often get lost and wander into dungeons. Careful when you
+    encounter them, as they often blame others for their misfortune!"
 --- !u!1 &7292151729833224801
 GameObject:
   m_ObjectHideFlags: 0
