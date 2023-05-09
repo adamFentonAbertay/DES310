@@ -92,30 +92,24 @@ public class code_manager : MonoBehaviour
                 code[3] = 2;
                 break;
             case 2:
-                code[0] = 2;
-                code[1] = 1;
-                code[2] = 3;
-                code[3] = 4;
-                break;
-            case 3:
                 code[0] = 4;
                 code[1] = 1;
                 code[2] = 3;
                 code[3] = 2;
                 break;
-            case 4:
+            case 3:
                 code[0] = 1;
                 code[1] = 3;
                 code[2] = 2;
                 code[3] = 4;
                 break;
-            case 5:
+            case 4:
                 code[0] = 1;
                 code[1] = 2;
                 code[2] = 4;
                 code[3] = 3;
                 break;
-            case 6:
+            case 5:
                 code[0] = 1;
                 code[1] = 4;
                 code[2] = 2;
