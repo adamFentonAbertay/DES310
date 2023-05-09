@@ -261,32 +261,6 @@ public class minimap_manager : MonoBehaviour
             item_Button[i].enabled = true;
         }
         crab_button.enabled = true;
-
-
-        //for (int i = 0; i < map_Button.Length; i++)
-        //{
-        //    map_Button[i].enabled = true;
-        //}
-        //if (Input.GetMouseButtonDown(0))
-        //{
-        //    touchStart = Camera.main.ScreenToViewportPoint(Input.mousePosition);
-
-        //}
-        //if (Input.GetMouseButton(0))
-        //{
-
-        //    dir = touchStart - Camera.main.ScreenToViewportPoint(Input.mousePosition);
-        //    Camera.main.transform.position += dir * SettingsController.sensitivity;
-        //    if (touchStart != Camera.main.ScreenToViewportPoint(Input.mousePosition))
-        //    {
-        //        for (int i = 0; i < map_Button.Length; i++)
-        //        {
-        //            map_Button[i].enabled = false;
-        //        }
-        //    }
-        //}
-        //zoom(Input.GetAxis("Mouse ScrollWheel") * 2);
-        //cam_limt();
         cam_limt();
         if (dropdownHistory.activeSelf == false)
         {
@@ -310,13 +284,11 @@ public class minimap_manager : MonoBehaviour
                     {
                         chance_Button[i].enabled = false;
                     }
-                    if (chance_Button.Length != 0)
-                    {
-                        for (int i = 0; i < chance_Button.Length; i++)
-                        {
+                    for (int i = 0; i < item_Button.Length; i++)
+                       {
                             item_Button[i].enabled = false;
-                        }
-                    }
+                       }
+                    
                     crab_button.enabled = false;
                 }
             }
