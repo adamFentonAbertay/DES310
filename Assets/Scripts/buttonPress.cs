@@ -68,6 +68,7 @@ public class buttonPress : MonoBehaviour
     public void TutorialResponse()
     {
         Debug.Log("Tutorial!");
+        SceneManager.LoadSceneAsync("Tutorial");
     }
 
     public void DiceResponse()
