@@ -25,7 +25,7 @@ public class Fullmap_manager : MonoBehaviour
     public static int turn_timer = 70;
     public static bool codeUI;
 
-    private int[] map_id = new int[7];
+    public static int[] map_id = new int[7];
 
 
 
@@ -76,7 +76,8 @@ public class Fullmap_manager : MonoBehaviour
             {
                 codeUI = true;
                 code_manager.map_codeid = mapid;
-            }
+                code_manager.code_list();
+        }
             else
             {
                 LoadMap(map_id[mapid]);

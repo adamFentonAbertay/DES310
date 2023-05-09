@@ -310,9 +310,12 @@ public class minimap_manager : MonoBehaviour
                     {
                         chance_Button[i].enabled = false;
                     }
-                    for (int i = 0; i < chance_Button.Length; i++)
+                    if (chance_Button.Length != 0)
                     {
-                        item_Button[i].enabled = false;
+                        for (int i = 0; i < chance_Button.Length; i++)
+                        {
+                            item_Button[i].enabled = false;
+                        }
                     }
                     crab_button.enabled = false;
                 }

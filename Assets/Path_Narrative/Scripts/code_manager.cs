@@ -26,17 +26,6 @@ public class code_manager : MonoBehaviour
         code_update();
     }
 
-    public void code_enter(int but_numb)
-    {
-        for (int i = 0; i < code.Length; i++)
-        {
-            if (code[i] == 0)
-            {
-                code[i] = but_numb;
-                break;
-            }
-        }
-    }
 
     public void code_cancel()
     {
@@ -52,6 +41,8 @@ public class code_manager : MonoBehaviour
 
     public void code_update()
     {
+
+
         for (int i = 0; i < code_image.Length; i++)
         {
             switch (code[i])
@@ -74,15 +65,62 @@ public class code_manager : MonoBehaviour
             }
         }
 
-        if (code[3] != 0)
-        {
-            Go_button.gameObject.SetActive(true);
-        }
-        else
-        {
-            Go_button.gameObject.SetActive(false);
-        }
+        //if (code[3] != 0)
+        //{
+        //    Go_button.gameObject.SetActive(true);
+        //}
+        //else
+        //{
+        //    Go_button.gameObject.SetActive(false);
+        //}
     }
 
-
+    public static void code_list()
+    {
+        switch (map_codeid)
+        {
+            case 0:
+                code[0] = 2;
+                code[1] = 1;
+                code[2] = 3;
+                code[3] = 4;
+                break;
+            case 1:
+                code[0] = 3;
+                code[1] = 1;
+                code[2] = 4;
+                code[3] = 2;
+                break;
+            case 2:
+                code[0] = 2;
+                code[1] = 1;
+                code[2] = 3;
+                code[3] = 4;
+                break;
+            case 3:
+                code[0] = 4;
+                code[1] = 1;
+                code[2] = 3;
+                code[3] = 2;
+                break;
+            case 4:
+                code[0] = 1;
+                code[1] = 3;
+                code[2] = 2;
+                code[3] = 4;
+                break;
+            case 5:
+                code[0] = 1;
+                code[1] = 2;
+                code[2] = 4;
+                code[3] = 3;
+                break;
+            case 6:
+                code[0] = 1;
+                code[1] = 4;
+                code[2] = 2;
+                code[3] = 3;
+                break;
+        }
+    }
 }
