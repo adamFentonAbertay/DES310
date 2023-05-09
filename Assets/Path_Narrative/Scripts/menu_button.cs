@@ -54,6 +54,10 @@ public class menu_button : MonoBehaviour
     {
         Debug.Log("back");
         SceneManager.LoadSceneAsync("Startup");
+        if (MusicDontDestroy.Instance != null)
+        {
+            MusicDontDestroy.Instance.gameObject.GetComponent<AudioSource>().Pause();
+        }
     }
     public void setting()
     {
