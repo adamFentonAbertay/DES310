@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -22,7 +23,10 @@ public class Fullmap_manager : MonoBehaviour
 
     public static bool[] map_vivwed = new bool[7];
     public static bool[] map_crashed = new bool[7];
+
     public static int turn_timer = 70;
+    public TextMeshProUGUI timer_number;
+
     public static bool codeUI;
 
     public static int[] map_id = new int[7];
@@ -50,6 +54,8 @@ public class Fullmap_manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        timer_number.text = turn_timer.ToString();
+
 
         board_check();
         cam_update();
@@ -126,10 +132,9 @@ public class Fullmap_manager : MonoBehaviour
                 turn_timer--;
                 Debug.Log("timer :" + turn_timer);
             }
-
             if (turn_timer <= 60)
             {
-                map_crashed[0] = true;
+                //map_crashed[0] = true;
                 Debug.Log("map 0" + map_crashed[0]);
             }
 
