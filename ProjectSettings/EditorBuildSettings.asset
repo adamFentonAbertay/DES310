@@ -26,6 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Path_Narrative/Full_map.unity
     guid: f1b14d83f008a7341a3910f76659001f
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: 74ddc15eb1dc3604b92cf5823b33a8be
   m_configObjects:
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 744b813df90924c169af73489b8325de,
       type: 2}
