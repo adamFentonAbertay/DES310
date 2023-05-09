@@ -75,3 +75,7 @@ Library/Search/transactions.db
 Library/SourceAssetDB
 Library/SourceAssetDB-lock
 Logs/shadercompiler-UnityShaderCompiler.exe0.log
+Library/ArtifactDB
+Library/Search/transactions.db
+Library/ShaderCache.db
+Library/SourceAssetDB
