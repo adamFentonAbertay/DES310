@@ -6,6 +6,7 @@ public class fall_manager : MonoBehaviour
 {
     // Start is called before the first frame update
     public Animator animator;
+    public int stop_number, shak_number, fall_number;
 
     void Start()
     {
@@ -17,13 +18,18 @@ public class fall_manager : MonoBehaviour
     {
         //animator.SetFloat("timer", Fullmap_manager.turn_timer);
 
-        if (Fullmap_manager.turn_timer <=65 && Fullmap_manager.turn_timer > 60)
+        if (Fullmap_manager.turn_timer <= shak_number && Fullmap_manager.turn_timer > fall_number)
         {
             animator.SetTrigger("shak");
         }
-        if (Fullmap_manager.turn_timer <= 60)
+        if (Fullmap_manager.turn_timer <= fall_number)
         {
             animator.SetTrigger("fall");
         }
-    }
+
+        if (Fullmap_manager.turn_timer > stop_number)
+        {
+            animator.SetTrigger("normal");
+        }
+        }
 }

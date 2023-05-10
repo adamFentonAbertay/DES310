@@ -95,7 +95,10 @@ MonoBehaviour:
   onLoadMessages:
   - SETTOCRAB
   - Urgh...
-  - I... I didn't even get to eat...
-  - My birthday cake...
+  - I... I didn't even get to eat.. my birthday cake..
   - DISABLE
-  audios: []
+  audios:
+  - {fileID: 8300000, guid: d5d4f82aac35cf24bbda49260845fcd7, type: 3}
+  - {fileID: 8300000, guid: 33c2de9061320af4b89c05e4132f80fd, type: 3}
+  - {fileID: 8300000, guid: d713c20cc1cf73d4fac123ef7c8d973a, type: 3}
+  - {fileID: 8300000, guid: d5d4f82aac35cf24bbda49260845fcd7, type: 3}

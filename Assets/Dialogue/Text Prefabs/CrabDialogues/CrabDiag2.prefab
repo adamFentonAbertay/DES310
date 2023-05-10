@@ -97,4 +97,8 @@ MonoBehaviour:
   - STOP IT!!!
   - YOU ARE RUINING MY BIRTHDAY!!
   - DISABLE
-  audios: []
+  audios:
+  - {fileID: 8300000, guid: d5d4f82aac35cf24bbda49260845fcd7, type: 3}
+  - {fileID: 8300000, guid: 744c336ee33dd46489c6690e71909e8c, type: 3}
+  - {fileID: 8300000, guid: 7a6f969472f513e4d8da98f973747ec2, type: 3}
+  - {fileID: 8300000, guid: d5d4f82aac35cf24bbda49260845fcd7, type: 3}
