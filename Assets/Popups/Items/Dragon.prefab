@@ -174,4 +174,9 @@ MonoBehaviour:
   - Hunt down dragons and steal their treasure? Get a hobby.
   - Maybe take up knitting or something.
   - DISABLE
-  audios: []
+  audios:
+  - {fileID: 8300000, guid: d5d4f82aac35cf24bbda49260845fcd7, type: 3}
+  - {fileID: 8300000, guid: 0a409aa5553b55040b6aef9e36fb1ac0, type: 3}
+  - {fileID: 8300000, guid: 56828dc032b502a4198e5ab66bc1fe3c, type: 3}
+  - {fileID: 8300000, guid: d3788f64e5bea8642925bcca645dadd6, type: 3}
+  - {fileID: 8300000, guid: d5d4f82aac35cf24bbda49260845fcd7, type: 3}

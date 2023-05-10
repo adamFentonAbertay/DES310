@@ -42,6 +42,19 @@ public class MusicDontDestroy : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
+    public void Tog()
+    {
+       if ( AudioManager.musicEnable == true )
+        {
+            Instance.gameObject.GetComponent<AudioSource>().UnPause();
+        }
+       else
+        {
+            Instance.gameObject.GetComponent<AudioSource>().Pause();
+        }
+
+    }
+
     // Update is called once per frame
     void Update()
     {
