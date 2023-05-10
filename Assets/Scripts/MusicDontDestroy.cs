@@ -25,7 +25,7 @@ public class MusicDontDestroy : MonoBehaviour
    
     private void Awake()
     {
-        if (Instance != null)
+        if (Instance != null && AudioManager.musicEnable == true)
         {
             Instance.gameObject.GetComponent<AudioSource>().UnPause();
         }
@@ -40,6 +40,19 @@ public class MusicDontDestroy : MonoBehaviour
             instance = this;
         }
         DontDestroyOnLoad(this.gameObject);
+    }
+
+    public void Tog()
+    {
+       if ( AudioManager.musicEnable == true )
+        {
+            Instance.gameObject.GetComponent<AudioSource>().UnPause();
+        }
+       else
+        {
+            Instance.gameObject.GetComponent<AudioSource>().Pause();
+        }
+
     }
 
     // Update is called once per frame

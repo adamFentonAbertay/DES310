@@ -170,7 +170,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onLoadMessages:
-  - AURGHHRFG?
-  - ARUFGURHH!!!
+  - AURGHHRFG.. IR THRIS THGRA SWCHRINMG PROOL?
+  - ARUFGURHH!! YROU MROVED THRE SWRIMMNG PROOL!!
   - DISABLE
-  audios: []
+  audios:
+  - {fileID: 8300000, guid: a5416b1df059d9a469a83f2afd50e25b, type: 3}
+  - {fileID: 8300000, guid: ff227818b3204e147885a81a0d59ef41, type: 3}
+  - {fileID: 8300000, guid: d5d4f82aac35cf24bbda49260845fcd7, type: 3}

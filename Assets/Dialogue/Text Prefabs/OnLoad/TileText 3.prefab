@@ -53,7 +53,16 @@ MonoBehaviour:
   - 'Apologies Bart! Im sure the adventurers are quaking in their boots just looking
     at you! '
   - SETTODRAGON
-  - 'Hey, are you guys heading to the birthday par.. '
-  - 'Hey! Why are you poking me with your swords? '
+  - 'Hey, are you guys heading to the birthday par.. Hey! Why are you poking me with
+    your swords? '
   - DISABLE
-  audios: []
+  audios:
+  - {fileID: 8300000, guid: d5d4f82aac35cf24bbda49260845fcd7, type: 3}
+  - {fileID: 8300000, guid: d5d4f82aac35cf24bbda49260845fcd7, type: 3}
+  - {fileID: 8300000, guid: d5d4f82aac35cf24bbda49260845fcd7, type: 3}
+  - {fileID: 8300000, guid: adf07b7bfd808c6478506491a88d27aa, type: 3}
+  - {fileID: 8300000, guid: d5d4f82aac35cf24bbda49260845fcd7, type: 3}
+  - {fileID: 8300000, guid: d5d4f82aac35cf24bbda49260845fcd7, type: 3}
+  - {fileID: 8300000, guid: d5d4f82aac35cf24bbda49260845fcd7, type: 3}
+  - {fileID: 8300000, guid: 8668be7c17fd9094fb5d9c8db2e54874, type: 3}
+  - {fileID: 8300000, guid: d5d4f82aac35cf24bbda49260845fcd7, type: 3}
