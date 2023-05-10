@@ -873,12 +873,12 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 1964008873}
+  m_TargetGraphic: {fileID: 317548084}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1533479375}
-        m_TargetAssemblyTypeName: SettingsController, Assembly-CSharp
+      - m_Target: {fileID: 1434653450}
+        m_TargetAssemblyTypeName: timer_manager, Assembly-CSharp
         m_MethodName: Set_playernumber
         m_Mode: 3
         m_Arguments:
@@ -1166,6 +1166,18 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!114 &377058870 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4949176967693965437, guid: dacd815b180dc1c479aec7805147df00,
+    type: 3}
+  m_PrefabInstance: {fileID: 1405500257}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &396127606
 GameObject:
   m_ObjectHideFlags: 0
@@ -1455,12 +1467,12 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 1964008873}
+  m_TargetGraphic: {fileID: 453731807}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1533479375}
-        m_TargetAssemblyTypeName: SettingsController, Assembly-CSharp
+      - m_Target: {fileID: 1434653450}
+        m_TargetAssemblyTypeName: timer_manager, Assembly-CSharp
         m_MethodName: Set_playernumber
         m_Mode: 3
         m_Arguments:
@@ -1658,6 +1670,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &524722749 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4949176967609670562, guid: dacd815b180dc1c479aec7805147df00,
+    type: 3}
+  m_PrefabInstance: {fileID: 1405500257}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &564059245
 GameObject:
   m_ObjectHideFlags: 0
@@ -2072,12 +2096,12 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 1964008873}
+  m_TargetGraphic: {fileID: 656426815}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1533479375}
-        m_TargetAssemblyTypeName: SettingsController, Assembly-CSharp
+      - m_Target: {fileID: 1434653450}
+        m_TargetAssemblyTypeName: timer_manager, Assembly-CSharp
         m_MethodName: Set_playernumber
         m_Mode: 3
         m_Arguments:
@@ -2241,7 +2265,6 @@ GameObject:
   - component: {fileID: 685054566}
   - component: {fileID: 685054565}
   - component: {fileID: 685054568}
-  - component: {fileID: 685054569}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -2332,25 +2355,10 @@ MonoBehaviour:
   - {fileID: 7583493028916039679, guid: 0f5bc7c5dc85f164cb58844e4dc6bc48, type: 3}
   monster_types: []
   codeUI_canvas: {fileID: 1995213897}
-  timer_number: {fileID: 2139092219}
   background_image: {fileID: 1332610764}
   background_sprite:
   - {fileID: 21300000, guid: 035d4c0154638f54bbe3291b1352b4b3, type: 3}
   - {fileID: 21300000, guid: e137f144de8f5994c856488544cbcc49, type: 3}
---- !u!114 &685054569
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 685054564}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7d2b92e85ff5524da8269e959457f0a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player_ui: 0
-  player_canv: {fileID: 1845643803}
 --- !u!1 &775545850
 GameObject:
   m_ObjectHideFlags: 0
@@ -3515,12 +3523,12 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 1964008873}
+  m_TargetGraphic: {fileID: 979000559}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1533479375}
-        m_TargetAssemblyTypeName: SettingsController, Assembly-CSharp
+      - m_Target: {fileID: 1434653450}
+        m_TargetAssemblyTypeName: timer_manager, Assembly-CSharp
         m_MethodName: Set_playernumber
         m_Mode: 3
         m_Arguments:
@@ -5012,6 +5020,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1996610396}
     m_Modifications:
+    - target: {fileID: 4949176965962579112, guid: dacd815b180dc1c479aec7805147df00,
+        type: 3}
+      propertyPath: fill
+      value: 
+      objectReference: {fileID: 524722749}
+    - target: {fileID: 4949176965962579112, guid: dacd815b180dc1c479aec7805147df00,
+        type: 3}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 377058870}
     - target: {fileID: 4949176965962579116, guid: dacd815b180dc1c479aec7805147df00,
         type: 3}
       propertyPath: m_Pivot.x
@@ -5137,7 +5155,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 685054568}
+      objectReference: {fileID: 1434653450}
+    - target: {fileID: 4949176965962579119, guid: dacd815b180dc1c479aec7805147df00,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: turn_end
+      objectReference: {fileID: 0}
+    - target: {fileID: 4949176965962579119, guid: dacd815b180dc1c479aec7805147df00,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: timer_manager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 4949176966424641102, guid: dacd815b180dc1c479aec7805147df00,
         type: 3}
       propertyPath: m_text
@@ -5257,7 +5285,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4949176965962579117, guid: dacd815b180dc1c479aec7805147df00,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1434653450}
   m_SourcePrefab: {fileID: 100100000, guid: dacd815b180dc1c479aec7805147df00, type: 3}
 --- !u!1 &1419202593
 GameObject:
@@ -5457,6 +5489,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1429547407}
   m_CullTransparentMesh: 1
+--- !u!1 &1434653445 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4949176965962579117, guid: dacd815b180dc1c479aec7805147df00,
+    type: 3}
+  m_PrefabInstance: {fileID: 1405500257}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1434653450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1434653445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89f9a1b3cc7b2f744bd0134fed65b09e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer_text: {fileID: 2139092219}
+  player_canv: {fileID: 1845643803}
 --- !u!1 &1443001010
 GameObject:
   m_ObjectHideFlags: 0
@@ -6760,8 +6812,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 685054569}
-        m_TargetAssemblyTypeName: player_number, Assembly-CSharp
+      - m_Target: {fileID: 1434653450}
+        m_TargetAssemblyTypeName: timer_manager, Assembly-CSharp
         m_MethodName: playerui_switch
         m_Mode: 1
         m_Arguments:
@@ -7172,7 +7224,7 @@ RectTransform:
   - {fileID: 317548082}
   - {fileID: 979000557}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -8041,8 +8093,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1533479375}
-        m_TargetAssemblyTypeName: SettingsController, Assembly-CSharp
+      - m_Target: {fileID: 1434653450}
+        m_TargetAssemblyTypeName: timer_manager, Assembly-CSharp
         m_MethodName: Set_playernumber
         m_Mode: 3
         m_Arguments:
@@ -8537,7 +8589,7 @@ RectTransform:
   - {fileID: 33783973}
   - {fileID: 1533479374}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -9229,7 +9281,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 685054569}
+      objectReference: {fileID: 1434653450}
     - target: {fileID: 1969408335509311367, guid: 26c6b7ff3e1e4b640a9eb40d059566f3,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
@@ -9253,7 +9305,7 @@ PrefabInstance:
     - target: {fileID: 1969408335509311367, guid: 26c6b7ff3e1e4b640a9eb40d059566f3,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: player_number, Assembly-CSharp
+      value: timer_manager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1969408335509311367, guid: 26c6b7ff3e1e4b640a9eb40d059566f3,
         type: 3}
