@@ -25,7 +25,7 @@ public class MusicDontDestroy : MonoBehaviour
    
     private void Awake()
     {
-        if (Instance != null)
+        if (Instance != null && AudioManager.musicEnable == true)
         {
             Instance.gameObject.GetComponent<AudioSource>().UnPause();
         }
