@@ -8,7 +8,7 @@ public class menu_button : MonoBehaviour
 {
     public static bool menu_open;
     public Image background_image,bl1,bl2,bl3;
-    public Button settingbut, backbut;
+    public Button settingbut, backbut, extrabut;
 
 
     // Start is called before the first frame update
@@ -28,6 +28,10 @@ public class menu_button : MonoBehaviour
             bl1.gameObject.SetActive(true);
             bl2.gameObject.SetActive(true);
             bl3.gameObject.SetActive(true);
+            if (extrabut != null)
+            {
+                extrabut.gameObject.SetActive(true);
+            }
         }
         else if (!menu_open)
         {
@@ -37,6 +41,10 @@ public class menu_button : MonoBehaviour
             bl1.gameObject.SetActive(false);
             bl2.gameObject.SetActive(false);
             bl3.gameObject.SetActive(false);
+            if (extrabut != null)
+            {
+                extrabut.gameObject.SetActive(false);
+            }
         }
     }
 
