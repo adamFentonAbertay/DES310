@@ -5,29 +5,32 @@ using UnityEngine;
 public class fall_manager : MonoBehaviour
 {
     // Start is called before the first frame update
+    static public int max_turn, curt_turn;
     public Animator animator;
     public int stop_number, shak_number, fall_number;
 
     void Start()
     {
-        
+       // shak_number = timer_manager.maxturn_timer - (shak_number * timer_manager.players_number);
+        //fall_number = timer_manager.maxturn_timer - (fall_number * timer_manager.players_number);
+       // stop_number = shak_number;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //animator.SetFloat("timer", Fullmap_manager.turn_timer);
 
-        if (Fullmap_manager.turn_timer <= shak_number && Fullmap_manager.turn_timer > fall_number)
+
+        if (timer_manager.turn_timer <= timer_manager.maxturn_timer - (shak_number * timer_manager.players_number) && timer_manager.turn_timer > timer_manager.maxturn_timer - (fall_number * timer_manager.players_number))
         {
             animator.SetTrigger("shak");
         }
-        if (Fullmap_manager.turn_timer <= fall_number)
+        if (timer_manager.turn_timer <= timer_manager.maxturn_timer - (fall_number * timer_manager.players_number))
         {
             animator.SetTrigger("fall");
         }
 
-        if (Fullmap_manager.turn_timer > stop_number)
+        if (timer_manager.turn_timer > timer_manager.maxturn_timer - (shak_number * timer_manager.players_number))
         {
             animator.SetTrigger("normal");
         }

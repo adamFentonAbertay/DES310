@@ -9,6 +9,7 @@ using TMPro;
 public class SettingsController : MonoBehaviour
 {
     static public float sensitivity = 1;
+    
 
     public Slider sensSlider;
     public TextMeshProUGUI sensText;
@@ -30,5 +31,7 @@ public class SettingsController : MonoBehaviour
         sensText.text = sensitivity.ToString("#.#");
         
     }
-    
+
+
+
 }

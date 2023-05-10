@@ -24,8 +24,7 @@ public class Fullmap_manager : MonoBehaviour
     public static bool[] map_vivwed = new bool[7];
     public static bool[] map_crashed = new bool[7];
 
-    public static int turn_timer = 70;
-    public TextMeshProUGUI timer_number;
+
 
     public static bool codeUI;
 
@@ -54,8 +53,6 @@ public class Fullmap_manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer_number.text = turn_timer.ToString();
-
 
         board_check();
         cam_update();
@@ -123,61 +120,7 @@ public class Fullmap_manager : MonoBehaviour
         }     
     }
 
-    public static void turn_end()
-    {
-        if (!Time_button.backward)
-        {
-            if (turn_timer > 0)
-            {
-                turn_timer--;
-                Debug.Log("timer :" + turn_timer);
-            }
-            if (turn_timer <= 60)
-            {
-                //map_crashed[0] = true;
-                Debug.Log("map 0" + map_crashed[0]);
-            }
 
-            if (turn_timer <= 50)
-            {
-                map_crashed[1] = true;
-                Debug.Log("map 1" + map_crashed[1]);
-            }
-
-            if (turn_timer <= 40)
-            {
-                map_crashed[2] = true;
-                Debug.Log("map 2" + map_crashed[2]);
-            }
-        }
-        else if (Time_button.backward)
-        {
-            if (turn_timer < 70)
-            {
-                turn_timer++;
-                Debug.Log("timer :" + turn_timer);
-            }
-
-            if (turn_timer >= 60)
-            {
-                map_crashed[0] = false;
-                Debug.Log("map 0" + map_crashed[0]);
-            }
-
-            if (turn_timer >= 50)
-            {
-                map_crashed[1] = false;
-                Debug.Log("map 0" + map_crashed[1]);
-            }
-
-            if (turn_timer >= 40)
-            {
-                map_crashed[2] = false;
-                Debug.Log("map 2" + map_crashed[2]);
-            }
-        }
-
-    }
 
     public void LoadMap(int mapid )
     {

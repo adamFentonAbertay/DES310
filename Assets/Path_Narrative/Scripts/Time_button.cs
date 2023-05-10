@@ -10,10 +10,13 @@ public class Time_button : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
 {
     public static bool backward;
 
+
+
     private bool pointerDown;
     private float downTimer;
     private float requiredHold = 2.0f;
 
+    public static bool first_time = true;
 
     public UnityEvent onLongClick;
 
@@ -80,4 +83,6 @@ public class Time_button : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
 
 
     }
+
+
 }
