@@ -127,6 +127,7 @@ public class minimap_manager : MonoBehaviour
             {
                 boss_Buttons[i].gameObject.transform.Rotate(0, 0, -90);
             }
+           crab_button.gameObject.transform.Rotate(0, 0, -90);
             for (int i = 0; i < item_Button.Length; i++)
             {
                 item_Button[i].gameObject.transform.Rotate(0, 0, -90);
