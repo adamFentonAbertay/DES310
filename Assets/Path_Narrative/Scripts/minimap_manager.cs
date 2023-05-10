@@ -136,6 +136,7 @@ public class minimap_manager : MonoBehaviour
 
         for (int i = 0; i < gridId.Length; i++)
         {
+            Debug.Log(i);
             grid[i].sprite = gridSprite[gridId[i]];
 
             if (gridId[i] == 1)
@@ -182,20 +183,31 @@ public class minimap_manager : MonoBehaviour
             }
             if (gridId[i] == 11)
             {
-
-                for (int j = 0; j < item_Button.Length; j++)
-                {
-                    if (!ibutton_used[j])
+    
+                    if (!ibutton_used[0])
                     {
-                        ibutton_used[j] = true;
+                        ibutton_used[0] = true;
                         //  boss_Button.transform.position = grid[i].transform.position;
-                        item_Button[j].transform.position = grid[i].transform.position;
-                        break;
-                    }
+                        item_Button[0].transform.position = grid[i].transform.position;
+                   
                     // crabPositions.Add(grid[i].transform.position);
-                    //  break;
+                    
                 }
             }
+            if (gridId[i] == 12)
+            {
+
+                if (!ibutton_used[1])
+                {
+                    ibutton_used[1] = true;
+                    //  boss_Button.transform.position = grid[i].transform.position;
+                    item_Button[1].transform.position = grid[i].transform.position;
+
+                    // crabPositions.Add(grid[i].transform.position);
+                     
+                }
+            }
+
         }
 
 
