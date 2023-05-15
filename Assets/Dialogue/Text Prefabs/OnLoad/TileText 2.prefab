@@ -50,4 +50,8 @@ MonoBehaviour:
   - The room of.. Lost Ogres Looking for the Swimming Pool!
   - 'Run for your lives! '
   - DISABLE
-  audios: []
+  audios:
+  - {fileID: 8300000, guid: 4547d5f5f796d984b81e7968ce1ffe98, type: 3}
+  - {fileID: 8300000, guid: c48bb75d5270e074982c1d98b997e31f, type: 3}
+  - {fileID: 8300000, guid: 91c36cd30a7959145969098a379db917, type: 3}
+  - {fileID: 8300000, guid: d5d4f82aac35cf24bbda49260845fcd7, type: 3}

@@ -170,10 +170,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onLoadMessages:
-  - AURGHHRFG.. IR THRIS THGRA SWCHRINMG PROOL?
+  - SETTOOGRE
+  - AURGH! IS THIS THRE SRWIMMINRG PROOL?
+  - SETTONARRATOR
+  - No this is not the swimming pool..
+  - SETTOOGRE
   - ARUFGURHH!! YROU MROVED THRE SWRIMMNG PROOL!!
+  - SETTONARRATOR
+  - NO I DID NOT MOVE THE SWIMMING POOL!
   - DISABLE
   audios:
+  - {fileID: 8300000, guid: d5d4f82aac35cf24bbda49260845fcd7, type: 3}
   - {fileID: 8300000, guid: a5416b1df059d9a469a83f2afd50e25b, type: 3}
+  - {fileID: 8300000, guid: d5d4f82aac35cf24bbda49260845fcd7, type: 3}
+  - {fileID: 8300000, guid: de02ab78d2bdeff42973e5f9fec99774, type: 3}
+  - {fileID: 8300000, guid: d5d4f82aac35cf24bbda49260845fcd7, type: 3}
   - {fileID: 8300000, guid: ff227818b3204e147885a81a0d59ef41, type: 3}
+  - {fileID: 8300000, guid: d5d4f82aac35cf24bbda49260845fcd7, type: 3}
+  - {fileID: 8300000, guid: e80886d46f925914498b75c775ba49b5, type: 3}
   - {fileID: 8300000, guid: d5d4f82aac35cf24bbda49260845fcd7, type: 3}

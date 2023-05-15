@@ -138,7 +138,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7292151729833224801}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
   m_Name: 
@@ -175,8 +175,4 @@ MonoBehaviour:
   - It heard you say you prefer Dundee University!
   - RUN FOR YOUR LIVES!
   - DISABLE
-  audios:
-  - {fileID: 8300000, guid: e4ceba83b530dae4a9d9af4f969f564f, type: 3}
-  - {fileID: 8300000, guid: da6bee8c0d2462a4a85c281621f83e7d, type: 3}
-  - {fileID: 8300000, guid: 980f9db714c3a3c4a873ee63710f9eab, type: 3}
-  - {fileID: 8300000, guid: a718680a1d43c1e4284a73af7cceb9ba, type: 3}
+  audios: []

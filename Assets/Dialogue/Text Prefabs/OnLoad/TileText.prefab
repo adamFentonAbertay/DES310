@@ -102,10 +102,10 @@ MonoBehaviour:
     out of danger! "
   - DISABLE
   audios:
-  - {fileID: 8300000, guid: 83fe34d61c11f8b4c8a94f59f804d157, type: 3}
-  - {fileID: 8300000, guid: d2a0a0d26e210ba4aa281eb8a9796dca, type: 3}
-  - {fileID: 8300000, guid: 7374f4780c0feea488ea328f362a6a1c, type: 3}
-  - {fileID: 8300000, guid: 546e1622ce25ef44e9c20c59d84f0d3a, type: 3}
-  - {fileID: 8300000, guid: cd1a17264bcbb7a4eabb551e0de34e77, type: 3}
-  - {fileID: 8300000, guid: 786b912506894684cb6aac0e1baa9eda, type: 3}
+  - {fileID: 8300000, guid: 0a845a2503e3fc9449bff164b1cb8478, type: 3}
+  - {fileID: 8300000, guid: 1ad030f13959c094d9224aa106a10e23, type: 3}
+  - {fileID: 8300000, guid: 616d74508fd49274587601eb9603b8ac, type: 3}
+  - {fileID: 8300000, guid: 46f18fc150413224daee1ec410e5f777, type: 3}
+  - {fileID: 8300000, guid: 24a373ab2ad2b8848a44c4a38eb2be8f, type: 3}
+  - {fileID: 8300000, guid: 83975dad48d60d24989035a81b7f36a5, type: 3}
   - {fileID: 8300000, guid: 19ed36c992e471d47bbc9a1e3102b786, type: 3}

@@ -52,4 +52,10 @@ MonoBehaviour:
   - And worst of all...
   - 'We didn''t bring a gift! '
   - DISABLE
-  audios: []
+  audios:
+  - {fileID: 8300000, guid: 7d300132468b33e43b99c61ce6a1861f, type: 3}
+  - {fileID: 8300000, guid: 4c4556021a11eea4b94c66927d17afd0, type: 3}
+  - {fileID: 8300000, guid: dcf37415b959eb848a40502e4c78f7d5, type: 3}
+  - {fileID: 8300000, guid: 8dd2c28bc1ad5f04991e973ab4444a17, type: 3}
+  - {fileID: 8300000, guid: 618e40a1f1915b842a45da29fc57c938, type: 3}
+  - {fileID: 8300000, guid: d5d4f82aac35cf24bbda49260845fcd7, type: 3}

@@ -50,4 +50,9 @@ MonoBehaviour:
   - It appears that we are moving at the pace of a three-legged tortoise with a hangover.
   - "Let\u2019s pick up the pace perhaps? "
   - DISABLE
-  audios: []
+  audios:
+  - {fileID: 8300000, guid: 94b434349a69c5348b7a0890c44419fd, type: 3}
+  - {fileID: 8300000, guid: 70eb9ffbb0fe0e9479f8d931be712dda, type: 3}
+  - {fileID: 8300000, guid: 6e6562b8d318a1f4786108333fe3c7dc, type: 3}
+  - {fileID: 8300000, guid: 8fd77c46b3e4bce49b83ee266668327f, type: 3}
+  - {fileID: 8300000, guid: d5d4f82aac35cf24bbda49260845fcd7, type: 3}

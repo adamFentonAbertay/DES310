@@ -99,7 +99,7 @@ public class DialogueManager : MonoBehaviour
             textCountTracker++;
             StartCoroutine(TypeDialogue(dialoguesScenarios[textCountTracker]));
         }
-        else if (dialoguesScenarios[textCountTracker] == "SETTOORGE")
+        else if (dialoguesScenarios[textCountTracker] == "SETTOOGRE")
         {
             SetToImage(3);
             resumeDialogue();

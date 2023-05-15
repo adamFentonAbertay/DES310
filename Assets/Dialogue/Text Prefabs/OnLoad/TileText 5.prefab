@@ -49,4 +49,8 @@ MonoBehaviour:
   - Quite an embarrassing misunderstanding really!
   - 'We''re not out of the clear yet.. make your grand escape and get outta here! '
   - DISABLE
-  audios: []
+  audios:
+  - {fileID: 8300000, guid: b2a17d93f24eb214181d626955db5968, type: 3}
+  - {fileID: 8300000, guid: 8b6d9f3df29d9614caa69ad625639465, type: 3}
+  - {fileID: 8300000, guid: 60b83a5d407213144bc9bc33c29cc6e2, type: 3}
+  - {fileID: 8300000, guid: d5d4f82aac35cf24bbda49260845fcd7, type: 3}

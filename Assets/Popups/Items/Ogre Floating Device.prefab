@@ -173,4 +173,8 @@ MonoBehaviour:
   - This magical device allows them to conquer not only land but water!
   - 'Go on.. You know you want to try it on! '
   - DISABLE
-  audios: []
+  audios:
+  - {fileID: 8300000, guid: 2d9729b860e5f4549a8918a10ab497b8, type: 3}
+  - {fileID: 8300000, guid: 8125c3fa857925a40ac27a641a48ffaf, type: 3}
+  - {fileID: 8300000, guid: a35ffaef06b334e42a310ad50cb5b91f, type: 3}
+  - {fileID: 8300000, guid: d5d4f82aac35cf24bbda49260845fcd7, type: 3}

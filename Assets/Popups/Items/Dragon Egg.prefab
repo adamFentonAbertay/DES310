@@ -178,4 +178,10 @@ MonoBehaviour:
   - "It\u2019s like having a toddler with a flamethrower!"
   - 'Best of luck, and may the fire extinguisher be with you! '
   - DISABLE
-  audios: []
+  audios:
+  - {fileID: 8300000, guid: 124e83c093d7d5349bcd68a2dcd35f31, type: 3}
+  - {fileID: 8300000, guid: 5ead906b184d77c4f9aa64cd5a7727b2, type: 3}
+  - {fileID: 8300000, guid: dc7712c81ef97834c8a042f3f41b2d08, type: 3}
+  - {fileID: 8300000, guid: e01efeb8cf6cab943992325363533484, type: 3}
+  - {fileID: 8300000, guid: 07422241fdff6e64ba1e74c200e4d75f, type: 3}
+  - {fileID: 8300000, guid: d5d4f82aac35cf24bbda49260845fcd7, type: 3}

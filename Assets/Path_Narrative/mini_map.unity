@@ -4734,7 +4734,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.64705884}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -11448,7 +11448,7 @@ MonoBehaviour:
   target: {fileID: 897457710}
   crabHealth1: {fileID: 2800000, guid: c2a100bd1d70a5e40a1e004795aa368c, type: 3}
   crabHealth2: {fileID: 2800000, guid: 2ddbf9c6534afa44ab0f4d30a333906d, type: 3}
-  crabHealth3: {fileID: 2800000, guid: 2ddbf9c6534afa44ab0f4d30a333906d, type: 3}
+  crabHealth3: {fileID: 2800000, guid: fc30462690405bb439dfa1c049050997, type: 3}
 --- !u!114 &806667706 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8210152686130001148, guid: 217ce12c8399b074283eb5f9647e3623,
@@ -21597,7 +21597,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 2f6adec2572ad9444a9cead7c09a70fa, type: 3}
+  m_Texture: {fileID: 2800000, guid: f409422afa3933646a771ae7cc48c117, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -21783,7 +21783,7 @@ MonoBehaviour:
   clickableCollider: {fileID: 1894732889}
   Narrator: {fileID: 1856222568}
   narratorImages:
-  - {fileID: 2800000, guid: 2f6adec2572ad9444a9cead7c09a70fa, type: 3}
+  - {fileID: 2800000, guid: f409422afa3933646a771ae7cc48c117, type: 3}
   - {fileID: 2800000, guid: e9c759690e60672489ebc08713ac9cf8, type: 3}
   - {fileID: 2800000, guid: e13c757d354b2514aa3e5a59933865fe, type: 3}
   - {fileID: 2800000, guid: 6c1915f23135b0344b946651607bc342, type: 3}
