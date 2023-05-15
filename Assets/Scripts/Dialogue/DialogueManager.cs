@@ -22,6 +22,8 @@ public class DialogueManager : MonoBehaviour
     public List<AudioClip> dialogueAudios;
     [SerializeField] AudioSource sfx;
     [SerializeField] GameObject clickableCollider;
+
+
     public GameObject Narrator;
     private int textCountTracker = 0;
     private bool NarratorMovementFlipFlop = true;
@@ -171,8 +173,11 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            sfx.clip = dialogueAudios[textCountTracker];
-            sfx.Play();
+            if (AudioManager.narratorEnable == true)
+            {
+                sfx.clip = dialogueAudios[textCountTracker];
+                sfx.Play();
+            }
         }
 
         //display lettr by letter ur message

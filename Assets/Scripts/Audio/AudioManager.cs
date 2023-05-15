@@ -7,7 +7,7 @@ public class AudioManager : MonoBehaviour
     // Start is called before the first frame update
 
     public static bool musicEnable = true;
-   
+    public static bool narratorEnable = true;
 
     void Start()
     {
@@ -26,6 +26,20 @@ public class AudioManager : MonoBehaviour
         {
             musicEnable = false;
             
+        }
+    }
+
+    public void userNarratorToggle(bool tog)
+    {
+        if (tog == true)
+        {
+            narratorEnable = true;
+
+        }
+        else
+        {
+            narratorEnable = false;
+
         }
     }
 
