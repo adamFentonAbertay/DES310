@@ -8,16 +8,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Startup.unity
     guid: 5c8a58c5f87d91f49aad94568a83e5d3
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/BlankAR.unity
     guid: 6bdce89659816455b9f906fc62d19910
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MinigameExample.unity
     guid: 2a3c4d2dedf3cd7428cae1ee009e1dc8
   - enabled: 1
     path: Assets/Minigame_Dice/Dice.unity
     guid: 9f55a3c1c0d361445851dce9b7db54c9
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Scenario 1.unity
     guid: 31cc37a8ee7f18045ae3c2f9218a74f1
   - enabled: 1
