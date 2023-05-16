@@ -79,7 +79,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0
-  m_Text: "ATTACK LEVEL: 1 \nMODIFIER: Aggressive\r (Moves an additional tile)\r\n\nThe
+  m_Text: "ATTACK LEVEL: 1 \nMODIFIER: Aggressive\r \n(Moves an additional tile)\r\n\nThe
     simple sunny side up..."
 --- !u!1 &7292151729833224801
 GameObject:

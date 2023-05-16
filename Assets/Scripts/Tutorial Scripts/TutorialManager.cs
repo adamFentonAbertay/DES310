@@ -26,6 +26,8 @@ public class TutorialManager : MonoBehaviour
     private bool NarratorMovementFlipFlop = true;
     public GameObject SetupPage;
     public GameObject MovementPage;
+    public GameObject CombatPage;
+    public GameObject InteractionsPage;
 
 
     public void setDialogue(GameObject textPrefabHolder)
@@ -277,6 +279,156 @@ public class TutorialManager : MonoBehaviour
             textCountTracker++;
             StartCoroutine(TypeDialogue(dialoguesScenarios[textCountTracker]));
 
+        }
+        //This segment is for the tutorial Combat page.
+        else if (dialoguesScenarios[textCountTracker] == "ENEMYSPAWN") //This is used for the tutorial dialogue to make the Enemy spawn image appear.
+        {
+            hideDialogue();
+            if (CombatPage == null)
+            {
+                Debug.Log("no tutorial movement page reference");
+            }
+
+            CombatPage.GetComponent<CombatPageScript>().ToggleEnemySpawn();
+
+        }
+        else if (dialoguesScenarios[textCountTracker] == "ENEMYSPAWNHIDE") //This is used for the tutorial dialogue to make the Enemy spawn image disappear.
+        {
+            if (CombatPage == null)
+            {
+                Debug.Log("no tutorial movement page reference");
+            }
+
+            CombatPage.GetComponent<CombatPageScript>().ToggleEnemySpawn();
+            resumeDialogue();
+            textCountTracker++;
+            StartCoroutine(TypeDialogue(dialoguesScenarios[textCountTracker]));
+
+        }
+        else if (dialoguesScenarios[textCountTracker] == "MONSTERENCOUNTER") //This is used for the tutorial dialogue to make the monster encounter images appear.
+        {
+            hideDialogue();
+            if (CombatPage == null)
+            {
+                Debug.Log("no tutorial movement page reference");
+            }
+
+            CombatPage.GetComponent<CombatPageScript>().ToggleMonsterEncounter();
+
+        }
+        else if (dialoguesScenarios[textCountTracker] == "MONSTERENCOUNTERHIDE") //This is used for the tutorial dialogue to make the monster encounter images disappear.
+        {
+            if (CombatPage == null)
+            {
+                Debug.Log("no tutorial movement page reference");
+            }
+
+            CombatPage.GetComponent<CombatPageScript>().ToggleMonsterEncounter();
+
+
+        }
+        else if (dialoguesScenarios[textCountTracker] == "COMBATDICE") //This is used for the tutorial dialogue to make the combat dice images appear.
+        {
+            hideDialogue();
+            if (CombatPage == null)
+            {
+                Debug.Log("no tutorial movement page reference");
+            }
+
+            CombatPage.GetComponent<CombatPageScript>().ToggleCombatDice();
+        }
+        else if (dialoguesScenarios[textCountTracker] == "COMBATDICEHIDE") //This is used for the tutorial dialogue to make the combat dice images disappear.
+        {
+            if (CombatPage == null)
+            {
+                Debug.Log("no tutorial movement page reference");
+            }
+
+            CombatPage.GetComponent<CombatPageScript>().ToggleCombatDice();
+            resumeDialogue();
+            textCountTracker++;
+            StartCoroutine(TypeDialogue(dialoguesScenarios[textCountTracker]));
+
+        }
+        //This segment is for the tutorial Iteractions page.
+        else if (dialoguesScenarios[textCountTracker] == "SHOP") //This is used for the tutorial dialogue to make the shop symbol image appear.
+        {
+            hideDialogue();
+            if (InteractionsPage == null)
+            {
+                Debug.Log("no tutorial movement page reference");
+            }
+
+            InteractionsPage.GetComponent<InteractionPageScript>().ToggleShopSymbol();
+        }
+        else if (dialoguesScenarios[textCountTracker] == "SHOPHIDE") //This is used for the tutorial dialogue to make the shop symbol image disappear.
+        {
+            if (InteractionsPage == null)
+            {
+                Debug.Log("no tutorial movement page reference");
+            }
+
+            InteractionsPage.GetComponent<InteractionPageScript>().ToggleShopSymbol();
+            resumeDialogue();
+            textCountTracker++;
+            StartCoroutine(TypeDialogue(dialoguesScenarios[textCountTracker]));
+
+        }
+        else if (dialoguesScenarios[textCountTracker] == "TRADE") //This is used for the tutorial dialogue to make the trade example images appear.
+        {
+            hideDialogue();
+            if (InteractionsPage == null)
+            {
+                Debug.Log("no tutorial movement page reference");
+            }
+
+            InteractionsPage.GetComponent<InteractionPageScript>().ToggleTradeExample();
+        }
+        else if (dialoguesScenarios[textCountTracker] == "TRADEHIDE") //This is used for the tutorial dialogue to make the trade example images disappear.
+        {
+            if (InteractionsPage == null)
+            {
+                Debug.Log("no tutorial movement page reference");
+            }
+
+            InteractionsPage.GetComponent<InteractionPageScript>().ToggleTradeExample();
+            resumeDialogue();
+            textCountTracker++;
+            StartCoroutine(TypeDialogue(dialoguesScenarios[textCountTracker]));
+        }
+        else if (dialoguesScenarios[textCountTracker] == "CRABBOSS") //This is used for the tutorial dialogue to make the crab boss image appear.
+        {
+            InteractionsPage.GetComponent<InteractionPageScript>().ToggleTradeDiagram();
+            hideDialogue();
+            if (InteractionsPage == null)
+            {
+                Debug.Log("no tutorial movement page reference");
+            }
+
+            InteractionsPage.GetComponent<InteractionPageScript>().ToggleCrabBoss();
+        }
+        else if (dialoguesScenarios[textCountTracker] == "CRABBOSSHIDE") //This is used for the tutorial dialogue to make the crab boss image disappear.
+        {
+            if (InteractionsPage == null)
+            {
+                Debug.Log("no tutorial movement page reference");
+            }
+
+            InteractionsPage.GetComponent<InteractionPageScript>().ToggleCrabBoss();
+            resumeDialogue();
+            textCountTracker++;
+            StartCoroutine(TypeDialogue(dialoguesScenarios[textCountTracker]));
+        }
+
+        else if (dialoguesScenarios[textCountTracker] == "TRADEDIAGRAM") //This is used for the tutorial dialogue to make the trade diagram image appear.
+        {
+            hideDialogue();
+            if (InteractionsPage == null)
+            {
+                Debug.Log("no tutorial movement page reference");
+            }
+
+            InteractionsPage.GetComponent<InteractionPageScript>().ToggleTradeDiagram();
         }
 
         else

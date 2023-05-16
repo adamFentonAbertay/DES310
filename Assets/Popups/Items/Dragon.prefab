@@ -79,8 +79,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0
-  m_Text: "ATTACK LEVEL: 2\nMODIFIER: Ranged\r (attack a player in an adjacent tile)\r\n\nA
-    fearsome creature who strikes fire-like fear into wimpy adventurers."
+  m_Text: "ATTACK LEVEL: 2\nMODIFIER: Ranged\r \n(attack a player in an adjacent
+    tile)\r\n\nA fearsome creature who strikes fire-like fear into wimpy adventurers."
 --- !u!1 &7292151729833224801
 GameObject:
   m_ObjectHideFlags: 0
@@ -176,7 +176,7 @@ MonoBehaviour:
   - DISABLE
   audios:
   - {fileID: 8300000, guid: d5d4f82aac35cf24bbda49260845fcd7, type: 3}
-  - {fileID: 8300000, guid: 0a409aa5553b55040b6aef9e36fb1ac0, type: 3}
-  - {fileID: 8300000, guid: 56828dc032b502a4198e5ab66bc1fe3c, type: 3}
-  - {fileID: 8300000, guid: d3788f64e5bea8642925bcca645dadd6, type: 3}
+  - {fileID: 8300000, guid: ebaaf05914b1eb24db78dd87978c3a72, type: 3}
+  - {fileID: 8300000, guid: ddb4e8b5f2a0dbe47bc6e0563edad0dc, type: 3}
+  - {fileID: 8300000, guid: 7cd2a450f642c22469f0bab36528d309, type: 3}
   - {fileID: 8300000, guid: d5d4f82aac35cf24bbda49260845fcd7, type: 3}

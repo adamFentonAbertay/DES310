@@ -79,7 +79,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0
-  m_Text: "ATTACK LEVEL: 3\nMODIFIER: Loot\r (Take an additional item card)\r\n\nA
+  m_Text: "ATTACK LEVEL: 3\nMODIFIER: Loot\r \n(Take an additional item card)\r\n\nA
     fearsome creature, said to have descened from an ancient shug-like breed. In
     olden tongue, this ancestor was called a Cha-wah-wah."
 --- !u!1 &7292151729833224801
@@ -170,7 +170,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onLoadMessages:
-  - Shug!
-  - Shug shug shug!
+  - What a nice dog!
   - DISABLE
   audios: []

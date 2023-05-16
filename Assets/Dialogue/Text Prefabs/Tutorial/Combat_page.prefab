@@ -50,27 +50,33 @@ MonoBehaviour:
   - 'Combat happens when a player lands on the same tile as a monster or player.  '
   - When you turn over a new board piece you will notice monster spawn points, these
     are defined with this symbol.
+  - ENEMYSPAWN
+  - RESUME
   - Take the monsters from the tier pile based on the tier area and place on the
     spawn points face up.
+  - ENEMYSPAWNHIDE
   - 'When encountered by a monster, roll both dice. Circles are the players hits,
     and the crosses are the monster''s hits. '
   - 'Count all the circles and crosses from both dice. The winner is the one with
     the most hits. '
   - 'Armour and Weapons give you extra hits. Monster''s gain extra hits based on
-    their level I.e. a level 3 monster will gain +3 hits.  '
+    their hit number found at the bottom of the card. '
   - 'In the result of a draw, REROLL the dice. '
   - 'Here is an example of an intense monster encounter.  '
-  - 'On the left we have a nasty level 3 monster and on the right, we have a player
+  - MONSTERENCOUNTER
+  - RESUME
+  - 'On the top we have a nasty level 3 monster and on the bottom, we have a player
     chancing his luck with a level two weapon and nothing else.  '
   - "Let\u2019s roll some dice and see how he gets on.  "
-  - 'In total we have 5 circles and 5 crosses. The enemy has +3 hits for being level
-    3 and the player has +2 from their weapon.  '
+  - COMBATDICE
+  - RESUME
+  - 'In total we have 5 circles and 5 crosses. The enemy has +3 hits from their hit
+    number and the player has +2 from their weapon.  '
   - "This means the monster hits the player 8 times beating the player\u2019s measly
     7 hits.  "
   - 'When beaten by a monster the player will be sent back to the start of the board
     piece they are on. '
-  - 'They can place themselves on any tile along the first row of the board piece
-    as shown. '
+  - They can place themselves on any tile along the first row of the board piece.
   - 'Combat with fellow players happens when two players land on the same tile. Each
     player will roll one dice. '
   - 'The players will count the circles on the dice they roll and add on any plus
@@ -78,8 +84,35 @@ MonoBehaviour:
   - 'The player with the most hit points wins and the player that loses will be sent
     to the start of the board piece they are on. '
   - 'A key action ability that can be used is REROLL. If a player rolls and loses,
-    they can use their action points to reroll they dice.  '
+    they can use their action points to reroll their dice.  '
   - 'In the event of a draw, the defending player wins! '
   - DISABLE
-  - 
-  audios: []
+  audios:
+  - {fileID: 8300000, guid: 988a709a8631ad04f9e2d6f46aaa8161, type: 3}
+  - {fileID: 8300000, guid: 9614b65a951e1d845b62d709e8ca3dfb, type: 3}
+  - {fileID: 8300000, guid: cfa8502e97229354686a7e901b0d0883, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 8300000, guid: e4f4c4d8a3c67b24cbebf115e2e9c521, type: 3}
+  - {fileID: 0}
+  - {fileID: 8300000, guid: a36dfdea5e0c0ae449192151ed154382, type: 3}
+  - {fileID: 8300000, guid: 01cc135ad026d0a4aa15909bf94dac4e, type: 3}
+  - {fileID: 8300000, guid: 5938b0bb75a12204d9941ee07c696dec, type: 3}
+  - {fileID: 8300000, guid: 3c8fa6af4d2f55c43bf647201c27927c, type: 3}
+  - {fileID: 8300000, guid: 9840445130cac2946bcefb98f30ea98b, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 8300000, guid: 553f706615ba47b4d8480eaba043edcb, type: 3}
+  - {fileID: 8300000, guid: 4102a7735c2fc094dacdcd0f98458f08, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 8300000, guid: 04f1b4113d34d1c42b1b072042eac9bb, type: 3}
+  - {fileID: 8300000, guid: ba5907c07f9f96e4185eae21bde62ce9, type: 3}
+  - {fileID: 8300000, guid: d730e79243944a34c886f1085cd13d1f, type: 3}
+  - {fileID: 8300000, guid: 641dc537630923b48af16d28432baf4f, type: 3}
+  - {fileID: 8300000, guid: 3e49e1ffc84313640b27730084d81679, type: 3}
+  - {fileID: 8300000, guid: cb5fb488b488e624fa27975c4242517d, type: 3}
+  - {fileID: 8300000, guid: 2e2e36888a3c7224ba297d06d598e20c, type: 3}
+  - {fileID: 8300000, guid: 3aefb63bbc688fb4f854af39fb365a82, type: 3}
+  - {fileID: 8300000, guid: 71a1347754d77f94fb471d2600866196, type: 3}
+  - {fileID: 0}

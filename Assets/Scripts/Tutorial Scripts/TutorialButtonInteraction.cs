@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TutorialButtonInteraction : MonoBehaviour
 {
@@ -67,9 +68,10 @@ public class TutorialButtonInteraction : MonoBehaviour
         TutorialMainMenuHolder.SetActive(true);
 
     }
-    void Button()
+    
+    public void MainMenuBackButton()
     {
-
+        SceneManager.LoadSceneAsync("Startup");
     }
 
 

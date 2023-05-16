@@ -67,4 +67,17 @@ MonoBehaviour:
   - 'ONLY when the player is on the same board piece as the monster. If the player
     is on a different board piece as the monster, the monster will not move '
   - DISABLE
-  audios: []
+  audios:
+  - {fileID: 8300000, guid: bc3f3a3ddc5de16478ed05df3cda9bd2, type: 3}
+  - {fileID: 8300000, guid: f00b9f794f56f6b4aa856a3a207aa378, type: 3}
+  - {fileID: 8300000, guid: 08fc3d828ad4e0b488d69e8b9975adc5, type: 3}
+  - {fileID: 8300000, guid: 9173318271c1723468cb0963858091cd, type: 3}
+  - {fileID: 8300000, guid: 2da08ecf1a711ae4f9987865c48cc287, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 8300000, guid: 2f4b936eed6f1c840a544f5f394f351b, type: 3}
+  - {fileID: 8300000, guid: e17568b93dcc9024cac75f8b987557af, type: 3}
+  - {fileID: 0}
+  - {fileID: 8300000, guid: 1dde90bd75d3b7349bb33809b0d39844, type: 3}
+  - {fileID: 8300000, guid: 3cc7a8897ff985d4bae026012f50afd3, type: 3}
+  - {fileID: 8300000, guid: 7d81fb199a6b19c48882594216130a37, type: 3}

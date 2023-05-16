@@ -8,7 +8,7 @@ using TMPro;
 
 public class SettingsController : MonoBehaviour
 {
-    static public float sensitivity = 1;
+    static public float sensitivity = 2;
     
 
     public Slider sensSlider;

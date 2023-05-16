@@ -45,11 +45,78 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onLoadMessages:
-  - Interactions :)
+  - 'Lets go shopping! Throughout the game you may encounter a shop or two. Shops
+    are used for trading. '
+  - 'Shops can be located with this symbol on the board. '
+  - SHOP
+  - RESUME
+  - 'When a player enters a shop, they will pull two item cards from the pile based
+    on the zone the shop is in.  '
+  - 'For example, if a player was to land on a shop located within Zone 2. They would
+    pull 2 item cards from the level two pile. '
+  - 'These cards then become part of the shop which is laid out on the table and
+    is visible to all players. '
+  - SHOPHIDE
+  - 'The player can simply swap same level items as a straight swap, or the player
+    can swap several items together to get a better levelled item.  '
+  - 'For example, a simple trade could be these two level one cards for this level
+    2 card.  '
+  - TRADE
+  - RESUME
+  - 'When the player swaps their cards for an item in the shop, the cards that they
+    have traded in will be added to the right-hand side of the shop. '
+  - 'The shop is capped at a 4-card capacity. This means that at the end of a trading
+    session extra cards will be discarded. '
+  - 'The extra cards are taken from the left-hand side of the shop layout and will
+    be put back at the bottom of the item pile.  '
+  - TRADEHIDE
+  - 'Here is a visual layout of the process of trading.  '
+  - TRADEDIAGRAM
+  - RESUME
+  - 'You may encounter a Crab Boss. If that happens and I''m not saying it will but
+    if it does this is what he looks like. '
+  - CRABBOSS
+  - RESUME
+  - 'The Crab Boss has 3 lives, to beat him the player attacking would need to win
+    three battles I.e. three dice rolls. '
+  - 'When a player loses a battle to The Crab Boss, they will be thrown back to the
+    starting tile of the board piece they are on.  '
+  - 'The Crab Boss has extra hits based on the level area it is in. For example,
+    if you encounter the crab within zone 2, he gets 2 extra hits.  '
+  - 'At the end of each round the crab boss will regenerate his lives. So, it might
+    be a good idea to work as a team to defeat him! '
+  - CRABBOSSHIDE
+  - 'Now I think I have covered everything. Feel free to come back to the tutorial
+    whenever you are stuck or use the rule book.  '
+  - 'Safe travels, young adventurers! '
   - DISABLE
-  - 
-  - 
-  - 
-  - 
-  - 
-  audios: []
+  audios:
+  - {fileID: 8300000, guid: 5d6e40b6eb8fb904eb1a0a7de41862d1, type: 3}
+  - {fileID: 8300000, guid: c05593f2579ff7a4abee1e51146d71e4, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 8300000, guid: 14628f3924ed27442a0009d067f7d54b, type: 3}
+  - {fileID: 8300000, guid: c9e2bc2163e21c04aac2505a688ab639, type: 3}
+  - {fileID: 8300000, guid: ab3ddf4e5ca3417489b191b6e9aac797, type: 3}
+  - {fileID: 0}
+  - {fileID: 8300000, guid: 09741cc8b03505043b93618ae92e8f80, type: 3}
+  - {fileID: 8300000, guid: 3fd7dddebf43b354dac66b48965c16e3, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 8300000, guid: 104569e9c1c68ad4a9b6b58628e30998, type: 3}
+  - {fileID: 8300000, guid: 5868b05587e788d40926e04160172ed8, type: 3}
+  - {fileID: 8300000, guid: 7a64e8e8eeb0bc1448a1db8342baac22, type: 3}
+  - {fileID: 0}
+  - {fileID: 8300000, guid: 7f0b50f1b44e3a54fab8f9d9e21e3288, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 8300000, guid: f7f9d49f40589ba4e9150b95564665f1, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 8300000, guid: d08d1ca7df3f17c4d89f1d38854dc9ea, type: 3}
+  - {fileID: 8300000, guid: 1b4fcfdad39dde34c804386265d37a57, type: 3}
+  - {fileID: 8300000, guid: f190b1b44851c144dbe647a7948e93e5, type: 3}
+  - {fileID: 8300000, guid: 5fe5a9dba2392ca4b96a2f71051287db, type: 3}
+  - {fileID: 0}
+  - {fileID: 8300000, guid: fdf09621ce75b5e46ac79a3b04c9c916, type: 3}
+  - {fileID: 8300000, guid: ab04239ef067a0840a4ae77db53968b4, type: 3}

@@ -52,7 +52,6 @@ MonoBehaviour:
   - INVENTORY
   - RESUME
   - 'Every player has an inventory holder so you can hand these out just now. '
-  - RESUME
   - ' The inventory will showcase each player''s character, armour and weapon.'
   - 'ONLY ONE weapon and ONLY ONE piece of armour can be EQUIPED in the inventory
     at any time.  '
@@ -95,8 +94,8 @@ MonoBehaviour:
     that complements a storyline. '
   - 'The default story line within the app is Jagged Pitts.  '
   - BOARDLAYOUT
-  - 'Here is the layout for this storyline, find the numbered tiles within the game
-    box and setup as shown. '
+  - 'Here is the layout for this storyline, find the board pieces with these symbols
+    within the game box and setup as shown.  '
   - HIDE
   - RESUME
   - 'Notice that the starting and end tiles are the only tiles visible to the players.
@@ -114,4 +113,56 @@ MonoBehaviour:
   - 'Now that should be everything setup! Click the back button to go onto the next
     tutorial section where we will be looking at characters. '
   - ENDSETUP
-  audios: []
+  - 
+  audios:
+  - {fileID: 8300000, guid: fd7445a31e750164692b6845b694ae20, type: 3}
+  - {fileID: 8300000, guid: 861496a8ecd2561449ea58da5693f436, type: 3}
+  - {fileID: 8300000, guid: ea082d2cb25a95343b0d01536c147502, type: 3}
+  - {fileID: 8300000, guid: a0aa39abcbf5b6e4f95fdcce7c9b9dc6, type: 3}
+  - {fileID: 8300000, guid: d5d4f82aac35cf24bbda49260845fcd7, type: 3}
+  - {fileID: 8300000, guid: 25ec235d97e19d946a0488e7ff324b96, type: 3}
+  - {fileID: 8300000, guid: 58d7b072b1c304446b3676e11c35f9f8, type: 3}
+  - {fileID: 8300000, guid: 2978636a079801d4186b8158a8b8b3d0, type: 3}
+  - {fileID: 8300000, guid: 81bff3a1c2762df438c4d23a9811a5f1, type: 3}
+  - {fileID: 8300000, guid: bd36011be7026f741bf19f24528fe1c4, type: 3}
+  - {fileID: 8300000, guid: 1aad1e7ca4578e94ea9bbc1911730ae4, type: 3}
+  - {fileID: 8300000, guid: 31118c75198b59042b9ae4d5c22ade97, type: 3}
+  - {fileID: 0}
+  - {fileID: 8300000, guid: 7a0073da915cf154394d09cdfcd85471, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 8300000, guid: c56cc311b5c882d44b751d813b994c88, type: 3}
+  - {fileID: 8300000, guid: ecbee1051692a054295b748c1c9ef54e, type: 3}
+  - {fileID: 8300000, guid: b658b4c381fbfd3479904e5147a8d6d0, type: 3}
+  - {fileID: 0}
+  - {fileID: 8300000, guid: c6252b665d8ae874780df8692dc6b493, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 8300000, guid: b8881ad2e30ee574d826a1813d0604c0, type: 3}
+  - {fileID: 8300000, guid: 72f3253463e7d2e429a2067556986adf, type: 3}
+  - {fileID: 8300000, guid: 286e2128b853df340b5a3b69e637ffe1, type: 3}
+  - {fileID: 0}
+  - {fileID: 8300000, guid: 016ddb68389141b49b34a0c7574b0f33, type: 3}
+  - {fileID: 8300000, guid: 8d373f46205daf54ca3481cdfca57220, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 8300000, guid: f41ac8467722d2b4c96767e753cf665e, type: 3}
+  - {fileID: 0}
+  - {fileID: 8300000, guid: e37ac1e27304ce943800b72db641824d, type: 3}
+  - {fileID: 8300000, guid: 2794e62c795d1f143b4b217fe2ee7f07, type: 3}
+  - {fileID: 8300000, guid: 90062176860cab045bdb750f63365eb1, type: 3}
+  - {fileID: 8300000, guid: 69902575c18c87c4fb19efefc95aaa68, type: 3}
+  - {fileID: 0}
+  - {fileID: 8300000, guid: 16648b83be1f47a45ad289836b92056c, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 8300000, guid: 5b17d57b5838cf84c8019caf23a2c87e, type: 3}
+  - {fileID: 0}
+  - {fileID: 8300000, guid: 8a397f14a7416ef42b65066fca561b76, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 8300000, guid: 4e6a57b515bd6f6409ddd502d379faf4, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 8300000, guid: d5f3bbe475ead0b4a8a1642630c196b6, type: 3}
+  - {fileID: 8300000, guid: dd64874a48461c248b9f472bb7105936, type: 3}

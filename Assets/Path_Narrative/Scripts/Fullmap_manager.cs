@@ -198,7 +198,7 @@ public class Fullmap_manager : MonoBehaviour
                     //8 - cartographer floor
                     //9 - shop
 
-                    int[] tempMap2 = {3,3,0,0,0,0,3,3,
+                    int[] tempMap2 = {3,3,0,1,1,0,3,3,
                                   0,0,2,4,4,2,0,0,
                                   1,0,4,4,4,4,0,1,
                                   0,0,4,2,9,4,0,0,
@@ -256,7 +256,7 @@ public class Fullmap_manager : MonoBehaviour
                                  3,4,0,2,0,1,
                                  3,11,0,4,5,8,
                                  4,0,2,1,0,0,
-                                 3,0,4,0,2,0,
+                                 3,0,4,0,0,0,
                                  0,0,0,0,4,0,
                                  0,4,0,0,0,0};
 
@@ -295,7 +295,7 @@ public class Fullmap_manager : MonoBehaviour
 
 
                 int[] tempMap4 = {4,4,0,0,0,0,
-                                 4,7,0,0,2,0,
+                                 4,7,0,2,0,0,
                                  0,0,4,4,0,12,
                                  0,1,4,4,0,0,
                                  3,0,0,0,0,2,
@@ -527,32 +527,32 @@ public class Fullmap_manager : MonoBehaviour
             default:
                 Debug.Log("code not found !!!");
                 break;
-            case 2134:
+            case 4323:
                 map_id[code_manager.map_codeid] = 1;
                 map_vivwed[code_manager.map_codeid] = true;
                 codeUI_switch();
                 break;
-            case 3142:
+            case 3443:
                 map_id[code_manager.map_codeid] = 2;
                 map_vivwed[code_manager.map_codeid] = true;
                 codeUI_switch();
                 break;
-            case 4132:
+            case 1234:
                 map_id[code_manager.map_codeid] = 3;
                 map_vivwed[code_manager.map_codeid] = true;
                 codeUI_switch();
                 break;
-            case 1324:
+            case 3412:
                 map_id[code_manager.map_codeid] = 4;
                 map_vivwed[code_manager.map_codeid] = true;
                 codeUI_switch();
                 break;
-            case 1243:
+            case 1122:
                 map_id[code_manager.map_codeid] = 5;
                 map_vivwed[code_manager.map_codeid] = true;
                 codeUI_switch();
                 break;
-            case 1423:
+            case 3344:
                 map_id[code_manager.map_codeid] = 6;
                 map_vivwed[code_manager.map_codeid] = true;
                 codeUI_switch();

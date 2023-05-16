@@ -52,4 +52,9 @@ MonoBehaviour:
     for more details or click the home button to go back to the tutorial menu.  '
   - DISABLE
   - 
-  audios: []
+  audios:
+  - {fileID: 8300000, guid: 2be12e4053b357c48926a896034dbad9, type: 3}
+  - {fileID: 8300000, guid: 9bd1311159e0a2440a0d672df8ff1ebd, type: 3}
+  - {fileID: 8300000, guid: a4e06ea60cbe31142adb741f61fbfdc4, type: 3}
+  - {fileID: 8300000, guid: d0a72a2b3bfb8494e96f7817c1e14759, type: 3}
+  - {fileID: 0}

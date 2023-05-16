@@ -20,14 +20,14 @@ public class Toggle : MonoBehaviour
 
         if (AudioManager.musicEnable == true)
         {
-            GetComponent<Toggle>().SendMessage("SetIsOnWithoutNotify", true);
+            this.GetComponent<Toggle>().SendMessage("SetIsOnWithoutNotify", true);
         }
         else
         {
-            GetComponent<Toggle>().SendMessage("SetIsOnWithoutNotify", false);
+            this.GetComponent<Toggle>().SendMessage("SetIsOnWithoutNotify", false);
         }
-      
 
+    
     }
 
     // Update is called once per frame

@@ -76,6 +76,11 @@ public class buttonPress : MonoBehaviour
         Debug.Log("dice game called");
         SceneManager.LoadSceneAsync("Dice");
     }
+
+    public void PDFResponse()
+    {
+        Application.OpenURL("http://chaoticcanoe.itch.io/breakneck-dungeons");
+    }
     public void MenuToSettingsResponse()
     {
         hideAllUI();
